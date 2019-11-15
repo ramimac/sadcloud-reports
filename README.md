@@ -2,12 +2,12 @@
 
 ### ScoutSuite
 
-https://ramimac.github.io/sadcloud-reports/scoutsuite-report/aws.html
+<https://ramimac.github.io/sadcloud-reports/scoutsuite-report/aws.html>
 
 ### Prowler
 
-https://ramimac.github.io/sadcloud-reports/prowler-report/report.html
+<https://ramimac.github.io/sadcloud-reports/prowler-report/report.html>
 
 ### Cloudmapper
 
-https://ramimac.github.io/sadcloud-reports/cloudmapper-reports/web/account-data/report.html
+<https://ramimac.github.io/sadcloud-reports/cloudmapper-reports/web/account-data/report.html>
