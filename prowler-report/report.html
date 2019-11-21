@@ -28,7 +28,7 @@
  | .__/|_|  \___/ \_/\_/ |_|\___|_|v2.1.0
  |_|</span><span class="ansi34"> the handy cloud security tool</span>
 
-<span class="ansi1 ansi33"> Date: Fri Nov 15 14:42:42 EST 2019
+<span class="ansi1 ansi33"> Date: Thu Nov 21 14:32:08 EST 2019
 
 </span> Colors code for results: 
 <span class="ansi1 ansi33"> INFO (Information)</span>,<span class="ansi1 ansi32"> PASS (Recommended value)</span>, <span class="ansi1 ansi31"> FAIL (Fix required)</span>, <span class="ansi35"> Not Scored </span>
@@ -165,7 +165,9 @@
       <span class="ansi1 ansi32"> PASS!</span> No users found with Access Key 2 never used
 
 <span class="ansi34"> 1.22 </span> [check122] Ensure IAM policies that allow full "*:*" administrative privileges are not created (Scored)
-      <span class="ansi1 ansi32"> PASS!</span> No custom policies found
+      <span class="ansi1 ansi33"> INFO! Looking for custom policies: (skipping default policies - it may take few seconds...) </span>
+      <span class="ansi1 ansi33"> INFO! List of custom policies:  </span>
+      <span class="ansi1 ansi31"> FAIL! Policy arn:aws:iam::XXXXXXXXXXXX:policy/wildcard_IAM_policy20191121184231906100000002 allows "*:*" </span>
 
 <span class="ansi35"> 2.0 Logging - [group2] ********************************************* </span>
 
@@ -218,7 +220,8 @@
       <span class="ansi1 ansi33"> INFO! ap-southeast-1: This region doesn't have ANY encryption keys </span>
       <span class="ansi1 ansi33"> INFO! ap-southeast-2: This region doesn't have ANY encryption keys </span>
       <span class="ansi1 ansi33"> INFO! eu-central-1: This region doesn't have ANY encryption keys </span>
-      <span class="ansi1 ansi33"> INFO! us-east-1: This region doesn't have ANY encryption keys </span>
+      <span class="ansi1 ansi32"> PASS!</span> us-east-1: Key 6528c278-b7e8-4649-8d46-b339fed6367d is set correctly
+      <span class="ansi1 ansi31"> FAIL! us-east-1: Key 854288a0-9d78-4b8b-8979-d29bcdb640e7 is not set to rotate! </span>
       <span class="ansi1 ansi33"> INFO! us-east-2: This region doesn't have ANY encryption keys </span>
       <span class="ansi1 ansi33"> INFO! us-west-1: This region doesn't have ANY encryption keys </span>
       <span class="ansi1 ansi33"> INFO! us-west-2: This region doesn't have ANY encryption keys </span>
@@ -301,11 +304,11 @@
       <span class="ansi1 ansi32"> PASS!</span> No Security Groups found in ap-southeast-1 with port 22 TCP open to 0.0.0.0/0
       <span class="ansi1 ansi32"> PASS!</span> No Security Groups found in ap-southeast-2 with port 22 TCP open to 0.0.0.0/0
       <span class="ansi1 ansi32"> PASS!</span> No Security Groups found in eu-central-1 with port 22 TCP open to 0.0.0.0/0
-      <span class="ansi1 ansi31"> FAIL! Found Security Group: sg-02227c74d17b6ba6b open to 0.0.0.0/0 in Region us-east-1 </span>
-      <span class="ansi1 ansi31"> FAIL! Found Security Group: sg-038b09dcdd2d5b9b0 open to 0.0.0.0/0 in Region us-east-1 </span>
-      <span class="ansi1 ansi31"> FAIL! Found Security Group: sg-08acce4c577ae5353 open to 0.0.0.0/0 in Region us-east-1 </span>
-      <span class="ansi1 ansi31"> FAIL! Found Security Group: sg-0be22c6f4acf838e9 open to 0.0.0.0/0 in Region us-east-1 </span>
+      <span class="ansi1 ansi31"> FAIL! Found Security Group: sg-010b97f3c0f6a49ab open to 0.0.0.0/0 in Region us-east-1 </span>
+      <span class="ansi1 ansi31"> FAIL! Found Security Group: sg-074dd0c36e527a4a8 open to 0.0.0.0/0 in Region us-east-1 </span>
+      <span class="ansi1 ansi31"> FAIL! Found Security Group: sg-0c42ae27291342d33 open to 0.0.0.0/0 in Region us-east-1 </span>
       <span class="ansi1 ansi31"> FAIL! Found Security Group: sg-0c45e7fed2e85b95b open to 0.0.0.0/0 in Region us-east-1 </span>
+      <span class="ansi1 ansi31"> FAIL! Found Security Group: sg-0d817bae8139665a2 open to 0.0.0.0/0 in Region us-east-1 </span>
       <span class="ansi1 ansi32"> PASS!</span> No Security Groups found in us-east-2 with port 22 TCP open to 0.0.0.0/0
       <span class="ansi1 ansi32"> PASS!</span> No Security Groups found in us-west-1 with port 22 TCP open to 0.0.0.0/0
       <span class="ansi1 ansi32"> PASS!</span> No Security Groups found in us-west-2 with port 22 TCP open to 0.0.0.0/0
@@ -323,9 +326,9 @@
       <span class="ansi1 ansi32"> PASS!</span> No Security Groups found in ap-southeast-1 with port 3389 TCP open to 0.0.0.0/0
       <span class="ansi1 ansi32"> PASS!</span> No Security Groups found in ap-southeast-2 with port 3389 TCP open to 0.0.0.0/0
       <span class="ansi1 ansi32"> PASS!</span> No Security Groups found in eu-central-1 with port 3389 TCP open to 0.0.0.0/0
-      <span class="ansi1 ansi31"> FAIL! Found Security Group: sg-02227c74d17b6ba6b open to 0.0.0.0/0 in Region us-east-1 </span>
-      <span class="ansi1 ansi31"> FAIL! Found Security Group: sg-038b09dcdd2d5b9b0 open to 0.0.0.0/0 in Region us-east-1 </span>
-      <span class="ansi1 ansi31"> FAIL! Found Security Group: sg-0be22c6f4acf838e9 open to 0.0.0.0/0 in Region us-east-1 </span>
+      <span class="ansi1 ansi31"> FAIL! Found Security Group: sg-010b97f3c0f6a49ab open to 0.0.0.0/0 in Region us-east-1 </span>
+      <span class="ansi1 ansi31"> FAIL! Found Security Group: sg-0c42ae27291342d33 open to 0.0.0.0/0 in Region us-east-1 </span>
+      <span class="ansi1 ansi31"> FAIL! Found Security Group: sg-0d817bae8139665a2 open to 0.0.0.0/0 in Region us-east-1 </span>
       <span class="ansi1 ansi32"> PASS!</span> No Security Groups found in us-east-2 with port 3389 TCP open to 0.0.0.0/0
       <span class="ansi1 ansi32"> PASS!</span> No Security Groups found in us-west-1 with port 3389 TCP open to 0.0.0.0/0
       <span class="ansi1 ansi32"> PASS!</span> No Security Groups found in us-west-2 with port 3389 TCP open to 0.0.0.0/0
@@ -343,8 +346,8 @@
       <span class="ansi1 ansi31"> FAIL! Default Security Groups (sg-ab2b43d4) found that allow 0.0.0.0 IN or OUT traffic in Region ap-southeast-1 </span>
       <span class="ansi1 ansi31"> FAIL! Default Security Groups (sg-9176c5ef) found that allow 0.0.0.0 IN or OUT traffic in Region ap-southeast-2 </span>
       <span class="ansi1 ansi31"> FAIL! Default Security Groups (sg-eab6d388) found that allow 0.0.0.0 IN or OUT traffic in Region eu-central-1 </span>
-      <span class="ansi1 ansi31"> FAIL! Default Security Groups (sg-0285c98c923d5a661) found that allow 0.0.0.0 IN or OUT traffic in Region us-east-1 </span>
       <span class="ansi1 ansi31"> FAIL! Default Security Groups (sg-0cb9e75c) found that allow 0.0.0.0 IN or OUT traffic in Region us-east-1 </span>
+      <span class="ansi1 ansi31"> FAIL! Default Security Groups (sg-0d2d541d41189253f) found that allow 0.0.0.0 IN or OUT traffic in Region us-east-1 </span>
       <span class="ansi1 ansi31"> FAIL! Default Security Groups (sg-3b5bcb59) found that allow 0.0.0.0 IN or OUT traffic in Region us-east-2 </span>
       <span class="ansi1 ansi31"> FAIL! Default Security Groups (sg-71045d0e) found that allow 0.0.0.0 IN or OUT traffic in Region us-west-1 </span>
       <span class="ansi1 ansi31"> FAIL! Default Security Groups (sg-e2dbc7a1) found that allow 0.0.0.0 IN or OUT traffic in Region us-west-2 </span>
@@ -376,26 +379,28 @@
 
 <span class="ansi35"> 7.2 [extra72] Ensure there are no EBS Snapshots set as Public (Not Scored) (Not part of CIS benchmark) </span>
       <span class="ansi1 ansi33"> INFO! Looking for EBS Snapshots in all regions...   </span>
+      <span class="ansi1 ansi32"> PASS!</span> us-east-1: snap-02cd246cf6e979663 is not Public
 
 <span class="ansi35"> 7.3 [extra73] Ensure there are no S3 buckets open to the Everyone or Any AWS user (Not Scored) (Not part of CIS benchmark) </span>
       <span class="ansi1 ansi33"> INFO! Looking for open S3 Buckets (ACLs and Policies) in all regions...   </span>
       <span class="ansi1 ansi32"> PASS!</span> us-east-1: basc2019-prebuiltdemo bucket is not open
       <span class="ansi1 ansi32"> PASS!</span> us-east-1: config-bucket-XXXXXXXXXXXX bucket is not open
-      <span class="ansi1 ansi31"> FAIL! us-east-1: (bucket: sadcloud-s3-stack-s3bucket-292zpniwhrlq) ALLUSERS_ACL: bucket ACL is open to the Internet (Everyone) with permissions: READ | AUTHUSERS_ACL: Ok | BUCKET_POLICY: Ok </span>
-      <span class="ansi1 ansi32"> PASS!</span> us-east-1: sadcloud20191115191723899400000003 bucket is not open
-      <span class="ansi1 ansi32"> PASS!</span> us-east-1: sadelb20191115191723892700000002 bucket is not open
+      <span class="ansi1 ansi31"> FAIL! us-east-1: (bucket: sadcloud-s3-stack-s3bucket-1jpl1kfcreyte) ALLUSERS_ACL: bucket ACL is open to the Internet (Everyone) with permissions: READ | AUTHUSERS_ACL: Ok | BUCKET_POLICY: Ok </span>
+      <span class="ansi1 ansi32"> PASS!</span> us-east-1: sadcloud-secret-stack-s3bucket-engp87teffx5 bucket is not open
+      <span class="ansi1 ansi32"> PASS!</span> us-east-1: sadcloud20191121184231983500000003 bucket is not open
+      <span class="ansi1 ansi32"> PASS!</span> us-east-1: sadelb20191121184233464500000007 bucket is not open
 
 <span class="ansi35"> 7.4 [extra74] Ensure there are no Security Groups without ingress filtering being used (Not Scored) (Not part of CIS benchmark) </span>
       <span class="ansi1 ansi33"> INFO! Looking for Security Groups in all regions...   </span>
-      <span class="ansi1 ansi33"> INFO! us-east-1: sg-02227c74d17b6ba6b has no ingress filtering but it is not being used </span>
+      <span class="ansi1 ansi33"> INFO! us-east-1: sg-010b97f3c0f6a49ab has no ingress filtering but it is not being used </span>
       <span class="ansi1 ansi31"> FAIL! us-east-1: sg-03766005a1346f503 has no ingress filtering and it is being used! </span>
-      <span class="ansi1 ansi33"> INFO! us-east-1: sg-038b09dcdd2d5b9b0 has no ingress filtering but it is not being used </span>
-      <span class="ansi1 ansi33"> INFO! us-east-1: sg-0502719d2d1d89540 has no ingress filtering but it is not being used </span>
-      <span class="ansi1 ansi33"> INFO! us-east-1: sg-05d6c884e79eddb7b has no ingress filtering but it is not being used </span>
-      <span class="ansi1 ansi33"> INFO! us-east-1: sg-08acce4c577ae5353 has no ingress filtering but it is not being used </span>
-      <span class="ansi1 ansi33"> INFO! us-east-1: sg-0b09a95bfa204ed56 has no ingress filtering but it is not being used </span>
-      <span class="ansi1 ansi33"> INFO! us-east-1: sg-0be22c6f4acf838e9 has no ingress filtering but it is not being used </span>
+      <span class="ansi1 ansi33"> INFO! us-east-1: sg-03fc62c7c2739a768 has no ingress filtering but it is not being used </span>
+      <span class="ansi1 ansi33"> INFO! us-east-1: sg-074dd0c36e527a4a8 has no ingress filtering but it is not being used </span>
+      <span class="ansi1 ansi33"> INFO! us-east-1: sg-0ac48976ca93d2d41 has no ingress filtering but it is not being used </span>
+      <span class="ansi1 ansi33"> INFO! us-east-1: sg-0c42ae27291342d33 has no ingress filtering but it is not being used </span>
       <span class="ansi1 ansi31"> FAIL! us-east-1: sg-0c45e7fed2e85b95b has no ingress filtering and it is being used! </span>
+      <span class="ansi1 ansi33"> INFO! us-east-1: sg-0c598523c75b255aa has no ingress filtering but it is not being used </span>
+      <span class="ansi1 ansi33"> INFO! us-east-1: sg-0d817bae8139665a2 has no ingress filtering but it is not being used </span>
 
 <span class="ansi35"> 7.5 [extra75] Ensure there are no Security Groups not being used (Not Scored) (Not part of CIS benchmark) </span>
       <span class="ansi1 ansi33"> INFO! Looking for Security Groups in all regions...   </span>
@@ -411,21 +416,21 @@
       <span class="ansi1 ansi31"> FAIL! ap-southeast-1: sg-ab2b43d4 is not being used! </span>
       <span class="ansi1 ansi31"> FAIL! ap-southeast-2: sg-9176c5ef is not being used! </span>
       <span class="ansi1 ansi31"> FAIL! eu-central-1: sg-eab6d388 is not being used! </span>
-      <span class="ansi1 ansi31"> FAIL! us-east-1: sg-02227c74d17b6ba6b is not being used! </span>
-      <span class="ansi1 ansi32"> PASS!</span> us-east-1: sg-0285c98c923d5a661 is being used
+      <span class="ansi1 ansi31"> FAIL! us-east-1: sg-002ecfb9e36f16ece is not being used! </span>
+      <span class="ansi1 ansi31"> FAIL! us-east-1: sg-010b97f3c0f6a49ab is not being used! </span>
       <span class="ansi1 ansi32"> PASS!</span> us-east-1: sg-03766005a1346f503 is being used
-      <span class="ansi1 ansi31"> FAIL! us-east-1: sg-038b09dcdd2d5b9b0 is not being used! </span>
-      <span class="ansi1 ansi31"> FAIL! us-east-1: sg-0502719d2d1d89540 is not being used! </span>
-      <span class="ansi1 ansi31"> FAIL! us-east-1: sg-0589b163e0d175ace is not being used! </span>
-      <span class="ansi1 ansi31"> FAIL! us-east-1: sg-05d6c884e79eddb7b is not being used! </span>
-      <span class="ansi1 ansi31"> FAIL! us-east-1: sg-05e807f004a59b449 is not being used! </span>
-      <span class="ansi1 ansi31"> FAIL! us-east-1: sg-08acce4c577ae5353 is not being used! </span>
-      <span class="ansi1 ansi31"> FAIL! us-east-1: sg-0b09a95bfa204ed56 is not being used! </span>
-      <span class="ansi1 ansi31"> FAIL! us-east-1: sg-0be22c6f4acf838e9 is not being used! </span>
+      <span class="ansi1 ansi31"> FAIL! us-east-1: sg-03fc62c7c2739a768 is not being used! </span>
+      <span class="ansi1 ansi31"> FAIL! us-east-1: sg-05202c74b26cde0c5 is not being used! </span>
+      <span class="ansi1 ansi31"> FAIL! us-east-1: sg-074dd0c36e527a4a8 is not being used! </span>
+      <span class="ansi1 ansi31"> FAIL! us-east-1: sg-08eb7a341a6fe17c8 is not being used! </span>
+      <span class="ansi1 ansi31"> FAIL! us-east-1: sg-0a05839a101c36e54 is not being used! </span>
+      <span class="ansi1 ansi31"> FAIL! us-east-1: sg-0ac48976ca93d2d41 is not being used! </span>
+      <span class="ansi1 ansi31"> FAIL! us-east-1: sg-0c42ae27291342d33 is not being used! </span>
       <span class="ansi1 ansi32"> PASS!</span> us-east-1: sg-0c45e7fed2e85b95b is being used
+      <span class="ansi1 ansi31"> FAIL! us-east-1: sg-0c598523c75b255aa is not being used! </span>
       <span class="ansi1 ansi31"> FAIL! us-east-1: sg-0cb9e75c is not being used! </span>
-      <span class="ansi1 ansi31"> FAIL! us-east-1: sg-0f2a4e4619a800ccf is not being used! </span>
-      <span class="ansi1 ansi31"> FAIL! us-east-1: sg-0f94dbca7823d5896 is not being used! </span>
+      <span class="ansi1 ansi32"> PASS!</span> us-east-1: sg-0d2d541d41189253f is being used
+      <span class="ansi1 ansi31"> FAIL! us-east-1: sg-0d817bae8139665a2 is not being used! </span>
       <span class="ansi1 ansi31"> FAIL! us-east-2: sg-3b5bcb59 is not being used! </span>
       <span class="ansi1 ansi31"> FAIL! us-west-1: sg-71045d0e is not being used! </span>
       <span class="ansi1 ansi31"> FAIL! us-west-2: sg-e2dbc7a1 is not being used! </span>
@@ -451,6 +456,7 @@
 
 <span class="ansi35"> 7.7 [extra77] Ensure there are no ECR repositories set as Public (Not Scored) (Not part of CIS benchmark) </span>
       <span class="ansi1 ansi33"> INFO! Looking for ECR repos in all regions...   </span>
+      <span class="ansi1 ansi31"> FAIL! us-east-1: sadcloud policy "may" allow Anonymous users to perform actions (Principal: "*") </span>
 
 <span class="ansi35"> 7.8 [extra78] Ensure there are no Public Accessible RDS instances (Not Scored) (Not part of CIS benchmark) </span>
       <span class="ansi1 ansi33"> INFO! Looking for RDS instances in all regions...   </span>
@@ -466,7 +472,7 @@
       <span class="ansi1 ansi32"> PASS!</span> ap-southeast-1: no Publicly Accessible RDS instances found
       <span class="ansi1 ansi32"> PASS!</span> ap-southeast-2: no Publicly Accessible RDS instances found
       <span class="ansi1 ansi32"> PASS!</span> eu-central-1: no Publicly Accessible RDS instances found
-      <span class="ansi1 ansi32"> PASS!</span> us-east-1: no Publicly Accessible RDS instances found
+      <span class="ansi1 ansi31"> FAIL! us-east-1: RDS instance: terraform-2019112118424072580000000c at terraform-2019112118424072580000000c.c8ajxmmdw6bx.us-east-1.rds.amazonaws.com is set as Publicly Accessible! </span>
       <span class="ansi1 ansi32"> PASS!</span> us-east-2: no Publicly Accessible RDS instances found
       <span class="ansi1 ansi32"> PASS!</span> us-west-1: no Publicly Accessible RDS instances found
       <span class="ansi1 ansi32"> PASS!</span> us-west-2: no Publicly Accessible RDS instances found
@@ -485,8 +491,8 @@
       <span class="ansi1 ansi32"> PASS!</span> ap-southeast-1: no Internet Facing ELBs found
       <span class="ansi1 ansi32"> PASS!</span> ap-southeast-2: no Internet Facing ELBs found
       <span class="ansi1 ansi32"> PASS!</span> eu-central-1: no Internet Facing ELBs found
-      <span class="ansi1 ansi31"> FAIL! us-east-1: ELB: sadcloud-elb at DNS: sadcloud-elb-1395992173.us-east-1.elb.amazonaws.com is internet-facing! </span>
-      <span class="ansi1 ansi31"> FAIL! us-east-1: ELB: tf-lb-20191115191728689800000008 at DNS: tf-lb-20191115191728689800000008-1884820427.us-east-1.elb.amazonaws.com is internet-facing! </span>
+      <span class="ansi1 ansi31"> FAIL! us-east-1: ELB: sadcloud-elb at DNS: sadcloud-elb-1229775038.us-east-1.elb.amazonaws.com is internet-facing! </span>
+      <span class="ansi1 ansi31"> FAIL! us-east-1: ELB: tf-lb-2019112118423961290000000b at DNS: tf-lb-2019112118423961290000000b-1627966856.us-east-1.elb.amazonaws.com is internet-facing! </span>
       <span class="ansi1 ansi32"> PASS!</span> us-east-2: no Internet Facing ELBs found
       <span class="ansi1 ansi32"> PASS!</span> us-west-1: no Internet Facing ELBs found
       <span class="ansi1 ansi32"> PASS!</span> us-west-2: no Internet Facing ELBs found
@@ -506,7 +512,7 @@
       <span class="ansi1 ansi32"> PASS!</span> ap-southeast-2: no Internet Facing EC2 Instances found
       <span class="ansi1 ansi32"> PASS!</span> eu-central-1: no Internet Facing EC2 Instances found
       <span class="ansi1 ansi31"> FAIL! us-east-1: Instance: i-0b2e55b69aaa55875 at IP: 54.146.176.4 is internet-facing! </span>
-      <span class="ansi1 ansi31"> FAIL! us-east-1: Instance: i-0d3cfe08b829d3526 at IP: 3.95.190.37 is internet-facing! </span>
+      <span class="ansi1 ansi31"> FAIL! us-east-1: Instance: i-0fc878f552c450873 at IP: 54.152.31.181 is internet-facing! </span>
       <span class="ansi1 ansi32"> PASS!</span> us-east-2: no Internet Facing EC2 Instances found
       <span class="ansi1 ansi32"> PASS!</span> us-west-1: no Internet Facing EC2 Instances found
       <span class="ansi1 ansi32"> PASS!</span> us-west-2: no Internet Facing EC2 Instances found
@@ -569,7 +575,8 @@
       <span class="ansi1 ansi33"> INFO! ap-southeast-1: No Elasticsearch Service domain found </span>
       <span class="ansi1 ansi33"> INFO! ap-southeast-2: No Elasticsearch Service domain found </span>
       <span class="ansi1 ansi33"> INFO! eu-central-1: No Elasticsearch Service domain found </span>
-      <span class="ansi1 ansi33"> INFO! us-east-1: No Elasticsearch Service domain found </span>
+      <span class="ansi1 ansi31"> FAIL! us-east-1: ElasticSearch Service domain sadcloud SEARCH_SLOW_LOGS disabled! </span>
+      <span class="ansi1 ansi31"> FAIL! us-east-1: ElasticSearch Service domain sadcloud INDEX_SLOW_LOGS disabled! </span>
       <span class="ansi1 ansi33"> INFO! us-east-2: No Elasticsearch Service domain found </span>
       <span class="ansi1 ansi33"> INFO! us-west-1: No Elasticsearch Service domain found </span>
       <span class="ansi1 ansi33"> INFO! us-west-2: No Elasticsearch Service domain found </span>
@@ -587,6 +594,7 @@
       <span class="ansi1 ansi33"> INFO! ap-southeast-1: No Elasticsearch Service domain found </span>
       <span class="ansi1 ansi33"> INFO! ap-southeast-2: No Elasticsearch Service domain found </span>
       <span class="ansi1 ansi33"> INFO! eu-central-1: No Elasticsearch Service domain found </span>
+      <span class="ansi1 ansi31"> FAIL! us-east-1: sadcloud policy "may" allow Anonymous users to perform actions (Principal: "*") </span>
       <span class="ansi1 ansi33"> INFO! us-east-1: No Elasticsearch Service domain found </span>
       <span class="ansi1 ansi33"> INFO! us-east-2: No Elasticsearch Service domain found </span>
       <span class="ansi1 ansi33"> INFO! us-west-1: No Elasticsearch Service domain found </span>
@@ -606,7 +614,7 @@
       <span class="ansi1 ansi33"> INFO! ap-southeast-2: No ELBs found </span>
       <span class="ansi1 ansi33"> INFO! eu-central-1: No ELBs found </span>
       <span class="ansi1 ansi31"> FAIL! us-east-1: sadcloud-elb has not configured access logs </span>
-      <span class="ansi1 ansi31"> FAIL! us-east-1: tf-lb-20191115191728689800000008 has not configured access logs </span>
+      <span class="ansi1 ansi31"> FAIL! us-east-1: tf-lb-2019112118423961290000000b has not configured access logs </span>
       <span class="ansi1 ansi33"> INFO! us-east-2: No ELBs found </span>
       <span class="ansi1 ansi33"> INFO! us-west-1: No ELBs found </span>
       <span class="ansi1 ansi33"> INFO! us-west-2: No ELBs found </span>
@@ -614,9 +622,10 @@
 <span class="ansi35"> 7.18 [extra718] Check if S3 buckets have server access logging enabled (Not Scored) (Not part of CIS benchmark) </span>
       <span class="ansi1 ansi31"> FAIL! Bucket basc2019-prebuiltdemo has server access logging disabled! </span>
       <span class="ansi1 ansi31"> FAIL! Bucket config-bucket-XXXXXXXXXXXX has server access logging disabled! </span>
-      <span class="ansi1 ansi31"> FAIL! Bucket sadcloud-s3-stack-s3bucket-292zpniwhrlq has server access logging disabled! </span>
-      <span class="ansi1 ansi31"> FAIL! Bucket sadcloud20191115191723899400000003 has server access logging disabled! </span>
-      <span class="ansi1 ansi31"> FAIL! Bucket sadelb20191115191723892700000002 has server access logging disabled! </span>
+      <span class="ansi1 ansi31"> FAIL! Bucket sadcloud-s3-stack-s3bucket-1jpl1kfcreyte has server access logging disabled! </span>
+      <span class="ansi1 ansi31"> FAIL! Bucket sadcloud-secret-stack-s3bucket-engp87teffx5 has server access logging disabled! </span>
+      <span class="ansi1 ansi31"> FAIL! Bucket sadcloud20191121184231983500000003 has server access logging disabled! </span>
+      <span class="ansi1 ansi31"> FAIL! Bucket sadelb20191121184233464500000007 has server access logging disabled! </span>
 
 <span class="ansi35"> 7.19 [extra719] Check if Route53 hosted zones are logging queries to CloudWatch Logs (Not Scored) (Not part of CIS benchmark) </span>
       <span class="ansi1 ansi33"> INFO! No Route53 hosted zones found </span>
@@ -722,7 +731,7 @@
       <span class="ansi1 ansi33"> INFO! ap-southeast-1: No ACM Certificates found </span>
       <span class="ansi1 ansi33"> INFO! ap-southeast-2: No ACM Certificates found </span>
       <span class="ansi1 ansi33"> INFO! eu-central-1: No ACM Certificates found </span>
-      <span class="ansi1 ansi33"> INFO! us-east-1: No ACM Certificates found </span>
+      <span class="ansi1 ansi31"> FAIL! us-east-1: ACM Certificate example.com has Certificate Transparency logging disabled! </span>
       <span class="ansi1 ansi33"> INFO! us-east-2: No ACM Certificates found </span>
       <span class="ansi1 ansi33"> INFO! us-west-1: No ACM Certificates found </span>
       <span class="ansi1 ansi33"> INFO! us-west-2: No ACM Certificates found </span>
@@ -732,9 +741,10 @@
       <span class="ansi1 ansi33"> INFO! Looking for S3 Buckets Object-level logging information in all trails...   </span>
       <span class="ansi1 ansi31"> FAIL! us-west-2: S3 bucket basc2019-prebuiltdemo has Object-level logging disabled </span>
       <span class="ansi1 ansi31"> FAIL! us-west-2: S3 bucket config-bucket-XXXXXXXXXXXX has Object-level logging disabled </span>
-      <span class="ansi1 ansi31"> FAIL! us-west-2: S3 bucket sadcloud-s3-stack-s3bucket-292zpniwhrlq has Object-level logging disabled </span>
-      <span class="ansi1 ansi31"> FAIL! us-west-2: S3 bucket sadcloud20191115191723899400000003 has Object-level logging disabled </span>
-      <span class="ansi1 ansi31"> FAIL! us-west-2: S3 bucket sadelb20191115191723892700000002 has Object-level logging disabled </span>
+      <span class="ansi1 ansi31"> FAIL! us-west-2: S3 bucket sadcloud-s3-stack-s3bucket-1jpl1kfcreyte has Object-level logging disabled </span>
+      <span class="ansi1 ansi31"> FAIL! us-west-2: S3 bucket sadcloud-secret-stack-s3bucket-engp87teffx5 has Object-level logging disabled </span>
+      <span class="ansi1 ansi31"> FAIL! us-west-2: S3 bucket sadcloud20191121184231983500000003 has Object-level logging disabled </span>
+      <span class="ansi1 ansi31"> FAIL! us-west-2: S3 bucket sadelb20191121184233464500000007 has Object-level logging disabled </span>
 
 <span class="ansi35"> 7.26 [extra726] Check Trusted Advisor for errors and warnings (Not Scored) (Not part of CIS benchmark) </span>
 
@@ -751,7 +761,7 @@
       <span class="ansi1 ansi33"> INFO! ap-southeast-1: No SQS queues found </span>
       <span class="ansi1 ansi33"> INFO! ap-southeast-2: No SQS queues found </span>
       <span class="ansi1 ansi33"> INFO! eu-central-1: No SQS queues found </span>
-      <span class="ansi1 ansi33"> INFO! us-east-1: SQS <a href="https://queue.amazonaws.com/XXXXXXXXXXXX/sadcloud">https://queue.amazonaws.com/XXXXXXXXXXXX/sadcloud</a> queue policy with public access but has a Condition </span>
+      <span class="ansi1 ansi31"> FAIL! us-east-1: SQS <a href="https://queue.amazonaws.com/XXXXXXXXXXXX/sadcloud">https://queue.amazonaws.com/XXXXXXXXXXXX/sadcloud</a> queue policy with public access: "[Principal: * Action: sqs:*]" </span>
       <span class="ansi1 ansi33"> INFO! us-east-2: No SQS queues found </span>
       <span class="ansi1 ansi33"> INFO! us-west-1: No SQS queues found </span>
       <span class="ansi1 ansi33"> INFO! us-west-2: No SQS queues found </span>
@@ -777,7 +787,8 @@
 <span class="ansi35"> 7.29 [extra729] Ensure there are no EBS Volumes unencrypted (Not Scored) (Not part of CIS benchmark) </span>
       <span class="ansi1 ansi33"> INFO! Looking for EBS Volumes in all regions...   </span>
       <span class="ansi1 ansi31"> FAIL! us-east-1: vol-0c0ca028c06cb8ff0 is not encrypted! </span>
-      <span class="ansi1 ansi31"> FAIL! us-east-1: vol-0db1b55120db24f71 is not encrypted! </span>
+      <span class="ansi1 ansi31"> FAIL! us-east-1: vol-031c1509b078b88ff is not encrypted! </span>
+      <span class="ansi1 ansi31"> FAIL! us-east-1: vol-0bbf4034eb95d46a2 is not encrypted! </span>
 
 <span class="ansi35"> 7.30 [extra730] Check if ACM Certificates are about to expire in 7 days or less (Not Scored) (Not part of CIS benchmark) </span>
       <span class="ansi1 ansi33"> INFO! eu-north-1: No certificates found </span>
@@ -792,7 +803,7 @@
       <span class="ansi1 ansi33"> INFO! ap-southeast-1: No certificates found </span>
       <span class="ansi1 ansi33"> INFO! ap-southeast-2: No certificates found </span>
       <span class="ansi1 ansi33"> INFO! eu-central-1: No certificates found </span>
-      <span class="ansi1 ansi33"> INFO! us-east-1: No certificates found </span>
+      <span class="ansi1 ansi31"> FAIL! us-east-1: Certificate for example.com is about to expire in -18221 days! </span>
       <span class="ansi1 ansi33"> INFO! us-east-2: No certificates found </span>
       <span class="ansi1 ansi33"> INFO! us-west-1: No certificates found </span>
       <span class="ansi1 ansi33"> INFO! us-west-2: No certificates found </span>
@@ -824,9 +835,10 @@
 <span class="ansi35"> 7.34 [extra734] Check if S3 buckets have default encryption (SSE) enabled or use a bucket policy to enforce it (Not Scored) (Not part of CIS benchmark) </span>
       <span class="ansi1 ansi31"> FAIL! Bucket basc2019-prebuiltdemo does not enforce encryption! </span>
       <span class="ansi1 ansi31"> FAIL! Bucket config-bucket-XXXXXXXXXXXX does not enforce encryption! </span>
-      <span class="ansi1 ansi31"> FAIL! Bucket sadcloud-s3-stack-s3bucket-292zpniwhrlq does not enforce encryption! </span>
-      <span class="ansi1 ansi31"> FAIL! Bucket sadcloud20191115191723899400000003 does not enforce encryption! </span>
-      <span class="ansi1 ansi31"> FAIL! Bucket sadelb20191115191723892700000002 does not enforce encryption! </span>
+      <span class="ansi1 ansi31"> FAIL! Bucket sadcloud-s3-stack-s3bucket-1jpl1kfcreyte does not enforce encryption! </span>
+      <span class="ansi1 ansi31"> FAIL! Bucket sadcloud-secret-stack-s3bucket-engp87teffx5 does not enforce encryption! </span>
+      <span class="ansi1 ansi31"> FAIL! Bucket sadcloud20191121184231983500000003 does not enforce encryption! </span>
+      <span class="ansi1 ansi31"> FAIL! Bucket sadelb20191121184233464500000007 does not enforce encryption! </span>
 
 <span class="ansi35"> 7.35 [extra735] Check if RDS instances storage is encrypted (Not Scored) (Not part of CIS benchmark) </span>
       <span class="ansi1 ansi33"> INFO! Looking for RDS Volumes in all regions...   </span>
@@ -842,7 +854,7 @@
       <span class="ansi1 ansi33"> INFO! ap-southeast-1: No RDS instances found </span>
       <span class="ansi1 ansi33"> INFO! ap-southeast-2: No RDS instances found </span>
       <span class="ansi1 ansi33"> INFO! eu-central-1: No RDS instances found </span>
-      <span class="ansi1 ansi31"> FAIL! us-east-1: RDS instance terraform-20191115191729921600000009 is not encrypted! </span>
+      <span class="ansi1 ansi31"> FAIL! us-east-1: RDS instance terraform-2019112118424072580000000c is not encrypted! </span>
       <span class="ansi1 ansi33"> INFO! us-east-2: No RDS instances found </span>
       <span class="ansi1 ansi33"> INFO! us-west-1: No RDS instances found </span>
       <span class="ansi1 ansi33"> INFO! us-west-2: No RDS instances found </span>
@@ -861,7 +873,8 @@
       <span class="ansi1 ansi33"> INFO! ap-southeast-1: No KMS keys found </span>
       <span class="ansi1 ansi33"> INFO! ap-southeast-2: No KMS keys found </span>
       <span class="ansi1 ansi33"> INFO! eu-central-1: No KMS keys found </span>
-      <span class="ansi1 ansi33"> INFO! us-east-1: No KMS keys found </span>
+      <span class="ansi1 ansi31"> FAIL! us-east-1: KMS key 6528c278-b7e8-4649-8d46-b339fed6367d may be publicly accessible! </span>
+      <span class="ansi1 ansi32"> PASS!</span> us-east-1: KMS key 854288a0-9d78-4b8b-8979-d29bcdb640e7 is not exposed to Public
       <span class="ansi1 ansi33"> INFO! us-east-2: No KMS keys found </span>
       <span class="ansi1 ansi33"> INFO! us-west-1: No KMS keys found </span>
       <span class="ansi1 ansi33"> INFO! us-west-2: No KMS keys found </span>
@@ -880,7 +893,8 @@
       <span class="ansi1 ansi33"> INFO! ap-southeast-1: No KMS keys found </span>
       <span class="ansi1 ansi33"> INFO! ap-southeast-2: No KMS keys found </span>
       <span class="ansi1 ansi33"> INFO! eu-central-1: No KMS keys found </span>
-      <span class="ansi1 ansi33"> INFO! us-east-1: No KMS keys found </span>
+      <span class="ansi1 ansi32"> PASS!</span> us-east-1: KMS key 6528c278-b7e8-4649-8d46-b339fed6367d has rotation enabled
+      <span class="ansi1 ansi31"> FAIL! us-east-1: KMS key 854288a0-9d78-4b8b-8979-d29bcdb640e7 has rotation disabled! </span>
       <span class="ansi1 ansi33"> INFO! us-east-2: No KMS keys found </span>
       <span class="ansi1 ansi33"> INFO! us-west-1: No KMS keys found </span>
       <span class="ansi1 ansi33"> INFO! us-west-2: No KMS keys found </span>
@@ -901,7 +915,7 @@
       <span class="ansi1 ansi33"> INFO! ap-southeast-1: No RDS instances found </span>
       <span class="ansi1 ansi33"> INFO! ap-southeast-2: No RDS instances found </span>
       <span class="ansi1 ansi33"> INFO! eu-central-1: No RDS instances found </span>
-      <span class="ansi1 ansi31"> FAIL! us-east-1: RDS instance terraform-20191115191729921600000009 has not backup enabled! </span>
+      <span class="ansi1 ansi31"> FAIL! us-east-1: RDS instance terraform-2019112118424072580000000c has not backup enabled! </span>
       <span class="ansi1 ansi33"> INFO! us-east-2: No RDS instances found </span>
       <span class="ansi1 ansi33"> INFO! us-west-1: No RDS instances found </span>
       <span class="ansi1 ansi33"> INFO! us-west-2: No RDS instances found </span>
@@ -920,7 +934,7 @@
       <span class="ansi1 ansi33"> INFO! ap-southeast-1: No EBS Snapshots found </span>
       <span class="ansi1 ansi33"> INFO! ap-southeast-2: No EBS Snapshots found </span>
       <span class="ansi1 ansi33"> INFO! eu-central-1: No EBS Snapshots found </span>
-      <span class="ansi1 ansi33"> INFO! us-east-1: No EBS Snapshots found </span>
+      <span class="ansi1 ansi31"> FAIL! us-east-1: snap-02cd246cf6e979663 is currently not encrypted! </span>
       <span class="ansi1 ansi33"> INFO! us-east-2: No EBS Snapshots found </span>
       <span class="ansi1 ansi33"> INFO! us-west-1: No EBS Snapshots found </span>
       <span class="ansi1 ansi33"> INFO! us-west-2: No EBS Snapshots found </span>
@@ -940,7 +954,7 @@
       <span class="ansi1 ansi33"> INFO! ap-southeast-2: No EC2 instances found </span>
       <span class="ansi1 ansi33"> INFO! eu-central-1: No EC2 instances found </span>
       <span class="ansi1 ansi32"> PASS!</span> us-east-1: No secrets found in i-0b2e55b69aaa55875 User Data or it is empty
-      <span class="ansi1 ansi32"> PASS!</span> us-east-1: No secrets found in i-0d3cfe08b829d3526
+      <span class="ansi1 ansi31"> FAIL! us-east-1: Potential secret found in i-0fc878f552c450873 </span>
       <span class="ansi1 ansi33"> INFO! us-east-2: No EC2 instances found </span>
       <span class="ansi1 ansi33"> INFO! us-west-1: No EC2 instances found </span>
       <span class="ansi1 ansi33"> INFO! us-west-2: No EC2 instances found </span>
@@ -960,6 +974,7 @@
       <span class="ansi1 ansi33"> INFO! ap-southeast-2: No CloudFormation stacks found </span>
       <span class="ansi1 ansi33"> INFO! eu-central-1: No CloudFormation stacks found </span>
       <span class="ansi1 ansi33"> INFO! us-east-1: CloudFormation stack sadcloud-s3-stack has not Outputs </span>
+      <span class="ansi1 ansi31"> FAIL! us-east-1: Potential secret found in stack sadcloud-secret-stack Outputs </span>
       <span class="ansi1 ansi33"> INFO! us-east-2: No CloudFormation stacks found </span>
       <span class="ansi1 ansi33"> INFO! us-west-1: No CloudFormation stacks found </span>
       <span class="ansi1 ansi33"> INFO! us-west-2: No CloudFormation stacks found </span>
@@ -1049,7 +1064,7 @@
       <span class="ansi1 ansi33"> INFO! ap-southeast-1: No RDS instances found </span>
       <span class="ansi1 ansi33"> INFO! ap-southeast-2: No RDS instances found </span>
       <span class="ansi1 ansi33"> INFO! eu-central-1: No RDS instances found </span>
-      <span class="ansi1 ansi31"> FAIL! us-east-1: RDS instance terraform-20191115191729921600000009 has not CloudWatch Logs enabled! </span>
+      <span class="ansi1 ansi31"> FAIL! us-east-1: RDS instance terraform-2019112118424072580000000c has not CloudWatch Logs enabled! </span>
       <span class="ansi1 ansi33"> INFO! us-east-2: No RDS instances found </span>
       <span class="ansi1 ansi33"> INFO! us-west-1: No RDS instances found </span>
       <span class="ansi1 ansi33"> INFO! us-west-2: No RDS instances found </span>
@@ -1067,8 +1082,8 @@
       <span class="ansi1 ansi32"> PASS!</span> ap-southeast-1: No Security Groups found with any port open to 0.0.0.0/0
       <span class="ansi1 ansi32"> PASS!</span> ap-southeast-2: No Security Groups found with any port open to 0.0.0.0/0
       <span class="ansi1 ansi32"> PASS!</span> eu-central-1: No Security Groups found with any port open to 0.0.0.0/0
-      <span class="ansi1 ansi31"> FAIL! us-east-1: Found Security Group: sg-02227c74d17b6ba6b open to 0.0.0.0/0 </span>
-      <span class="ansi1 ansi31"> FAIL! us-east-1: Found Security Group: sg-038b09dcdd2d5b9b0 open to 0.0.0.0/0 </span>
+      <span class="ansi1 ansi31"> FAIL! us-east-1: Found Security Group: sg-010b97f3c0f6a49ab open to 0.0.0.0/0 </span>
+      <span class="ansi1 ansi31"> FAIL! us-east-1: Found Security Group: sg-0c42ae27291342d33 open to 0.0.0.0/0 </span>
       <span class="ansi1 ansi32"> PASS!</span> us-east-2: No Security Groups found with any port open to 0.0.0.0/0
       <span class="ansi1 ansi32"> PASS!</span> us-west-1: No Security Groups found with any port open to 0.0.0.0/0
       <span class="ansi1 ansi32"> PASS!</span> us-west-2: No Security Groups found with any port open to 0.0.0.0/0
@@ -1086,9 +1101,9 @@
       <span class="ansi1 ansi32"> PASS!</span> ap-southeast-1: No Security Groups found with any port open to 0.0.0.0/0 for Oracle ports
       <span class="ansi1 ansi32"> PASS!</span> ap-southeast-2: No Security Groups found with any port open to 0.0.0.0/0 for Oracle ports
       <span class="ansi1 ansi32"> PASS!</span> eu-central-1: No Security Groups found with any port open to 0.0.0.0/0 for Oracle ports
-      <span class="ansi1 ansi31"> FAIL! us-east-1: Found Security Group: sg-02227c74d17b6ba6b open to 0.0.0.0/0 for Oracle ports </span>
-      <span class="ansi1 ansi31"> FAIL! us-east-1: Found Security Group: sg-038b09dcdd2d5b9b0 open to 0.0.0.0/0 for Oracle ports </span>
-      <span class="ansi1 ansi31"> FAIL! us-east-1: Found Security Group: sg-0be22c6f4acf838e9 open to 0.0.0.0/0 for Oracle ports </span>
+      <span class="ansi1 ansi31"> FAIL! us-east-1: Found Security Group: sg-010b97f3c0f6a49ab open to 0.0.0.0/0 for Oracle ports </span>
+      <span class="ansi1 ansi31"> FAIL! us-east-1: Found Security Group: sg-0c42ae27291342d33 open to 0.0.0.0/0 for Oracle ports </span>
+      <span class="ansi1 ansi31"> FAIL! us-east-1: Found Security Group: sg-0d817bae8139665a2 open to 0.0.0.0/0 for Oracle ports </span>
       <span class="ansi1 ansi32"> PASS!</span> us-east-2: No Security Groups found with any port open to 0.0.0.0/0 for Oracle ports
       <span class="ansi1 ansi32"> PASS!</span> us-west-1: No Security Groups found with any port open to 0.0.0.0/0 for Oracle ports
       <span class="ansi1 ansi32"> PASS!</span> us-west-2: No Security Groups found with any port open to 0.0.0.0/0 for Oracle ports
@@ -1106,9 +1121,9 @@
       <span class="ansi1 ansi32"> PASS!</span> ap-southeast-1: No Security Groups found open to 0.0.0.0/0 for MySQL port
       <span class="ansi1 ansi32"> PASS!</span> ap-southeast-2: No Security Groups found open to 0.0.0.0/0 for MySQL port
       <span class="ansi1 ansi32"> PASS!</span> eu-central-1: No Security Groups found open to 0.0.0.0/0 for MySQL port
-      <span class="ansi1 ansi31"> FAIL! us-east-1: Found Security Group: sg-02227c74d17b6ba6b open to 0.0.0.0/0 for MySQL port </span>
-      <span class="ansi1 ansi31"> FAIL! us-east-1: Found Security Group: sg-038b09dcdd2d5b9b0 open to 0.0.0.0/0 for MySQL port </span>
-      <span class="ansi1 ansi31"> FAIL! us-east-1: Found Security Group: sg-0be22c6f4acf838e9 open to 0.0.0.0/0 for MySQL port </span>
+      <span class="ansi1 ansi31"> FAIL! us-east-1: Found Security Group: sg-010b97f3c0f6a49ab open to 0.0.0.0/0 for MySQL port </span>
+      <span class="ansi1 ansi31"> FAIL! us-east-1: Found Security Group: sg-0c42ae27291342d33 open to 0.0.0.0/0 for MySQL port </span>
+      <span class="ansi1 ansi31"> FAIL! us-east-1: Found Security Group: sg-0d817bae8139665a2 open to 0.0.0.0/0 for MySQL port </span>
       <span class="ansi1 ansi32"> PASS!</span> us-east-2: No Security Groups found open to 0.0.0.0/0 for MySQL port
       <span class="ansi1 ansi32"> PASS!</span> us-west-1: No Security Groups found open to 0.0.0.0/0 for MySQL port
       <span class="ansi1 ansi32"> PASS!</span> us-west-2: No Security Groups found open to 0.0.0.0/0 for MySQL port
@@ -1126,9 +1141,9 @@
       <span class="ansi1 ansi32"> PASS!</span> ap-southeast-1: No Security Groups found open to 0.0.0.0/0 for Postgres port
       <span class="ansi1 ansi32"> PASS!</span> ap-southeast-2: No Security Groups found open to 0.0.0.0/0 for Postgres port
       <span class="ansi1 ansi32"> PASS!</span> eu-central-1: No Security Groups found open to 0.0.0.0/0 for Postgres port
-      <span class="ansi1 ansi31"> FAIL! us-east-1: Found Security Group: sg-02227c74d17b6ba6b open to 0.0.0.0/0 for Postgres port </span>
-      <span class="ansi1 ansi31"> FAIL! us-east-1: Found Security Group: sg-038b09dcdd2d5b9b0 open to 0.0.0.0/0 for Postgres port </span>
-      <span class="ansi1 ansi31"> FAIL! us-east-1: Found Security Group: sg-0be22c6f4acf838e9 open to 0.0.0.0/0 for Postgres port </span>
+      <span class="ansi1 ansi31"> FAIL! us-east-1: Found Security Group: sg-010b97f3c0f6a49ab open to 0.0.0.0/0 for Postgres port </span>
+      <span class="ansi1 ansi31"> FAIL! us-east-1: Found Security Group: sg-0c42ae27291342d33 open to 0.0.0.0/0 for Postgres port </span>
+      <span class="ansi1 ansi31"> FAIL! us-east-1: Found Security Group: sg-0d817bae8139665a2 open to 0.0.0.0/0 for Postgres port </span>
       <span class="ansi1 ansi32"> PASS!</span> us-east-2: No Security Groups found open to 0.0.0.0/0 for Postgres port
       <span class="ansi1 ansi32"> PASS!</span> us-west-1: No Security Groups found open to 0.0.0.0/0 for Postgres port
       <span class="ansi1 ansi32"> PASS!</span> us-west-2: No Security Groups found open to 0.0.0.0/0 for Postgres port
@@ -1146,8 +1161,8 @@
       <span class="ansi1 ansi32"> PASS!</span> ap-southeast-1: No Security Groups found open to 0.0.0.0/0 for Redis port
       <span class="ansi1 ansi32"> PASS!</span> ap-southeast-2: No Security Groups found open to 0.0.0.0/0 for Redis port
       <span class="ansi1 ansi32"> PASS!</span> eu-central-1: No Security Groups found open to 0.0.0.0/0 for Redis port
-      <span class="ansi1 ansi31"> FAIL! us-east-1: Found Security Group: sg-02227c74d17b6ba6b open to 0.0.0.0/0 for Redis port </span>
-      <span class="ansi1 ansi31"> FAIL! us-east-1: Found Security Group: sg-038b09dcdd2d5b9b0 open to 0.0.0.0/0 for Redis port </span>
+      <span class="ansi1 ansi31"> FAIL! us-east-1: Found Security Group: sg-010b97f3c0f6a49ab open to 0.0.0.0/0 for Redis port </span>
+      <span class="ansi1 ansi31"> FAIL! us-east-1: Found Security Group: sg-0c42ae27291342d33 open to 0.0.0.0/0 for Redis port </span>
       <span class="ansi1 ansi32"> PASS!</span> us-east-2: No Security Groups found open to 0.0.0.0/0 for Redis port
       <span class="ansi1 ansi32"> PASS!</span> us-west-1: No Security Groups found open to 0.0.0.0/0 for Redis port
       <span class="ansi1 ansi32"> PASS!</span> us-west-2: No Security Groups found open to 0.0.0.0/0 for Redis port
@@ -1165,9 +1180,9 @@
       <span class="ansi1 ansi32"> PASS!</span> ap-southeast-1: No Security Groups found open to 0.0.0.0/0 for MongoDB ports
       <span class="ansi1 ansi32"> PASS!</span> ap-southeast-2: No Security Groups found open to 0.0.0.0/0 for MongoDB ports
       <span class="ansi1 ansi32"> PASS!</span> eu-central-1: No Security Groups found open to 0.0.0.0/0 for MongoDB ports
-      <span class="ansi1 ansi31"> FAIL! us-east-1: Found Security Group: sg-02227c74d17b6ba6b open to 0.0.0.0/0 for MongoDB ports </span>
-      <span class="ansi1 ansi31"> FAIL! us-east-1: Found Security Group: sg-038b09dcdd2d5b9b0 open to 0.0.0.0/0 for MongoDB ports </span>
-      <span class="ansi1 ansi31"> FAIL! us-east-1: Found Security Group: sg-0be22c6f4acf838e9 open to 0.0.0.0/0 for MongoDB ports </span>
+      <span class="ansi1 ansi31"> FAIL! us-east-1: Found Security Group: sg-010b97f3c0f6a49ab open to 0.0.0.0/0 for MongoDB ports </span>
+      <span class="ansi1 ansi31"> FAIL! us-east-1: Found Security Group: sg-0c42ae27291342d33 open to 0.0.0.0/0 for MongoDB ports </span>
+      <span class="ansi1 ansi31"> FAIL! us-east-1: Found Security Group: sg-0d817bae8139665a2 open to 0.0.0.0/0 for MongoDB ports </span>
       <span class="ansi1 ansi32"> PASS!</span> us-east-2: No Security Groups found open to 0.0.0.0/0 for MongoDB ports
       <span class="ansi1 ansi32"> PASS!</span> us-west-1: No Security Groups found open to 0.0.0.0/0 for MongoDB ports
       <span class="ansi1 ansi32"> PASS!</span> us-west-2: No Security Groups found open to 0.0.0.0/0 for MongoDB ports
@@ -1185,8 +1200,8 @@
       <span class="ansi1 ansi32"> PASS!</span> ap-southeast-1: No Security Groups found open to 0.0.0.0/0 for Cassandra ports
       <span class="ansi1 ansi32"> PASS!</span> ap-southeast-2: No Security Groups found open to 0.0.0.0/0 for Cassandra ports
       <span class="ansi1 ansi32"> PASS!</span> eu-central-1: No Security Groups found open to 0.0.0.0/0 for Cassandra ports
-      <span class="ansi1 ansi31"> FAIL! us-east-1: Found Security Group: sg-02227c74d17b6ba6b open to 0.0.0.0/0 for Cassandra ports </span>
-      <span class="ansi1 ansi31"> FAIL! us-east-1: Found Security Group: sg-038b09dcdd2d5b9b0 open to 0.0.0.0/0 for Cassandra ports </span>
+      <span class="ansi1 ansi31"> FAIL! us-east-1: Found Security Group: sg-010b97f3c0f6a49ab open to 0.0.0.0/0 for Cassandra ports </span>
+      <span class="ansi1 ansi31"> FAIL! us-east-1: Found Security Group: sg-0c42ae27291342d33 open to 0.0.0.0/0 for Cassandra ports </span>
       <span class="ansi1 ansi32"> PASS!</span> us-east-2: No Security Groups found open to 0.0.0.0/0 for Cassandra ports
       <span class="ansi1 ansi32"> PASS!</span> us-west-1: No Security Groups found open to 0.0.0.0/0 for Cassandra ports
       <span class="ansi1 ansi32"> PASS!</span> us-west-2: No Security Groups found open to 0.0.0.0/0 for Cassandra ports
@@ -1204,8 +1219,8 @@
       <span class="ansi1 ansi32"> PASS!</span> ap-southeast-1: No Security Groups found open to 0.0.0.0/0 for Memcached port
       <span class="ansi1 ansi32"> PASS!</span> ap-southeast-2: No Security Groups found open to 0.0.0.0/0 for Memcached port
       <span class="ansi1 ansi32"> PASS!</span> eu-central-1: No Security Groups found open to 0.0.0.0/0 for Memcached port
-      <span class="ansi1 ansi31"> FAIL! us-east-1: Found Security Group: sg-02227c74d17b6ba6b open to 0.0.0.0/0 for Memcached port </span>
-      <span class="ansi1 ansi31"> FAIL! us-east-1: Found Security Group: sg-038b09dcdd2d5b9b0 open to 0.0.0.0/0 for Memcached port </span>
+      <span class="ansi1 ansi31"> FAIL! us-east-1: Found Security Group: sg-010b97f3c0f6a49ab open to 0.0.0.0/0 for Memcached port </span>
+      <span class="ansi1 ansi31"> FAIL! us-east-1: Found Security Group: sg-0c42ae27291342d33 open to 0.0.0.0/0 for Memcached port </span>
       <span class="ansi1 ansi32"> PASS!</span> us-east-2: No Security Groups found open to 0.0.0.0/0 for Memcached port
       <span class="ansi1 ansi32"> PASS!</span> us-west-1: No Security Groups found open to 0.0.0.0/0 for Memcached port
       <span class="ansi1 ansi32"> PASS!</span> us-west-2: No Security Groups found open to 0.0.0.0/0 for Memcached port

@@ -1236,12 +1236,17 @@ Handlebars.registerPartial("dashboard", $("#services\\.id\\.findings\\.partial")
         </div>
             <div class="list-group-item">
                 <h4 class="list-group-item-heading">Information</h4>
-                <div class="list-group-item-text">ID: {{name}}</div>
-                <div class="list-group-item-text">VPC ID: {{VpcId}}</div>
-                <div class="list-group-item-text">Availability Zone: {{AvailabilityZone}}</div>
-                <div class="list-group-item-text">CIDR Block: {{CidrBlock}}</div>
-                <div class="list-group-item-text">IPv6 CIDR Block: {{Ipv6CidrBlockAssociationSet}}</div>
-                <div class="list-group-item-text">Public IP on launch: {{MapPublicIpOnLaunch}}</div>
+                {{#ifEqual name id}}
+                <div class="list-group-item-text">Name: <samp>None</samp></div>
+                {{else}}
+                <div class="list-group-item-text">Name: <samp>{{name}}</samp></div>
+                {{/ifEqual}}
+                <div class="list-group-item-text">ID: <samp>{{id}}</samp></div>
+                <div class="list-group-item-text">VPC ID: <samp>{{VpcId}}</samp></div>
+                <div class="list-group-item-text">Availability Zone: <samp>{{AvailabilityZone}}</samp></div>
+                <div class="list-group-item-text">CIDR Block: <samp>{{CidrBlock}}</samp></div>
+                <div class="list-group-item-text">IPv6 CIDR Block: {{value_or_none CidrBlockv6}}</div>
+                <div class="list-group-item-text">Public IP on Launch: {{convert_bool_to_enabled MapPublicIpOnLaunch}}</div>
             </div>
             <div class="list-group-item">
                 <h4 class="list-group-item-heading accordion-heading">Instances
@@ -1277,13 +1282,14 @@ Handlebars.registerPartial("dashboard", $("#services\\.id\\.findings\\.partial")
     <script>
         var single_vpc_subnet_template = Handlebars.compile($("#single_vpc_subnet-template").html());
     </script>
+
 <!-- AMIs partial -->
 <script id="services.ec2.regions.id.images.partial" type="text/x-handlebars-template">
-    <div id="resource-name" class="list-group-item active">
+    <div class="list-group-item active">
         <h4 class="list-group-item-heading">{{name}}</h4>
     </div>
     <div class="list-group-item">
-        <h4>Information</h4>
+        <h4 class="list-group-item-heading">Information</h4>
         <ul>
             <li class="list-group-item-text">ID: {{id}}</li>
             <li class="list-group-item-text">Architecture: {{getValueAt 'services.ec2.regions' region 'images' id 'Architecture'}}</li>
@@ -1423,6 +1429,16 @@ Handlebars.registerPartial("dashboard", $("#services\\.id\\.findings\\.partial")
                 </div>
             </div>
         </div>
+        {{#if tags}}
+            <div class="list-group-item">
+                <h4>Tags</h4>
+                <ul>
+                    {{#each tags}}
+                    <li class="list-group-item-text"><samp>{{@key}}</samp>: <samp>{{this}}</samp></li>
+                    {{/each}}
+                </ul>
+            </div>
+        {{/if}}
 
     </script>
     <script>
@@ -1444,9 +1460,13 @@ Handlebars.registerPartial("dashboard", $("#services\\.id\\.findings\\.partial")
           <h4 class="list-group-item-heading">{{name}}</h4>
         </div>
         <div class="list-group-item">
-          <h4 class="list-group-item-heading">Information</h4>
-          <div class="list-group-item-text item-margin">Creation date: {{CreateDate}}</div>
-          <div class="list-group-item-text item-margin">ARN: {{arn}}</div>
+            <h4 class="list-group-item-heading">Information</h4>
+            <div class="list-group-item-text item-margin">ID: <span id="iam.roles.{{@key}}.id"><samp>{{value_or_none id}}</samp></span></div>
+            <div class="list-group-item-text item-margin">Arn: <span id="iam.roles.{{@key}}.arn"><samp>{{value_or_none arn}}</samp></span></div>
+            <div class="list-group-item-text item-margin">Description: <span id="iam.roles.{{@key}}.description"><samp>{{value_or_none description}}</samp></span></div>
+            <div class="list-group-item-text item-margin">Creation Date: <span id="iam.roles.{{@key}}.create_date">{{format_date create_date}}</span></div>
+            <div class="list-group-item-text item-margin">Path: <span id="iam.roles.{{@key}}.path"><samp>{{value_or_none path}}</samp></span></div>
+            <div class="list-group-item-text item-margin">Max Session Duration: <span id="iam.roles.{{@key}}.max_session_duration"><samp>{{value_or_none max_session_duration}}</samp></span></div>
         </div>
         <div class="list-group-item">
             {{> accordion_policy name = 'Role Trust Policy' policy_path = (concat 'iam.roles' @key 'assume_role_policy.PolicyDocument') document = assume_role_policy.PolicyDocument}}
@@ -1837,6 +1857,16 @@ Handlebars.registerPartial("dashboard", $("#services\\.id\\.findings\\.partial")
             {{> services.elb.regions.vpcs.elbs.linked_resources region = region vpc = vpc resources = Subnets resource_type = 'subnets'}}
           </ul>
         </div>
+        {{#if tags}}
+            <div class="list-group-item">
+                <h4>Tags</h4>
+                <ul>
+                    {{#each tags}}
+                        <li class="list-group-item-text"><samp>{{@key}}</samp>: <samp>{{this}}</samp></li>
+                    {{/each}}
+                </ul>
+            </div>
+        {{/if}}
     </script>
     <script>
       Handlebars.registerPartial("services.elb.regions.id.vpcs.id.elbs", $("#services\\.elb\\.regions\\.id\\.vpcs\\.id\\.elbs\\.partial").html());
@@ -2013,38 +2043,37 @@ Handlebars.registerPartial("dashboard", $("#services\\.id\\.findings\\.partial")
 
 <!-- Trail partial -->
 <script id="services.cloudtrail.regions.id.trails.partial" type="text/x-handlebars-template">
-  {{#unless scout_link}}
     <div id="resource-name" class="list-group-item active">
       <h4 class="list-group-item-heading">{{name}}</h4>
     </div>
     <div class="list-group-item">
     <h4>Information</h4>
       <ul>
-        <li class="list-group-item-text">Name: {{name}}</li>
-        <li class="list-group-item-text">Region: {{region}}</li>
-        <li class="list-group-item-text">Logging: <span id="cloudtrail.regions.{{region}}.trails.{{@key}}.IsLogging">{{IsLogging}}</span></li>
-        <li class="list-group-item-text">Data events: <span id="cloudtrail.regions.{{region}}.trails.{{@key}}.cloudtrail-data-events-disabled">{{DataEventsEnabled}}</span></li>
-
-        <li class="list-group-item-text">Management events: <span id="cloudtrail.regions.{{region}}.trails.{{@key}}.cloudtrail-management-events-disabled">{{ManagementEventsEnabled}}</span></li>
-        <li class="list-group-item-text">Multi region: {{IsMultiRegionTrail}}</li>
-        {{#ifEqual IsMultiRegionTrail "true"}}
-          <li></li>
-        {{/ifEqual}}
-        <li class="list-group-item-text">Start Logging Time: {{StartLoggingTime}}</li>
-        <li class="list-group-item-text">Stop Logging Time: {{StopLoggingTime}}</li>
-        <li class="list-group-item-text">Include global services:
+        <li class="list-group-item-text">Region: <samp>{{region}}</samp>
+        {{#if scout_link}}
+        <i class="fa fa-exclamation-triangle"></i> multi-region trail
+        {{/if}}
+        </li>
+        {{#unless scout_link}}
+        <li class="list-group-item-text">Logging: <span id="cloudtrail.regions.{{region}}.trails.{{@key}}.IsLogging">{{convert_bool_to_enabled IsLogging}}</span></li>
+        <li class="list-group-item-text">Start Logging Time: {{format_date StartLoggingTime}}</li>
+        <li class="list-group-item-text">Stop Logging Time: {{format_date StopLoggingTime}}</li>
+        <li class="list-group-item-text">Multi Region: {{convert_bool_to_enabled IsMultiRegionTrail}}</li>
+        <li class="list-group-item-text">Management Events: <span id="cloudtrail.regions.{{region}}.trails.{{@key}}.cloudtrail-management-events-disabled">{{convert_bool_to_enabled ManagementEventsEnabled}}</span></li>
+        <li class="list-group-item-text">Data Events: <span id="cloudtrail.regions.{{region}}.trails.{{@key}}.cloudtrail-data-events-disabled">{{convert_bool_to_enabled DataEventsEnabled}}</span></li>
+        <li class="list-group-item-text">Include Global Services:
           <span id="cloudtrail.regions.{{region}}.trails.{{@key}}.GlobalServicesDuplicated">
             <span id="cloudtrail.regions.{{region}}.trails.{{@key}}.IncludeGlobalServiceEvents">
-              {{#if IncludeGlobalServiceEvents}} True {{#unless IsLogging}}(Trail disabled){{/unless}} {{else}} False {{/if}}
+              <samp>{{#if IncludeGlobalServiceEvents}} true {{#unless IsLogging}}(Trail disabled){{/unless}} {{else}} false {{/if}}</samp>
             </span>
           </span>
         </li>
-        <li class="list-group-item-text">Log File Validation Enabled: <span id="cloudtrail.regions.{{region}}.trails.{{@key}}.LogFileValidationDisabled">{{LogFileValidationEnabled}}</span></li>
-        <li class="list-group-item-text">Destination S3 bucket name: <a href="javascript:showObject('services.s3.buckets.{{bucket_id}}')">{{getValueAt 'services.s3.buckets' bucket_id 'name'}}</a>/{{S3KeyPrefix}}</li>
-        <li class="list-group-item-text">KMS key: <span id="cloudtrail.regions.{{region}}.trails.{{@key}}.cloudtrail-kms-key-unused">{{#if KmsKeyId}} true {{else}} false {{/if}}</span></li>
+        <li class="list-group-item-text">Destination S3 Bucket Name: <samp><a href="javascript:showObject('services.s3.buckets.{{bucket_id}}')">{{getValueAt 'services.s3.buckets' bucket_id 'name'}}</a>/{{S3KeyPrefix}}</samp></li>
+        <li class="list-group-item-text">Log File Validation Enabled: <span id="cloudtrail.regions.{{region}}.trails.{{@key}}.LogFileValidationDisabled">{{convert_bool_to_enabled LogFileValidationEnabled}}</span></li>
+        <li class="list-group-item-text">KMS Key: <span id="cloudtrail.regions.{{region}}.trails.{{@key}}.cloudtrail-kms-key-unused"><samp>{{#if KmsKeyId}} true {{else}} false {{/if}}</samp></span></li>
+        {{/unless}}
       </ul>
     </div>
-  {{/unless}}
 </script>
 <script>
   Handlebars.registerPartial("services.cloudtrail.regions.id.trails", $("#services\\.cloudtrail\\.regions\\.id\\.trails\\.partial").html());
@@ -2250,16 +2279,16 @@ Handlebars.registerPartial("dashboard", $("#services\\.id\\.findings\\.partial")
     </div>
     <div class="list-group-item">
         <h4 class="list-group-item-heading">Credentials Report</h4>
-        <div class="list-group-item-text item-margin">Creation date: {{ format_date (getValueAt 'services' 'iam' 'credential_reports' @key 'user_creation_time')}}</div>
-        <div class="list-group-item-text item-margin">Last used date:  <span id="iam.credential_reports.{{@key}}.inactive_user">{{ format_date (getValueAt 'services' 'iam' 'credential_reports' @key 'last_used')}}</span></div>
-        <div class="list-group-item-text item-margin">Password last used: <span id="iam.credential_reports.{{@key}}.password_last_used">{{ format_date (getValueAt 'services' 'iam' 'credential_reports' @key 'password_last_used')}}</span></div>
-        <div class="list-group-item-text item-margin">MFA enabled: <span id="iam.credential_reports.{{@key}}.mfa_active">{{getValueAt 'services' 'iam' 'credential_reports' @key 'mfa_active'}}</span></div>
-        <div class="list-group-item-text item-margin">Access key 1 active: <span id="iam.credential_reports.{{@key}}.access_key_1_active">{{getValueAt 'services' 'iam' 'credential_reports' @key 'access_key_1_active'}}</span></div>
-        <div class="list-group-item-text item-margin">Access key 2 active: <span id="iam.credential_reports.{{@key}}.access_key_2_active">{{getValueAt 'services' 'iam' 'credential_reports' @key 'access_key_2_active'}}</span></div>
-        <div class="list-group-item-text item-margin">Signing cert 1 active: {{getValueAt 'services' 'iam' 'credential_reports' @key 'cert_1_active'}}</div>
-        <div class="list-group-item-text item-margin">Signing cert 2 active: {{getValueAt 'services' 'iam' 'credential_reports' @key 'cert_2_active'}}</div>
-        <div class="list-group-item-text item-margin">Cert 1 last used: {{format_date (getValueAt 'services' 'iam' 'credential_reports' @key 'access_key_1_last_used_date')}}</div>
-        <div class="list-group-item-text item-margin">Cert 2 last used: {{format_date (getValueAt 'services' 'iam' 'credential_reports' @key 'access_key_2_last_used_date')}}</div>
+        <div class="list-group-item-text item-margin">Creation Date: {{ format_date (getValueAt 'services' 'iam' 'credential_reports' @key 'user_creation_time')}}</div>
+        <div class="list-group-item-text item-margin">Last Used Date:  <span id="iam.credential_reports.{{@key}}.inactive_user">{{ format_date (getValueAt 'services' 'iam' 'credential_reports' @key 'last_used')}}</span></div>
+        <div class="list-group-item-text item-margin">Password Last Used: <span id="iam.credential_reports.{{@key}}.password_last_used">{{ format_date (getValueAt 'services' 'iam' 'credential_reports' @key 'password_last_used')}}</span></div>
+        <div class="list-group-item-text item-margin">MFA Active: <span id="iam.credential_reports.{{@key}}.mfa_active"><samp>{{getValueAt 'services' 'iam' 'credential_reports' @key 'mfa_active'}}</samp></span></div>
+        <div class="list-group-item-text item-margin">Access Key 1 Active: <span id="iam.credential_reports.{{@key}}.access_key_1_active"><samp>{{getValueAt 'services' 'iam' 'credential_reports' @key 'access_key_1_active'}}</samp></span></div>
+        <div class="list-group-item-text item-margin">Access Key 2 Active: <span id="iam.credential_reports.{{@key}}.access_key_2_active"><samp>{{getValueAt 'services' 'iam' 'credential_reports' @key 'access_key_2_active'}}</samp></span></div>
+        <div class="list-group-item-text item-margin">Access Key 1 Last Used: {{format_date (getValueAt 'services' 'iam' 'credential_reports' @key 'access_key_1_last_used_date')}}</div>
+        <div class="list-group-item-text item-margin">Access Key 2 Last Used: {{format_date (getValueAt 'services' 'iam' 'credential_reports' @key 'access_key_2_last_used_date')}}</div>
+        <div class="list-group-item-text item-margin">Signing Cert 1 Active: <samp>{{getValueAt 'services' 'iam' 'credential_reports' @key 'cert_1_active'}}</samp></div>
+        <div class="list-group-item-text item-margin">Signing Cert 2 Active: <samp>{{getValueAt 'services' 'iam' 'credential_reports' @key 'cert_2_active'}}</samp></div>
     </div>
   </script>
 
@@ -2801,7 +2830,7 @@ Handlebars.registerPartial("dashboard", $("#services\\.id\\.findings\\.partial")
             <li class="list-group-item-text">Is read replica: {{is_read_replica}}</li>
             <li class="list-group-item-text">Auto Minor Version Upgrade: <span id="rds.regions.{{region}}.vpcs.{{vpc}}.instances.{{@key}}.AutoMinorVersionUpgrade">{{#if AutoMinorVersionUpgrade}} Enabled {{else}} Disabled {{/if}}</span></li>
             <li class="list-group-item-text">Multi Availability Zones: <span id="rds.regions.{{region}}.vpcs.{{vpc}}.instances.{{@key}}.MultiAZ">{{#if MultiAZ}} Enabled {{else}} Disabled {{/if}}</span></li>
-            <li class="list-group-item-text">Instance Class: <span id="rds.regions.{{region}}.vpcs.{{vpc}}.instances.{{@key}}.DBInstanceClass"> {{DBInstanceClass}}<span></li>
+            <li class="list-group-item-text">Instance Class: <span id="rds.regions.{{region}}.vpcs.{{vpc}}.instances.{{@key}}.DBInstanceClass">{{DBInstanceClass}}</span></li>
             <li class="list-group-item-text">Created on: {{InstanceCreateTime}}</li>
             <li class="list-group-item-text">Backup retention period in days: <span id="rds.regions.{{region}}.vpcs.{{vpc}}.instances.{{@key}}.BackupRetentionPeriod">{{BackupRetentionPeriod}}</span>
             <li class="list-group-item-text">Publicly accessible: <span id="rds.regions.{{region}}.vpcs.{{vpc}}.instances.{{@key}}.instance_publicly_accessible">{{PubliclyAccessible}}</span>
@@ -2809,10 +2838,8 @@ Handlebars.registerPartial("dashboard", $("#services\\.id\\.findings\\.partial")
               <span id="rds.regions.{{region}}.vpcs.{{vpc}}.instances.{{@key}}.EnhancedMonitoringResourceArn">{{#if EnhancedMonitoringResourceArn}} Enabled {{else}} Disabled {{/if}}</span>
             </li>
             <li class="list-group-item-text">Encrypted Storage: <span id="rds.regions.{{region}}.vpcs.{{vpc}}.instances.{{@key}}.StorageEncrypted">{{StorageEncrypted}}</span></li>
+            <li class="list-group-item-text">CA Certificate: <span id="rds.regions.{{region}}.vpcs.{{vpc}}.instances.{{@key}}.CACertificateIdentifier">{{CACertificateIdentifier}}</span></li>
           </ul>
-          <span id="rds.regions.{{region}}.vpcs.{{vpc}}.instances.{{@key}}.pgsslcert" class="finding-hidden item-margin">
-           <i class="fa fa-exclamation-triangle"></i> SSL/TLS certificates on PostgreSQL instances created before August 8, 2014, cannot be verified.
-          </span>
         </div>
         <div class="list-group-item">
           <h4>Network</h4>
