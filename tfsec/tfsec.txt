@@ -1,303 +1,6 @@
+29 potential problems detected:
+
 Problem 1
-
-  [AWS008] Resource 'aws_security_group.all_ports_to_all' defines a fully open ingress security group.
-  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/ec2/main.tf:45
-
-      42 |     from_port   = 0
-      43 |     to_port     = 0
-      44 |     protocol    = -1
-      45 |     cidr_blocks = ["0.0.0.0/0"]
-      46 |   }
-      47 | 
-      48 |   egress {
-
-Problem 2
-
-  [AWS009] Resource 'aws_security_group.all_ports_to_all' defines a fully open egress security group.
-  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/ec2/main.tf:52
-
-      49 |     from_port   = 0
-      50 |     to_port     = 0
-      51 |     protocol    = -1
-      52 |     cidr_blocks = ["0.0.0.0/0"]
-      53 |   }
-      54 | 
-      55 |   egress {
-
-Problem 3
-
-  [AWS008] Resource 'aws_security_group.all_ports_to_self' defines a fully open ingress security group.
-  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/ec2/main.tf:73
-
-      70 |     from_port   = 0
-      71 |     to_port     = 0
-      72 |     protocol    = -1
-      73 |     cidr_blocks = ["0.0.0.0/0"]
-      74 |     self        = true
-      75 |   }
-      76 | 
-
-Problem 4
-
-  [AWS009] Resource 'aws_security_group.all_ports_to_self' defines a fully open egress security group.
-  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/ec2/main.tf:81
-
-      78 |     from_port   = 0
-      79 |     to_port     = 0
-      80 |     protocol    = -1
-      81 |     cidr_blocks = ["0.0.0.0/0"]
-      82 |   }
-      83 | 
-      84 |   egress {
-
-Problem 5
-
-  [AWS008] Resource 'aws_security_group.icmp_to_all' defines a fully open ingress security group.
-  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/ec2/main.tf:102
-
-      99 |     from_port   = 0
-     100 |     to_port     = 0
-     101 |     protocol    = "icmp"
-     102 |     cidr_blocks = ["0.0.0.0/0"]
-     103 |   }
-     104 | 
-     105 |   egress {
-
-Problem 6
-
-  [AWS009] Resource 'aws_security_group.icmp_to_all' defines a fully open egress security group.
-  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/ec2/main.tf:109
-
-     106 |     from_port   = 0
-     107 |     to_port     = 0
-     108 |     protocol    = -1
-     109 |     cidr_blocks = ["0.0.0.0/0"]
-     110 |   }
-     111 | 
-     112 |   egress {
-
-Problem 7
-
-  [AWS008] Resource 'aws_security_group.known_port_to_all' defines a fully open ingress security group.
-  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/ec2/main.tf:130
-
-     127 |     from_port   = 22 # SSH
-     128 |     to_port     = 22
-     129 |     protocol    = "tcp"
-     130 |     cidr_blocks = ["0.0.0.0/0"]
-     131 |   }
-     132 | 
-     133 |   ingress {
-
-Problem 8
-
-  [AWS009] Resource 'aws_security_group.known_port_to_all' defines a fully open egress security group.
-  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/ec2/main.tf:200
-
-     197 |     from_port   = 0
-     198 |     to_port     = 0
-     199 |     protocol    = -1
-     200 |     cidr_blocks = ["0.0.0.0/0"]
-     201 |   }
-     202 | 
-     203 |   egress {
-
-Problem 9
-
-  [AWS008] Resource 'aws_security_group.opens_plaintext_port' defines a fully open ingress security group.
-  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/ec2/main.tf:221
-
-     218 |     from_port   = 21 # FTP
-     219 |     to_port     = 21
-     220 |     protocol    = "tcp"
-     221 |     cidr_blocks = ["0.0.0.0/0"]
-     222 |   }
-     223 | 
-     224 |   ingress {
-
-Problem 10
-
-  [AWS009] Resource 'aws_security_group.opens_plaintext_port' defines a fully open egress security group.
-  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/ec2/main.tf:235
-
-     232 |     from_port   = 0
-     233 |     to_port     = 0
-     234 |     protocol    = -1
-     235 |     cidr_blocks = ["0.0.0.0/0"]
-     236 |   }
-     237 | 
-     238 |   egress {
-
-Problem 11
-
-  [AWS008] Resource 'aws_security_group.opens_port_range' defines a fully open ingress security group.
-  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/ec2/main.tf:256
-
-     253 |     from_port   = 21
-     254 |     to_port     = 25
-     255 |     protocol    = "tcp"
-     256 |     cidr_blocks = ["0.0.0.0/0"]
-     257 |   }
-     258 | 
-     259 |   egress {
-
-Problem 12
-
-  [AWS009] Resource 'aws_security_group.opens_port_range' defines a fully open egress security group.
-  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/ec2/main.tf:263
-
-     260 |     from_port   = 0
-     261 |     to_port     = 0
-     262 |     protocol    = -1
-     263 |     cidr_blocks = ["0.0.0.0/0"]
-     264 |   }
-     265 | 
-     266 |   egress {
-
-Problem 13
-
-  [AWS008] Resource 'aws_security_group.opens_port_to_all' defines a fully open ingress security group.
-  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/ec2/main.tf:284
-
-     281 |     from_port   = 21
-     282 |     to_port     = 21
-     283 |     protocol    = "tcp"
-     284 |     cidr_blocks = ["0.0.0.0/0"]
-     285 |   }
-     286 | 
-     287 |   egress {
-
-Problem 14
-
-  [AWS009] Resource 'aws_security_group.opens_port_to_all' defines a fully open egress security group.
-  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/ec2/main.tf:291
-
-     288 |     from_port   = 0
-     289 |     to_port     = 0
-     290 |     protocol    = -1
-     291 |     cidr_blocks = ["0.0.0.0/0"]
-     292 |   }
-     293 | 
-     294 |   egress {
-
-Problem 15
-
-  [AWS009] Resource 'aws_security_group.whitelists_aws_ip_from_banned_region' defines a fully open egress security group.
-  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/ec2/main.tf:319
-
-     316 |     from_port   = 0
-     317 |     to_port     = 0
-     318 |     protocol    = -1
-     319 |     cidr_blocks = ["0.0.0.0/0"]
-     320 |   }
-     321 | 
-     322 |   egress {
-
-Problem 16
-
-  [AWS009] Resource 'aws_security_group.whitelists_aws' defines a fully open egress security group.
-  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/ec2/main.tf:347
-
-     344 |     from_port   = 0
-     345 |     to_port     = 0
-     346 |     protocol    = -1
-     347 |     cidr_blocks = ["0.0.0.0/0"]
-     348 |   }
-     349 | 
-     350 |   egress {
-
-Problem 17
-
-  [AWS009] Resource 'aws_security_group.whitelists_unknown_cidrs' defines a fully open egress security group.
-  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/ec2/main.tf:375
-
-     372 |     from_port   = 0
-     373 |     to_port     = 0
-     374 |     protocol    = -1
-     375 |     cidr_blocks = ["0.0.0.0/0"]
-     376 |   }
-     377 | 
-     378 |   egress {
-
-Problem 18
-
-  [AWS009] Resource 'aws_security_group.unused_security_group' defines a fully open egress security group.
-  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/ec2/main.tf:401
-
-     398 |     from_port   = 0
-     399 |     to_port     = 0
-     400 |     protocol    = -1
-     401 |     cidr_blocks = ["0.0.0.0/0"]
-     402 |   }
-     403 | 
-     404 |   egress {
-
-Problem 19
-
-  [AWS002] Resource 'aws_s3_bucket.access_logging' does not have logging enabled.
-  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/elbv2/main.tf:1-6
-
-       1 | resource "aws_s3_bucket" "access_logging" {
-       2 |   bucket_prefix = var.name
-       3 |   acl    = "private"
-       4 | 
-       5 |   count = "${var.no_access_logs && (var.no_deletion_protection || var.older_ssl_policy) ? 1 : 0}"
-       6 | }
-       7 | 
-       8 | resource "aws_lb" "main" {
-       9 |   load_balancer_type = "application"
-
-Problem 20
-
-  [AWS005] Resource 'aws_lb.main' is exposed publicly.
-  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/elbv2/main.tf:8-19
-
-       5 |   count = "${var.no_access_logs && (var.no_deletion_protection || var.older_ssl_policy) ? 1 : 0}"
-       6 | }
-       7 | 
-       8 | resource "aws_lb" "main" {
-       9 |   load_balancer_type = "application"
-      10 |   enable_deletion_protection = !var.no_deletion_protection
-      11 |   subnets = ["${var.main_subnet_id}","${var.secondary_subnet_id}"]
-      12 | 
-      13 |   access_logs {
-      14 |     bucket  = "${aws_s3_bucket.access_logging[0].bucket_prefix}"
-      15 |     enabled = !var.no_access_logs
-      16 |   }
-      17 | 
-      18 |   count = "${(var.older_ssl_policy || var.no_access_logs || var.no_deletion_protection) ? 1 : 0}"
-      19 | }
-      20 | 
-      21 | resource "aws_lb_target_group" "main" {
-      22 |   port     = 80
-
-Problem 21
-
-  [GEN003] Block 'aws_db_instance.main' includes a potentially sensitive attribute which is defined within the project.
-  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/rds/main.tf:14
-
-      11 |   instance_class       = "db.t2.micro"
-      12 |   name                 = var.name
-      13 |   username             = "foo"
-      14 |   password             = "foobarbaz"
-      15 |   skip_final_snapshot = true
-      16 | 
-      17 |   auto_minor_version_upgrade = "${var.no_minor_upgrade ? false : true}"
-
-Problem 22
-
-  [GEN003] Block 'aws_redshift_cluster.main' includes a potentially sensitive attribute which is defined within the project.
-  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/redshift/main.tf:27
-
-      24 | resource "aws_redshift_cluster" "main" {
-      25 |   cluster_identifier = var.name
-      26 |   master_username    = "foo"
-      27 |   master_password    = "Password1"
-      28 |   node_type          = "dc1.large"
-      29 |   cluster_type       = "single-node"
-      30 |   skip_final_snapshot =  true
-
-Problem 23
 
   [AWS002] Resource 'aws_s3_bucket.logging' does not have logging enabled.
   /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/cloudtrail/main.tf:29-34
@@ -315,7 +18,33 @@ Problem 23
       36 | resource "aws_s3_bucket_policy" "CloudTrailS3Bucket-Policy" {
       37 |   bucket = "${aws_s3_bucket.logging[0].id}"
 
-Problem 24
+Problem 2
+
+  [GEN003] Block 'aws_db_instance.main' includes a potentially sensitive attribute which is defined within the project.
+  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/rds/main.tf:14
+
+      11 |   instance_class       = "db.t2.micro"
+      12 |   name                 = var.name
+      13 |   username             = "foo"
+      14 |   password             = "foobarbaz"
+      15 |   skip_final_snapshot = true
+      16 | 
+      17 |   auto_minor_version_upgrade = "${var.no_minor_upgrade ? false : true}"
+
+Problem 3
+
+  [GEN003] Block 'provider.aws' includes a potentially sensitive attribute which is defined within the project.
+  /home/rami/Documents/Desktop/Development/sadcloud/sadcloud/providers.tf:11
+
+       8 | #BASC
+       9 | provider "aws" {
+      10 |   access_key = "XXXX"
+      11 |   secret_key = "XXXX"
+      12 |   region     = "us-east-1"
+      13 | }
+      14 | 
+
+Problem 4
 
   [AWS002] Resource 'aws_s3_bucket.main' does not have logging enabled.
   /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/s3/main.tf:1-38
@@ -362,7 +91,7 @@ Problem 24
       40 | resource "aws_s3_bucket" "logging" {
       41 |   bucket_prefix = var.name
 
-Problem 25
+Problem 5
 
   [AWS002] Resource 'aws_s3_bucket.logging' does not have logging enabled.
   /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/s3/main.tf:40-45
@@ -380,20 +109,327 @@ Problem 25
       47 | data "aws_iam_policy_document" "force_ssl_only_access" {
       48 |   # Force SSL access
 
+Problem 6
+
+  [AWS002] Resource 'aws_s3_bucket.getonly' does not have logging enabled.
+  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/s3/main.tf:101-105
+
+      98 |   count = "${var.s3_getobject_only ? 1 : 0}"
+      99 | }
+     100 | 
+     101 | resource "aws_s3_bucket" "getonly" {
+     102 |   bucket_prefix = "sadcloudhetonlys3"
+     103 | 
+     104 |   count = "${var.s3_getobject_only ? 1 : 0}"
+     105 | }
+     106 | 
+     107 | resource "aws_s3_bucket_policy" "getonly" {
+     108 |   bucket = "${aws_s3_bucket.getonly[0].id}"
+
+Problem 7
+
+  [AWS002] Resource 'aws_s3_bucket.public' does not have logging enabled.
+  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/s3/main.tf:135-139
+
+     132 |   count = "${var.s3_public ? 1 : 0}"
+     133 | }
+     134 | 
+     135 | resource "aws_s3_bucket" "public" {
+     136 |   bucket_prefix = "sadcloudhetonlys3"
+     137 | 
+     138 |   count = "${var.s3_public ? 1 : 0}"
+     139 | }
+     140 | 
+     141 | resource "aws_s3_bucket_policy" "public" {
+     142 |   bucket = "${aws_s3_bucket.public[0].id}"
+
+Problem 8
+
+  [AWS002] Resource 'aws_s3_bucket.access_logging' does not have logging enabled.
+  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/elbv2/main.tf:1-6
+
+       1 | resource "aws_s3_bucket" "access_logging" {
+       2 |   bucket_prefix = var.name
+       3 |   acl    = "private"
+       4 | 
+       5 |   count = "${var.no_access_logs && (var.no_deletion_protection || var.older_ssl_policy) ? 1 : 0}"
+       6 | }
+       7 | 
+       8 | resource "aws_lb" "main" {
+       9 |   load_balancer_type = "application"
+
+Problem 9
+
+  [AWS005] Resource 'aws_lb.main' is exposed publicly.
+  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/elbv2/main.tf:8-19
+
+       5 |   count = "${var.no_access_logs && (var.no_deletion_protection || var.older_ssl_policy) ? 1 : 0}"
+       6 | }
+       7 | 
+       8 | resource "aws_lb" "main" {
+       9 |   load_balancer_type = "application"
+      10 |   enable_deletion_protection = !var.no_deletion_protection
+      11 |   subnets = ["${var.main_subnet_id}","${var.secondary_subnet_id}"]
+      12 | 
+      13 |   access_logs {
+      14 |     bucket  = "${aws_s3_bucket.access_logging[0].bucket_prefix}"
+      15 |     enabled = !var.no_access_logs
+      16 |   }
+      17 | 
+      18 |   count = "${(var.older_ssl_policy || var.no_access_logs || var.no_deletion_protection) ? 1 : 0}"
+      19 | }
+      20 | 
+      21 | resource "aws_lb_target_group" "main" {
+      22 |   port     = 80
+
+Problem 10
+
+  [GEN003] Block 'aws_redshift_cluster.main' includes a potentially sensitive attribute which is defined within the project.
+  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/redshift/main.tf:27
+
+      24 | resource "aws_redshift_cluster" "main" {
+      25 |   cluster_identifier = var.name
+      26 |   master_username    = "foo"
+      27 |   master_password    = "Password1"
+      28 |   node_type          = "dc1.large"
+      29 |   cluster_type       = "single-node"
+      30 |   skip_final_snapshot =  true
+
+Problem 11
+
+  [AWS008] Resource 'aws_security_group.all_ports_to_all' defines a fully open ingress security group.
+  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/ec2/main.tf:45
+
+      42 |     from_port   = 0
+      43 |     to_port     = 0
+      44 |     protocol    = -1
+      45 |     cidr_blocks = ["0.0.0.0/0"]
+      46 |   }
+      47 | 
+      48 |   egress {
+
+Problem 12
+
+  [AWS009] Resource 'aws_security_group.all_ports_to_all' defines a fully open egress security group.
+  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/ec2/main.tf:52
+
+      49 |     from_port   = 0
+      50 |     to_port     = 0
+      51 |     protocol    = -1
+      52 |     cidr_blocks = ["0.0.0.0/0"]
+      53 |   }
+      54 | 
+      55 |   egress {
+
+Problem 13
+
+  [AWS008] Resource 'aws_security_group.all_ports_to_self' defines a fully open ingress security group.
+  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/ec2/main.tf:73
+
+      70 |     from_port   = 0
+      71 |     to_port     = 0
+      72 |     protocol    = -1
+      73 |     cidr_blocks = ["0.0.0.0/0"]
+      74 |     self        = true
+      75 |   }
+      76 | 
+
+Problem 14
+
+  [AWS009] Resource 'aws_security_group.all_ports_to_self' defines a fully open egress security group.
+  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/ec2/main.tf:81
+
+      78 |     from_port   = 0
+      79 |     to_port     = 0
+      80 |     protocol    = -1
+      81 |     cidr_blocks = ["0.0.0.0/0"]
+      82 |   }
+      83 | 
+      84 |   egress {
+
+Problem 15
+
+  [AWS008] Resource 'aws_security_group.icmp_to_all' defines a fully open ingress security group.
+  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/ec2/main.tf:102
+
+      99 |     from_port   = 0
+     100 |     to_port     = 0
+     101 |     protocol    = "icmp"
+     102 |     cidr_blocks = ["0.0.0.0/0"]
+     103 |   }
+     104 | 
+     105 |   egress {
+
+Problem 16
+
+  [AWS009] Resource 'aws_security_group.icmp_to_all' defines a fully open egress security group.
+  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/ec2/main.tf:109
+
+     106 |     from_port   = 0
+     107 |     to_port     = 0
+     108 |     protocol    = -1
+     109 |     cidr_blocks = ["0.0.0.0/0"]
+     110 |   }
+     111 | 
+     112 |   egress {
+
+Problem 17
+
+  [AWS008] Resource 'aws_security_group.known_port_to_all' defines a fully open ingress security group.
+  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/ec2/main.tf:130
+
+     127 |     from_port   = 22 # SSH
+     128 |     to_port     = 22
+     129 |     protocol    = "tcp"
+     130 |     cidr_blocks = ["0.0.0.0/0"]
+     131 |   }
+     132 | 
+     133 |   ingress {
+
+Problem 18
+
+  [AWS009] Resource 'aws_security_group.known_port_to_all' defines a fully open egress security group.
+  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/ec2/main.tf:200
+
+     197 |     from_port   = 0
+     198 |     to_port     = 0
+     199 |     protocol    = -1
+     200 |     cidr_blocks = ["0.0.0.0/0"]
+     201 |   }
+     202 | 
+     203 |   egress {
+
+Problem 19
+
+  [AWS008] Resource 'aws_security_group.opens_plaintext_port' defines a fully open ingress security group.
+  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/ec2/main.tf:221
+
+     218 |     from_port   = 21 # FTP
+     219 |     to_port     = 21
+     220 |     protocol    = "tcp"
+     221 |     cidr_blocks = ["0.0.0.0/0"]
+     222 |   }
+     223 | 
+     224 |   ingress {
+
+Problem 20
+
+  [AWS009] Resource 'aws_security_group.opens_plaintext_port' defines a fully open egress security group.
+  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/ec2/main.tf:235
+
+     232 |     from_port   = 0
+     233 |     to_port     = 0
+     234 |     protocol    = -1
+     235 |     cidr_blocks = ["0.0.0.0/0"]
+     236 |   }
+     237 | 
+     238 |   egress {
+
+Problem 21
+
+  [AWS008] Resource 'aws_security_group.opens_port_range' defines a fully open ingress security group.
+  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/ec2/main.tf:256
+
+     253 |     from_port   = 21
+     254 |     to_port     = 25
+     255 |     protocol    = "tcp"
+     256 |     cidr_blocks = ["0.0.0.0/0"]
+     257 |   }
+     258 | 
+     259 |   egress {
+
+Problem 22
+
+  [AWS009] Resource 'aws_security_group.opens_port_range' defines a fully open egress security group.
+  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/ec2/main.tf:263
+
+     260 |     from_port   = 0
+     261 |     to_port     = 0
+     262 |     protocol    = -1
+     263 |     cidr_blocks = ["0.0.0.0/0"]
+     264 |   }
+     265 | 
+     266 |   egress {
+
+Problem 23
+
+  [AWS008] Resource 'aws_security_group.opens_port_to_all' defines a fully open ingress security group.
+  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/ec2/main.tf:284
+
+     281 |     from_port   = 21
+     282 |     to_port     = 21
+     283 |     protocol    = "tcp"
+     284 |     cidr_blocks = ["0.0.0.0/0"]
+     285 |   }
+     286 | 
+     287 |   egress {
+
+Problem 24
+
+  [AWS009] Resource 'aws_security_group.opens_port_to_all' defines a fully open egress security group.
+  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/ec2/main.tf:291
+
+     288 |     from_port   = 0
+     289 |     to_port     = 0
+     290 |     protocol    = -1
+     291 |     cidr_blocks = ["0.0.0.0/0"]
+     292 |   }
+     293 | 
+     294 |   egress {
+
+Problem 25
+
+  [AWS009] Resource 'aws_security_group.whitelists_aws_ip_from_banned_region' defines a fully open egress security group.
+  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/ec2/main.tf:319
+
+     316 |     from_port   = 0
+     317 |     to_port     = 0
+     318 |     protocol    = -1
+     319 |     cidr_blocks = ["0.0.0.0/0"]
+     320 |   }
+     321 | 
+     322 |   egress {
+
 Problem 26
 
-  [GEN003] Block 'provider.aws' includes a potentially sensitive attribute which is defined within the project.
-  /home/rami/Documents/Desktop/Development/sadcloud/sadcloud/providers.tf:11
+  [AWS009] Resource 'aws_security_group.whitelists_aws' defines a fully open egress security group.
+  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/ec2/main.tf:347
 
-       8 | #BASC
-       9 | provider "aws" {
-      10 |   access_key = "XXXXX"
-      11 |   secret_key = "XXXXX"
-      12 |   region     = "us-east-1"
-      13 | }
-      14 | 
+     344 |     from_port   = 0
+     345 |     to_port     = 0
+     346 |     protocol    = -1
+     347 |     cidr_blocks = ["0.0.0.0/0"]
+     348 |   }
+     349 | 
+     350 |   egress {
 
 Problem 27
+
+  [AWS009] Resource 'aws_security_group.whitelists_unknown_cidrs' defines a fully open egress security group.
+  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/ec2/main.tf:375
+
+     372 |     from_port   = 0
+     373 |     to_port     = 0
+     374 |     protocol    = -1
+     375 |     cidr_blocks = ["0.0.0.0/0"]
+     376 |   }
+     377 | 
+     378 |   egress {
+
+Problem 28
+
+  [AWS009] Resource 'aws_security_group.unused_security_group' defines a fully open egress security group.
+  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/ec2/main.tf:401
+
+     398 |     from_port   = 0
+     399 |     to_port     = 0
+     400 |     protocol    = -1
+     401 |     cidr_blocks = ["0.0.0.0/0"]
+     402 |   }
+     403 | 
+     404 |   egress {
+
+Problem 29
 
   [AWS005] Resource 'aws_elb.main' is exposed publicly.
   /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/elb/main.tf:1-22
