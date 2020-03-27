@@ -1,0 +1,1262 @@
+50 potential problems detected:
+
+Problem 1
+
+  [AWS002][ERROR] Resource 'aws_s3_bucket.access_logging' does not have logging enabled.
+  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/elbv2/main.tf:1-6
+
+       1 | resource "aws_s3_bucket" "access_logging" {
+       2 |   bucket_prefix = var.name
+       3 |   acl    = "private"
+       4 | 
+       5 |   count = "${var.no_access_logs && (var.no_deletion_protection || var.older_ssl_policy) ? 1 : 0}"
+       6 | }
+       7 | 
+       8 | resource "aws_lb" "main" {
+       9 |   load_balancer_type = "application"
+
+  See https://github.com/liamg/tfsec/wiki/AWS002 for more information.
+
+Problem 2
+
+  [AWS017][ERROR] Resource 'aws_s3_bucket.access_logging' defines an unencrypted S3 bucket (missing server_side_encryption_configuration block).
+  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/elbv2/main.tf:1-6
+
+       1 | resource "aws_s3_bucket" "access_logging" {
+       2 |   bucket_prefix = var.name
+       3 |   acl    = "private"
+       4 | 
+       5 |   count = "${var.no_access_logs && (var.no_deletion_protection || var.older_ssl_policy) ? 1 : 0}"
+       6 | }
+       7 | 
+       8 | resource "aws_lb" "main" {
+       9 |   load_balancer_type = "application"
+
+  See https://github.com/liamg/tfsec/wiki/AWS017 for more information.
+
+Problem 3
+
+  [AWS005][WARNING] Resource 'aws_lb.main' is exposed publicly.
+  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/elbv2/main.tf:8-19
+
+       5 |   count = "${var.no_access_logs && (var.no_deletion_protection || var.older_ssl_policy) ? 1 : 0}"
+       6 | }
+       7 | 
+       8 | resource "aws_lb" "main" {
+       9 |   load_balancer_type = "application"
+      10 |   enable_deletion_protection = !var.no_deletion_protection
+      11 |   subnets = ["${var.main_subnet_id}","${var.secondary_subnet_id}"]
+      12 | 
+      13 |   access_logs {
+      14 |     bucket  = "${aws_s3_bucket.access_logging[0].bucket_prefix}"
+      15 |     enabled = !var.no_access_logs
+      16 |   }
+      17 | 
+      18 |   count = "${(var.older_ssl_policy || var.no_access_logs || var.no_deletion_protection) ? 1 : 0}"
+      19 | }
+      20 | 
+      21 | resource "aws_lb_target_group" "main" {
+      22 |   port     = 80
+
+  See https://github.com/liamg/tfsec/wiki/AWS005 for more information.
+
+Problem 4
+
+  [AWS002][ERROR] Resource 'aws_s3_bucket.main' does not have logging enabled.
+  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/s3/main.tf:1-38
+
+       1 | resource "aws_s3_bucket" "main" {
+       2 |   bucket_prefix = var.name
+       3 |   acl    = "private"
+       4 | 
+       5 |   dynamic "server_side_encryption_configuration" {
+       6 |     for_each = var.no_default_encryption ? [] : list(var.no_default_encryption)
+       7 | 
+       8 |     content {
+       9 |       rule {
+      10 |         apply_server_side_encryption_by_default {
+      11 |           sse_algorithm = "AES256"
+      12 |         }
+      13 |       }
+      14 |     }
+      15 |   }
+      16 | 
+      17 |   dynamic "logging" {
+      18 |     for_each = var.no_logging ? [] : list(var.no_logging)
+      19 | 
+      20 |     content {
+      21 |       target_bucket = "${aws_s3_bucket.logging[0].id}"
+      22 |       target_prefix = var.name
+      23 |     }
+      24 |   }
+      25 | 
+      26 |   versioning {
+      27 |       enabled = "${var.no_versioning ? false : true}"
+      28 |       mfa_delete = false
+      29 |   }
+      30 | 
+      31 |   dynamic "website" {
+      32 |     for_each = var.website_enabled ? [] : list(var.website_enabled)
+      33 | 
+      34 |     content {
+      35 |       index_document = "index.html"
+      36 |     }
+      37 |   }
+      38 | }
+      39 | 
+      40 | resource "aws_s3_bucket" "logging" {
+      41 |   bucket_prefix = var.name
+
+  See https://github.com/liamg/tfsec/wiki/AWS002 for more information.
+
+Problem 5
+
+  [AWS017][ERROR] Resource 'aws_s3_bucket.main' defines an unencrypted S3 bucket (missing server_side_encryption_configuration block).
+  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/s3/main.tf:1-38
+
+       1 | resource "aws_s3_bucket" "main" {
+       2 |   bucket_prefix = var.name
+       3 |   acl    = "private"
+       4 | 
+       5 |   dynamic "server_side_encryption_configuration" {
+       6 |     for_each = var.no_default_encryption ? [] : list(var.no_default_encryption)
+       7 | 
+       8 |     content {
+       9 |       rule {
+      10 |         apply_server_side_encryption_by_default {
+      11 |           sse_algorithm = "AES256"
+      12 |         }
+      13 |       }
+      14 |     }
+      15 |   }
+      16 | 
+      17 |   dynamic "logging" {
+      18 |     for_each = var.no_logging ? [] : list(var.no_logging)
+      19 | 
+      20 |     content {
+      21 |       target_bucket = "${aws_s3_bucket.logging[0].id}"
+      22 |       target_prefix = var.name
+      23 |     }
+      24 |   }
+      25 | 
+      26 |   versioning {
+      27 |       enabled = "${var.no_versioning ? false : true}"
+      28 |       mfa_delete = false
+      29 |   }
+      30 | 
+      31 |   dynamic "website" {
+      32 |     for_each = var.website_enabled ? [] : list(var.website_enabled)
+      33 | 
+      34 |     content {
+      35 |       index_document = "index.html"
+      36 |     }
+      37 |   }
+      38 | }
+      39 | 
+      40 | resource "aws_s3_bucket" "logging" {
+      41 |   bucket_prefix = var.name
+
+  See https://github.com/liamg/tfsec/wiki/AWS017 for more information.
+
+Problem 6
+
+  [AWS002][ERROR] Resource 'aws_s3_bucket.logging' does not have logging enabled.
+  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/s3/main.tf:40-45
+
+      37 |   }
+      38 | }
+      39 | 
+      40 | resource "aws_s3_bucket" "logging" {
+      41 |   bucket_prefix = var.name
+      42 |   acl    = var.bucket_acl
+      43 | 
+      44 |   count = "${var.no_logging ? 0 : 1}"
+      45 | }
+      46 | 
+      47 | data "aws_iam_policy_document" "force_ssl_only_access" {
+      48 |   # Force SSL access
+
+  See https://github.com/liamg/tfsec/wiki/AWS002 for more information.
+
+Problem 7
+
+  [AWS017][ERROR] Resource 'aws_s3_bucket.logging' defines an unencrypted S3 bucket (missing server_side_encryption_configuration block).
+  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/s3/main.tf:40-45
+
+      37 |   }
+      38 | }
+      39 | 
+      40 | resource "aws_s3_bucket" "logging" {
+      41 |   bucket_prefix = var.name
+      42 |   acl    = var.bucket_acl
+      43 | 
+      44 |   count = "${var.no_logging ? 0 : 1}"
+      45 | }
+      46 | 
+      47 | data "aws_iam_policy_document" "force_ssl_only_access" {
+      48 |   # Force SSL access
+
+  See https://github.com/liamg/tfsec/wiki/AWS017 for more information.
+
+Problem 8
+
+  [AWS002][ERROR] Resource 'aws_s3_bucket.getonly' does not have logging enabled.
+  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/s3/main.tf:101-105
+
+      98 |   count = "${var.s3_getobject_only ? 1 : 0}"
+      99 | }
+     100 | 
+     101 | resource "aws_s3_bucket" "getonly" {
+     102 |   bucket_prefix = "sadcloudhetonlys3"
+     103 | 
+     104 |   count = "${var.s3_getobject_only ? 1 : 0}"
+     105 | }
+     106 | 
+     107 | resource "aws_s3_bucket_policy" "getonly" {
+     108 |   bucket = "${aws_s3_bucket.getonly[0].id}"
+
+  See https://github.com/liamg/tfsec/wiki/AWS002 for more information.
+
+Problem 9
+
+  [AWS017][ERROR] Resource 'aws_s3_bucket.getonly' defines an unencrypted S3 bucket (missing server_side_encryption_configuration block).
+  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/s3/main.tf:101-105
+
+      98 |   count = "${var.s3_getobject_only ? 1 : 0}"
+      99 | }
+     100 | 
+     101 | resource "aws_s3_bucket" "getonly" {
+     102 |   bucket_prefix = "sadcloudhetonlys3"
+     103 | 
+     104 |   count = "${var.s3_getobject_only ? 1 : 0}"
+     105 | }
+     106 | 
+     107 | resource "aws_s3_bucket_policy" "getonly" {
+     108 |   bucket = "${aws_s3_bucket.getonly[0].id}"
+
+  See https://github.com/liamg/tfsec/wiki/AWS017 for more information.
+
+Problem 10
+
+  [AWS002][ERROR] Resource 'aws_s3_bucket.public' does not have logging enabled.
+  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/s3/main.tf:135-139
+
+     132 |   count = "${var.s3_public ? 1 : 0}"
+     133 | }
+     134 | 
+     135 | resource "aws_s3_bucket" "public" {
+     136 |   bucket_prefix = "sadcloudhetonlys3"
+     137 | 
+     138 |   count = "${var.s3_public ? 1 : 0}"
+     139 | }
+     140 | 
+     141 | resource "aws_s3_bucket_policy" "public" {
+     142 |   bucket = "${aws_s3_bucket.public[0].id}"
+
+  See https://github.com/liamg/tfsec/wiki/AWS002 for more information.
+
+Problem 11
+
+  [AWS017][ERROR] Resource 'aws_s3_bucket.public' defines an unencrypted S3 bucket (missing server_side_encryption_configuration block).
+  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/s3/main.tf:135-139
+
+     132 |   count = "${var.s3_public ? 1 : 0}"
+     133 | }
+     134 | 
+     135 | resource "aws_s3_bucket" "public" {
+     136 |   bucket_prefix = "sadcloudhetonlys3"
+     137 | 
+     138 |   count = "${var.s3_public ? 1 : 0}"
+     139 | }
+     140 | 
+     141 | resource "aws_s3_bucket_policy" "public" {
+     142 |   bucket = "${aws_s3_bucket.public[0].id}"
+
+  See https://github.com/liamg/tfsec/wiki/AWS017 for more information.
+
+Problem 12
+
+  [AWS005][WARNING] Resource 'aws_elb.main' is exposed publicly.
+  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/elb/main.tf:1-22
+
+       1 | resource "aws_elb" "main" {
+       2 |   name               = var.name
+       3 |   availability_zones = ["us-east-1a"]
+       4 |   count = "${var.no_access_logs ? 1 : 0}"
+       5 | 
+       6 |   dynamic "access_logs" {
+       7 |     for_each = var.no_access_logs == true ? [] : list(var.no_access_logs)
+       8 | 
+       9 |     content {
+      10 |       bucket        = "foo"
+      11 |       bucket_prefix = "bar"
+      12 |       interval      = 60
+      13 |     }
+      14 |   }
+      15 | 
+      16 |   listener {
+      17 |     instance_port     = 8000
+      18 |     instance_protocol = "http"
+      19 |     lb_port           = 80
+      20 |     lb_protocol       = "http"
+      21 |   }
+      22 | }
+      23 | 
+
+  See https://github.com/liamg/tfsec/wiki/AWS005 for more information.
+
+Problem 14
+
+  [GEN003][WARNING] Block 'aws_redshift_cluster.main' includes a potentially sensitive attribute which is defined within the project.
+  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/redshift/main.tf:27
+
+      24 | resource "aws_redshift_cluster" "main" {
+      25 |   cluster_identifier = var.name
+      26 |   master_username    = "foo"
+      27 |   master_password    = "Password1"
+      28 |   node_type          = "dc1.large"
+      29 |   cluster_type       = "single-node"
+      30 |   skip_final_snapshot =  true
+
+  See https://github.com/liamg/tfsec/wiki/GEN003 for more information.
+
+Problem 15
+
+  [GEN003][WARNING] Block 'aws_db_instance.main' includes a potentially sensitive attribute which is defined within the project.
+  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/rds/main.tf:14
+
+      11 |   instance_class       = "db.t2.micro"
+      12 |   name                 = var.name
+      13 |   username             = "foo"
+      14 |   password             = "foobarbaz"
+      15 |   skip_final_snapshot = true
+      16 | 
+      17 |   auto_minor_version_upgrade = "${var.no_minor_upgrade ? false : true}"
+
+  See https://github.com/liamg/tfsec/wiki/GEN003 for more information.
+
+Problem 16
+
+  [AWS016][ERROR] Resource 'aws_sns_topic.main' defines an unencrypted SNS topic.
+  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/sns/main.tf:1-5
+
+       1 | resource "aws_sns_topic" "main" {
+       2 |   name = var.name
+       3 | 
+       4 |   count = "${var.topic_world_policy ? 1 : 0}"
+       5 | }
+       6 | 
+       7 | resource "aws_sns_topic_policy" "main-policy" {
+       8 |   arn = "${aws_sns_topic.main[0].arn}"
+
+  See https://github.com/liamg/tfsec/wiki/AWS016 for more information.
+
+Problem 17
+
+  [AWS002][ERROR] Resource 'aws_s3_bucket.logging' does not have logging enabled.
+  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/cloudtrail/main.tf:29-34
+
+      26 |   }
+      27 | }
+      28 | 
+      29 | resource "aws_s3_bucket" "logging" {
+      30 |   bucket_prefix = var.name
+      31 |   force_destroy = true
+      32 | 
+      33 |   count = "${var.no_logging ? 0 : 1}"
+      34 | }
+      35 | 
+      36 | resource "aws_s3_bucket_policy" "CloudTrailS3Bucket-Policy" {
+      37 |   bucket = "${aws_s3_bucket.logging[0].id}"
+
+  See https://github.com/liamg/tfsec/wiki/AWS002 for more information.
+
+Problem 18
+
+  [AWS017][ERROR] Resource 'aws_s3_bucket.logging' defines an unencrypted S3 bucket (missing server_side_encryption_configuration block).
+  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/cloudtrail/main.tf:29-34
+
+      26 |   }
+      27 | }
+      28 | 
+      29 | resource "aws_s3_bucket" "logging" {
+      30 |   bucket_prefix = var.name
+      31 |   force_destroy = true
+      32 | 
+      33 |   count = "${var.no_logging ? 0 : 1}"
+      34 | }
+      35 | 
+      36 | resource "aws_s3_bucket_policy" "CloudTrailS3Bucket-Policy" {
+      37 |   bucket = "${aws_s3_bucket.logging[0].id}"
+
+  See https://github.com/liamg/tfsec/wiki/AWS017 for more information.
+
+Problem 19
+
+  [AWS018][ERROR] Resource 'aws_security_group.all_ports_to_all' should include a description for auditing purposes.
+  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/ec2/main.tf:35-61
+
+      32 | 
+      33 | # Security Groups
+      34 | 
+      35 | resource "aws_security_group" "all_ports_to_all" {
+      36 |   name  = "${var.name}-all_ports_to_all"
+      37 |   count = "${var.security_group_opens_all_ports_to_all ? 1 : 0}"
+      38 | 
+      39 |   vpc_id = var.vpc_id
+      40 | 
+      41 |   ingress {
+      42 |     from_port   = 0
+      43 |     to_port     = 0
+      44 |     protocol    = -1
+      45 |     cidr_blocks = ["0.0.0.0/0"]
+      46 |   }
+      47 | 
+      48 |   egress {
+      49 |     from_port   = 0
+      50 |     to_port     = 0
+      51 |     protocol    = -1
+      52 |     cidr_blocks = ["0.0.0.0/0"]
+      53 |   }
+      54 | 
+      55 |   egress {
+      56 |     from_port        = 0
+      57 |     to_port          = 0
+      58 |     protocol         = -1
+      59 |     ipv6_cidr_blocks = ["::/0"]
+      60 |   }
+      61 | }
+      62 | 
+      63 | resource "aws_security_group" "all_ports_to_self" {
+      64 |   name  = "${var.name}-all_ports_to_self"
+
+  See https://github.com/liamg/tfsec/wiki/AWS018 for more information.
+
+Problem 20
+
+  [AWS008][WARNING] Resource 'aws_security_group.all_ports_to_all' defines a fully open ingress security group.
+  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/ec2/main.tf:45
+
+      42 |     from_port   = 0
+      43 |     to_port     = 0
+      44 |     protocol    = -1
+      45 |     cidr_blocks = ["0.0.0.0/0"]
+      46 |   }
+      47 | 
+      48 |   egress {
+
+  See https://github.com/liamg/tfsec/wiki/AWS008 for more information.
+
+Problem 21
+
+  [AWS009][WARNING] Resource 'aws_security_group.all_ports_to_all' defines a fully open egress security group.
+  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/ec2/main.tf:52
+
+      49 |     from_port   = 0
+      50 |     to_port     = 0
+      51 |     protocol    = -1
+      52 |     cidr_blocks = ["0.0.0.0/0"]
+      53 |   }
+      54 | 
+      55 |   egress {
+
+  See https://github.com/liamg/tfsec/wiki/AWS009 for more information.
+
+Problem 22
+
+  [AWS018][ERROR] Resource 'aws_security_group.all_ports_to_self' should include a description for auditing purposes.
+  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/ec2/main.tf:63-90
+
+      60 |   }
+      61 | }
+      62 | 
+      63 | resource "aws_security_group" "all_ports_to_self" {
+      64 |   name  = "${var.name}-all_ports_to_self"
+      65 |   count = "${var.security_group_opens_all_ports_to_self ? 1 : 0}"
+      66 | 
+      67 |   vpc_id = var.vpc_id
+      68 | 
+      69 |   ingress {
+      70 |     from_port   = 0
+      71 |     to_port     = 0
+      72 |     protocol    = -1
+      73 |     cidr_blocks = ["0.0.0.0/0"]
+      74 |     self        = true
+      75 |   }
+      76 | 
+      77 |   egress {
+      78 |     from_port   = 0
+      79 |     to_port     = 0
+      80 |     protocol    = -1
+      81 |     cidr_blocks = ["0.0.0.0/0"]
+      82 |   }
+      83 | 
+      84 |   egress {
+      85 |     from_port        = 0
+      86 |     to_port          = 0
+      87 |     protocol         = -1
+      88 |     ipv6_cidr_blocks = ["::/0"]
+      89 |   }
+      90 | }
+      91 | 
+      92 | resource "aws_security_group" "icmp_to_all" {
+      93 |   name  = "${var.name}-icmp_to_all"
+
+  See https://github.com/liamg/tfsec/wiki/AWS018 for more information.
+
+Problem 23
+
+  [AWS008][WARNING] Resource 'aws_security_group.all_ports_to_self' defines a fully open ingress security group.
+  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/ec2/main.tf:73
+
+      70 |     from_port   = 0
+      71 |     to_port     = 0
+      72 |     protocol    = -1
+      73 |     cidr_blocks = ["0.0.0.0/0"]
+      74 |     self        = true
+      75 |   }
+      76 | 
+
+  See https://github.com/liamg/tfsec/wiki/AWS008 for more information.
+
+Problem 24
+
+  [AWS009][WARNING] Resource 'aws_security_group.all_ports_to_self' defines a fully open egress security group.
+  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/ec2/main.tf:81
+
+      78 |     from_port   = 0
+      79 |     to_port     = 0
+      80 |     protocol    = -1
+      81 |     cidr_blocks = ["0.0.0.0/0"]
+      82 |   }
+      83 | 
+      84 |   egress {
+
+  See https://github.com/liamg/tfsec/wiki/AWS009 for more information.
+
+Problem 25
+
+  [AWS018][ERROR] Resource 'aws_security_group.icmp_to_all' should include a description for auditing purposes.
+  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/ec2/main.tf:92-118
+
+      89 |   }
+      90 | }
+      91 | 
+      92 | resource "aws_security_group" "icmp_to_all" {
+      93 |   name  = "${var.name}-icmp_to_all"
+      94 |   count = "${var.security_group_opens_icmp_to_all ? 1 : 0}"
+      95 | 
+      96 |   vpc_id = var.vpc_id
+      97 | 
+      98 |   ingress {
+      99 |     from_port   = 0
+     100 |     to_port     = 0
+     101 |     protocol    = "icmp"
+     102 |     cidr_blocks = ["0.0.0.0/0"]
+     103 |   }
+     104 | 
+     105 |   egress {
+     106 |     from_port   = 0
+     107 |     to_port     = 0
+     108 |     protocol    = -1
+     109 |     cidr_blocks = ["0.0.0.0/0"]
+     110 |   }
+     111 | 
+     112 |   egress {
+     113 |     from_port        = 0
+     114 |     to_port          = 0
+     115 |     protocol         = -1
+     116 |     ipv6_cidr_blocks = ["::/0"]
+     117 |   }
+     118 | }
+     119 | 
+     120 | resource "aws_security_group" "known_port_to_all" {
+     121 |   name  = "${var.name}-known_port_to_all"
+
+  See https://github.com/liamg/tfsec/wiki/AWS018 for more information.
+
+Problem 26
+
+  [AWS008][WARNING] Resource 'aws_security_group.icmp_to_all' defines a fully open ingress security group.
+  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/ec2/main.tf:102
+
+      99 |     from_port   = 0
+     100 |     to_port     = 0
+     101 |     protocol    = "icmp"
+     102 |     cidr_blocks = ["0.0.0.0/0"]
+     103 |   }
+     104 | 
+     105 |   egress {
+
+  See https://github.com/liamg/tfsec/wiki/AWS008 for more information.
+
+Problem 27
+
+  [AWS009][WARNING] Resource 'aws_security_group.icmp_to_all' defines a fully open egress security group.
+  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/ec2/main.tf:109
+
+     106 |     from_port   = 0
+     107 |     to_port     = 0
+     108 |     protocol    = -1
+     109 |     cidr_blocks = ["0.0.0.0/0"]
+     110 |   }
+     111 | 
+     112 |   egress {
+
+  See https://github.com/liamg/tfsec/wiki/AWS009 for more information.
+
+Problem 28
+
+  [AWS018][ERROR] Resource 'aws_security_group.known_port_to_all' should include a description for auditing purposes.
+  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/ec2/main.tf:120-209
+
+     117 |   }
+     118 | }
+     119 | 
+     120 | resource "aws_security_group" "known_port_to_all" {
+     121 |   name  = "${var.name}-known_port_to_all"
+     122 |   count = "${var.security_group_opens_known_port_to_all ? 1 : 0}"
+     123 | 
+     124 |   vpc_id = var.vpc_id
+     125 | 
+     126 |   ingress {
+     127 |     from_port   = 22 # SSH
+     128 |     to_port     = 22
+     129 |     protocol    = "tcp"
+     130 |     cidr_blocks = ["0.0.0.0/0"]
+     131 |   }
+     132 | 
+     133 |   ingress {
+     134 |     from_port   = 25 # SMTP
+     135 |     to_port     = 25
+     136 |     protocol    = "tcp"
+     137 |     cidr_blocks = ["0.0.0.0/0"]
+     138 |   }
+     139 | 
+     140 |   ingress {
+     141 |     from_port   = 2049 # NFS
+     142 |     to_port     = 2049
+     143 |     protocol    = "tcp"
+     144 |     cidr_blocks = ["0.0.0.0/0"]
+     145 |   }
+     146 | 
+     147 |   ingress {
+     148 |     from_port   = 3306 # mysql
+     149 |     to_port     = 3306
+     150 |     protocol    = "tcp"
+     151 |     cidr_blocks = ["0.0.0.0/0"]
+     152 |   }
+     153 | 
+     154 |   ingress {
+     155 |     from_port   = 27017 # mongodb
+     156 |     to_port     = 27017
+     157 |     protocol    = "tcp"
+     158 |     cidr_blocks = ["0.0.0.0/0"]
+     159 |   }
+     160 | 
+     161 |   ingress {
+     162 |     from_port   = 1433 # MsSQL
+     163 |     to_port     = 1433
+     164 |     protocol    = "tcp"
+     165 |     cidr_blocks = ["0.0.0.0/0"]
+     166 |   }
+     167 | 
+     168 |   ingress {
+     169 |     from_port   = 1521 # Oracle DB
+     170 |     to_port     = 1521
+     171 |     protocol    = "tcp"
+     172 |     cidr_blocks = ["0.0.0.0/0"]
+     173 |   }
+     174 | 
+     175 |   ingress {
+     176 |     from_port   = 5432 # PostgreSQL
+     177 |     to_port     = 5432
+     178 |     protocol    = "tcp"
+     179 |     cidr_blocks = ["0.0.0.0/0"]
+     180 |   }
+     181 | 
+     182 |   ingress {
+     183 |     from_port   = 3389 # RDP
+     184 |     to_port     = 3389
+     185 |     protocol    = "tcp"
+     186 |     cidr_blocks = ["0.0.0.0/0"]
+     187 |   }
+     188 | 
+     189 |   ingress {
+     190 |     from_port   = 53 # DNS
+     191 |     to_port     = 53
+     192 |     protocol    = "udp"
+     193 |     cidr_blocks = ["0.0.0.0/0"]
+     194 |   }
+     195 | 
+     196 |   egress {
+     197 |     from_port   = 0
+     198 |     to_port     = 0
+     199 |     protocol    = -1
+     200 |     cidr_blocks = ["0.0.0.0/0"]
+     201 |   }
+     202 | 
+     203 |   egress {
+     204 |     from_port        = 0
+     205 |     to_port          = 0
+     206 |     protocol         = -1
+     207 |     ipv6_cidr_blocks = ["::/0"]
+     208 |   }
+     209 | }
+     210 | 
+     211 | resource "aws_security_group" "opens_plaintext_port" {
+     212 |   name  = "${var.name}-opens_plaintext_port"
+
+  See https://github.com/liamg/tfsec/wiki/AWS018 for more information.
+
+Problem 29
+
+  [AWS008][WARNING] Resource 'aws_security_group.known_port_to_all' defines a fully open ingress security group.
+  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/ec2/main.tf:130
+
+     127 |     from_port   = 22 # SSH
+     128 |     to_port     = 22
+     129 |     protocol    = "tcp"
+     130 |     cidr_blocks = ["0.0.0.0/0"]
+     131 |   }
+     132 | 
+     133 |   ingress {
+
+  See https://github.com/liamg/tfsec/wiki/AWS008 for more information.
+
+Problem 30
+
+  [AWS009][WARNING] Resource 'aws_security_group.known_port_to_all' defines a fully open egress security group.
+  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/ec2/main.tf:200
+
+     197 |     from_port   = 0
+     198 |     to_port     = 0
+     199 |     protocol    = -1
+     200 |     cidr_blocks = ["0.0.0.0/0"]
+     201 |   }
+     202 | 
+     203 |   egress {
+
+  See https://github.com/liamg/tfsec/wiki/AWS009 for more information.
+
+Problem 31
+
+  [AWS018][ERROR] Resource 'aws_security_group.opens_plaintext_port' should include a description for auditing purposes.
+  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/ec2/main.tf:211-244
+
+     208 |   }
+     209 | }
+     210 | 
+     211 | resource "aws_security_group" "opens_plaintext_port" {
+     212 |   name  = "${var.name}-opens_plaintext_port"
+     213 |   count = "${var.security_group_opens_plaintext_port ? 1 : 0}"
+     214 | 
+     215 |   vpc_id = var.vpc_id
+     216 | 
+     217 |   ingress {
+     218 |     from_port   = 21 # FTP
+     219 |     to_port     = 21
+     220 |     protocol    = "tcp"
+     221 |     cidr_blocks = ["0.0.0.0/0"]
+     222 |   }
+     223 | 
+     224 |   ingress {
+     225 |     from_port   = 23 # Telnet
+     226 |     to_port     = 23
+     227 |     protocol    = "tcp"
+     228 |     cidr_blocks = ["0.0.0.0/0"]
+     229 |   }
+     230 | 
+     231 |   egress {
+     232 |     from_port   = 0
+     233 |     to_port     = 0
+     234 |     protocol    = -1
+     235 |     cidr_blocks = ["0.0.0.0/0"]
+     236 |   }
+     237 | 
+     238 |   egress {
+     239 |     from_port        = 0
+     240 |     to_port          = 0
+     241 |     protocol         = -1
+     242 |     ipv6_cidr_blocks = ["::/0"]
+     243 |   }
+     244 | }
+     245 | 
+     246 | resource "aws_security_group" "opens_port_range" {
+     247 |   name  = "${var.name}-opens_port_range"
+
+  See https://github.com/liamg/tfsec/wiki/AWS018 for more information.
+
+Problem 32
+
+  [AWS008][WARNING] Resource 'aws_security_group.opens_plaintext_port' defines a fully open ingress security group.
+  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/ec2/main.tf:221
+
+     218 |     from_port   = 21 # FTP
+     219 |     to_port     = 21
+     220 |     protocol    = "tcp"
+     221 |     cidr_blocks = ["0.0.0.0/0"]
+     222 |   }
+     223 | 
+     224 |   ingress {
+
+  See https://github.com/liamg/tfsec/wiki/AWS008 for more information.
+
+Problem 33
+
+  [AWS009][WARNING] Resource 'aws_security_group.opens_plaintext_port' defines a fully open egress security group.
+  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/ec2/main.tf:235
+
+     232 |     from_port   = 0
+     233 |     to_port     = 0
+     234 |     protocol    = -1
+     235 |     cidr_blocks = ["0.0.0.0/0"]
+     236 |   }
+     237 | 
+     238 |   egress {
+
+  See https://github.com/liamg/tfsec/wiki/AWS009 for more information.
+
+Problem 34
+
+  [AWS018][ERROR] Resource 'aws_security_group.opens_port_range' should include a description for auditing purposes.
+  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/ec2/main.tf:246-272
+
+     243 |   }
+     244 | }
+     245 | 
+     246 | resource "aws_security_group" "opens_port_range" {
+     247 |   name  = "${var.name}-opens_port_range"
+     248 |   count = "${var.security_group_opens_port_range ? 1 : 0}"
+     249 | 
+     250 |   vpc_id = var.vpc_id
+     251 | 
+     252 |   ingress {
+     253 |     from_port   = 21
+     254 |     to_port     = 25
+     255 |     protocol    = "tcp"
+     256 |     cidr_blocks = ["0.0.0.0/0"]
+     257 |   }
+     258 | 
+     259 |   egress {
+     260 |     from_port   = 0
+     261 |     to_port     = 0
+     262 |     protocol    = -1
+     263 |     cidr_blocks = ["0.0.0.0/0"]
+     264 |   }
+     265 | 
+     266 |   egress {
+     267 |     from_port        = 0
+     268 |     to_port          = 0
+     269 |     protocol         = -1
+     270 |     ipv6_cidr_blocks = ["::/0"]
+     271 |   }
+     272 | }
+     273 | 
+     274 | resource "aws_security_group" "opens_port_to_all" {
+     275 |   name  = "${var.name}-opens_port_to_all"
+
+  See https://github.com/liamg/tfsec/wiki/AWS018 for more information.
+
+Problem 35
+
+  [AWS008][WARNING] Resource 'aws_security_group.opens_port_range' defines a fully open ingress security group.
+  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/ec2/main.tf:256
+
+     253 |     from_port   = 21
+     254 |     to_port     = 25
+     255 |     protocol    = "tcp"
+     256 |     cidr_blocks = ["0.0.0.0/0"]
+     257 |   }
+     258 | 
+     259 |   egress {
+
+  See https://github.com/liamg/tfsec/wiki/AWS008 for more information.
+
+Problem 36
+
+  [AWS009][WARNING] Resource 'aws_security_group.opens_port_range' defines a fully open egress security group.
+  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/ec2/main.tf:263
+
+     260 |     from_port   = 0
+     261 |     to_port     = 0
+     262 |     protocol    = -1
+     263 |     cidr_blocks = ["0.0.0.0/0"]
+     264 |   }
+     265 | 
+     266 |   egress {
+
+  See https://github.com/liamg/tfsec/wiki/AWS009 for more information.
+
+Problem 37
+
+  [AWS018][ERROR] Resource 'aws_security_group.opens_port_to_all' should include a description for auditing purposes.
+  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/ec2/main.tf:274-300
+
+     271 |   }
+     272 | }
+     273 | 
+     274 | resource "aws_security_group" "opens_port_to_all" {
+     275 |   name  = "${var.name}-opens_port_to_all"
+     276 |   count = "${var.security_group_opens_port_to_all ? 1 : 0}"
+     277 | 
+     278 |   vpc_id = var.vpc_id
+     279 | 
+     280 |   ingress {
+     281 |     from_port   = 21
+     282 |     to_port     = 21
+     283 |     protocol    = "tcp"
+     284 |     cidr_blocks = ["0.0.0.0/0"]
+     285 |   }
+     286 | 
+     287 |   egress {
+     288 |     from_port   = 0
+     289 |     to_port     = 0
+     290 |     protocol    = -1
+     291 |     cidr_blocks = ["0.0.0.0/0"]
+     292 |   }
+     293 | 
+     294 |   egress {
+     295 |     from_port        = 0
+     296 |     to_port          = 0
+     297 |     protocol         = -1
+     298 |     ipv6_cidr_blocks = ["::/0"]
+     299 |   }
+     300 | }
+     301 | 
+     302 | resource "aws_security_group" "whitelists_aws_ip_from_banned_region" {
+     303 |   name  = "${var.name}-whitelists_aws_ip_from_banned_region"
+
+  See https://github.com/liamg/tfsec/wiki/AWS018 for more information.
+
+Problem 38
+
+  [AWS008][WARNING] Resource 'aws_security_group.opens_port_to_all' defines a fully open ingress security group.
+  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/ec2/main.tf:284
+
+     281 |     from_port   = 21
+     282 |     to_port     = 21
+     283 |     protocol    = "tcp"
+     284 |     cidr_blocks = ["0.0.0.0/0"]
+     285 |   }
+     286 | 
+     287 |   egress {
+
+  See https://github.com/liamg/tfsec/wiki/AWS008 for more information.
+
+Problem 39
+
+  [AWS009][WARNING] Resource 'aws_security_group.opens_port_to_all' defines a fully open egress security group.
+  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/ec2/main.tf:291
+
+     288 |     from_port   = 0
+     289 |     to_port     = 0
+     290 |     protocol    = -1
+     291 |     cidr_blocks = ["0.0.0.0/0"]
+     292 |   }
+     293 | 
+     294 |   egress {
+
+  See https://github.com/liamg/tfsec/wiki/AWS009 for more information.
+
+Problem 40
+
+  [AWS018][ERROR] Resource 'aws_security_group.whitelists_aws_ip_from_banned_region' should include a description for auditing purposes.
+  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/ec2/main.tf:302-328
+
+     299 |   }
+     300 | }
+     301 | 
+     302 | resource "aws_security_group" "whitelists_aws_ip_from_banned_region" {
+     303 |   name  = "${var.name}-whitelists_aws_ip_from_banned_region"
+     304 |   count = "${var.security_group_whitelists_aws_ip_from_banned_region ? 1 : 0}"
+     305 | 
+     306 |   vpc_id = var.vpc_id
+     307 | 
+     308 |   ingress {
+     309 |     from_port   = 0
+     310 |     to_port     = 0
+     311 |     protocol    = -1
+     312 |     cidr_blocks = ["52.28.0.0/16"] # eu-central-1
+     313 |   }
+     314 | 
+     315 |   egress {
+     316 |     from_port   = 0
+     317 |     to_port     = 0
+     318 |     protocol    = -1
+     319 |     cidr_blocks = ["0.0.0.0/0"]
+     320 |   }
+     321 | 
+     322 |   egress {
+     323 |     from_port        = 0
+     324 |     to_port          = 0
+     325 |     protocol         = -1
+     326 |     ipv6_cidr_blocks = ["::/0"]
+     327 |   }
+     328 | }
+     329 | 
+     330 | resource "aws_security_group" "whitelists_aws" {
+     331 |   name  = "${var.name}-whitelists_aws"
+
+  See https://github.com/liamg/tfsec/wiki/AWS018 for more information.
+
+Problem 41
+
+  [AWS009][WARNING] Resource 'aws_security_group.whitelists_aws_ip_from_banned_region' defines a fully open egress security group.
+  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/ec2/main.tf:319
+
+     316 |     from_port   = 0
+     317 |     to_port     = 0
+     318 |     protocol    = -1
+     319 |     cidr_blocks = ["0.0.0.0/0"]
+     320 |   }
+     321 | 
+     322 |   egress {
+
+  See https://github.com/liamg/tfsec/wiki/AWS009 for more information.
+
+Problem 42
+
+  [AWS018][ERROR] Resource 'aws_security_group.whitelists_aws' should include a description for auditing purposes.
+  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/ec2/main.tf:330-356
+
+     327 |   }
+     328 | }
+     329 | 
+     330 | resource "aws_security_group" "whitelists_aws" {
+     331 |   name  = "${var.name}-whitelists_aws"
+     332 |   count = "${var.security_group_whitelists_aws ? 1 : 0}"
+     333 | 
+     334 |   vpc_id = var.vpc_id
+     335 | 
+     336 |   ingress {
+     337 |     from_port   = 0
+     338 |     to_port     = 0
+     339 |     protocol    = -1
+     340 |     cidr_blocks = ["52.14.0.0/16"] # us-east-2
+     341 |   }
+     342 | 
+     343 |   egress {
+     344 |     from_port   = 0
+     345 |     to_port     = 0
+     346 |     protocol    = -1
+     347 |     cidr_blocks = ["0.0.0.0/0"]
+     348 |   }
+     349 | 
+     350 |   egress {
+     351 |     from_port        = 0
+     352 |     to_port          = 0
+     353 |     protocol         = -1
+     354 |     ipv6_cidr_blocks = ["::/0"]
+     355 |   }
+     356 | }
+     357 | 
+     358 | resource "aws_security_group" "whitelists_unknown_cidrs" {
+     359 |   name  = "${var.name}-whitelists_unknown_cidrs"
+
+  See https://github.com/liamg/tfsec/wiki/AWS018 for more information.
+
+Problem 43
+
+  [AWS009][WARNING] Resource 'aws_security_group.whitelists_aws' defines a fully open egress security group.
+  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/ec2/main.tf:347
+
+     344 |     from_port   = 0
+     345 |     to_port     = 0
+     346 |     protocol    = -1
+     347 |     cidr_blocks = ["0.0.0.0/0"]
+     348 |   }
+     349 | 
+     350 |   egress {
+
+  See https://github.com/liamg/tfsec/wiki/AWS009 for more information.
+
+Problem 44
+
+  [AWS018][ERROR] Resource 'aws_security_group.whitelists_unknown_cidrs' should include a description for auditing purposes.
+  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/ec2/main.tf:358-384
+
+     355 |   }
+     356 | }
+     357 | 
+     358 | resource "aws_security_group" "whitelists_unknown_cidrs" {
+     359 |   name  = "${var.name}-whitelists_unknown_cidrs"
+     360 |   count = "${var.ec2_security_group_whitelists_unknown_cidrs ? 1 : 0}"
+     361 | 
+     362 |   vpc_id = var.vpc_id
+     363 | 
+     364 |   ingress {
+     365 |     from_port   = 0
+     366 |     to_port     = 0
+     367 |     protocol    = -1
+     368 |     cidr_blocks = ["8.8.8.8/32"]
+     369 |   }
+     370 | 
+     371 |   egress {
+     372 |     from_port   = 0
+     373 |     to_port     = 0
+     374 |     protocol    = -1
+     375 |     cidr_blocks = ["0.0.0.0/0"]
+     376 |   }
+     377 | 
+     378 |   egress {
+     379 |     from_port        = 0
+     380 |     to_port          = 0
+     381 |     protocol         = -1
+     382 |     ipv6_cidr_blocks = ["::/0"]
+     383 |   }
+     384 | }
+     385 | 
+     386 | resource "aws_security_group" "unused_security_group" {
+     387 |   name  = "${var.name}-unused_security_group"
+
+  See https://github.com/liamg/tfsec/wiki/AWS018 for more information.
+
+Problem 45
+
+  [AWS009][WARNING] Resource 'aws_security_group.whitelists_unknown_cidrs' defines a fully open egress security group.
+  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/ec2/main.tf:375
+
+     372 |     from_port   = 0
+     373 |     to_port     = 0
+     374 |     protocol    = -1
+     375 |     cidr_blocks = ["0.0.0.0/0"]
+     376 |   }
+     377 | 
+     378 |   egress {
+
+  See https://github.com/liamg/tfsec/wiki/AWS009 for more information.
+
+Problem 46
+
+  [AWS018][ERROR] Resource 'aws_security_group.unused_security_group' should include a description for auditing purposes.
+  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/ec2/main.tf:386-410
+
+     383 |   }
+     384 | }
+     385 | 
+     386 | resource "aws_security_group" "unused_security_group" {
+     387 |   name  = "${var.name}-unused_security_group"
+     388 |   count = "${var.ec2_unused_security_group ? 1 : 0}"
+     389 | 
+     390 |   ingress {
+     391 |     from_port   = 0
+     392 |     to_port     = 0
+     393 |     protocol    = -1
+     394 |     cidr_blocks = ["8.8.8.8/32"]
+     395 |   }
+     396 | 
+     397 |   egress {
+     398 |     from_port   = 0
+     399 |     to_port     = 0
+     400 |     protocol    = -1
+     401 |     cidr_blocks = ["0.0.0.0/0"]
+     402 |   }
+     403 | 
+     404 |   egress {
+     405 |     from_port        = 0
+     406 |     to_port          = 0
+     407 |     protocol         = -1
+     408 |     ipv6_cidr_blocks = ["::/0"]
+     409 |   }
+     410 | }
+     411 | 
+     412 | resource "aws_security_group" "unneeded_security_group" {
+     413 |   name  = "${var.name}-unneeded_security_group"
+
+  See https://github.com/liamg/tfsec/wiki/AWS018 for more information.
+
+Problem 47
+
+  [AWS009][WARNING] Resource 'aws_security_group.unused_security_group' defines a fully open egress security group.
+  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/ec2/main.tf:401
+
+     398 |     from_port   = 0
+     399 |     to_port     = 0
+     400 |     protocol    = -1
+     401 |     cidr_blocks = ["0.0.0.0/0"]
+     402 |   }
+     403 | 
+     404 |   egress {
+
+  See https://github.com/liamg/tfsec/wiki/AWS009 for more information.
+
+Problem 48
+
+  [AWS018][ERROR] Resource 'aws_security_group.unneeded_security_group' should include a description for auditing purposes.
+  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/ec2/main.tf:412-422
+
+     409 |   }
+     410 | }
+     411 | 
+     412 | resource "aws_security_group" "unneeded_security_group" {
+     413 |   name  = "${var.name}-unneeded_security_group"
+     414 |   count = "${var.ec2_unneeded_security_group ? 1 : 0}"
+     415 | 
+     416 |   ingress {
+     417 |     from_port   = 0
+     418 |     to_port     = 0
+     419 |     protocol    = -1
+     420 |     cidr_blocks = ["127.0.0.0/8"]
+     421 |   }
+     422 | }
+     423 | 
+     424 | resource "aws_security_group" "unexpected_security_group" {
+     425 |   name  = "${var.name}-unexpected_security_group"
+
+  See https://github.com/liamg/tfsec/wiki/AWS018 for more information.
+
+Problem 49
+
+  [AWS018][ERROR] Resource 'aws_security_group.unexpected_security_group' should include a description for auditing purposes.
+  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/ec2/main.tf:424-434
+
+     421 |   }
+     422 | }
+     423 | 
+     424 | resource "aws_security_group" "unexpected_security_group" {
+     425 |   name  = "${var.name}-unexpected_security_group"
+     426 |   count = "${var.ec2_unexpected_security_group ? 1 : 0}"
+     427 | 
+     428 |   ingress {
+     429 |     from_port   = 0
+     430 |     to_port     = 0
+     431 |     protocol    = -1
+     432 |     cidr_blocks = ["0.0.0.0/8"]
+     433 |   }
+     434 | }
+     435 | 
+     436 | resource "aws_security_group" "overlapping_security_group" {
+     437 |   name  = "${var.name}-overlapping_security_group"
+
+  See https://github.com/liamg/tfsec/wiki/AWS018 for more information.
+
+Problem 50
+
+  [AWS018][ERROR] Resource 'aws_security_group.overlapping_security_group' should include a description for auditing purposes.
+  /home/rami/Documents/Desktop/Development/sadcloud/modules/aws/ec2/main.tf:436-453
+
+     433 |   }
+     434 | }
+     435 | 
+     436 | resource "aws_security_group" "overlapping_security_group" {
+     437 |   name  = "${var.name}-overlapping_security_group"
+     438 |   count = "${var.ec2_overlapping_security_group ? 1 : 0}"
+     439 | 
+     440 |   ingress {
+     441 |     from_port   = 0
+     442 |     to_port     = 0
+     443 |     protocol    = -1
+     444 |     cidr_blocks = ["162.168.2.0/24"]
+     445 |   }
+     446 | 
+     447 |   ingress {
+     448 |     from_port   = 0
+     449 |     to_port     = 0
+     450 |     protocol    = -1
+     451 |     cidr_blocks = ["162.168.2.0/25"]
+     452 |   }
+     453 | }
+     454 | 
+
+  See https://github.com/liamg/tfsec/wiki/AWS018 for more information.

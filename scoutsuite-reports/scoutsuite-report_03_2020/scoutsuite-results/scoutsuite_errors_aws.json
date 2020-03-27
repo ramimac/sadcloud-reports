@@ -1,0 +1,9 @@
+[
+    {
+        "additional_details": null,
+        "exception": "Failed to get KMS key rotation: An error occurred (AccessDeniedException) when calling the GetKeyRotationStatus operation: User: arn:aws:iam::395822310781:user/rami is not authorized to perform: kms:GetKeyRotationStatus on resource: arn:aws:kms:us-east-1:395822310781:key/10bd8379-dd1d-4058-a6d1-993d3fb92d3f",
+        "file": "kms.py",
+        "line": 41,
+        "traceback": "Traceback (most recent call last):\n  File \"/home/rami/.local/lib/python3.7/site-packages/ScoutSuite/providers/aws/facade/kms.py\", line 41, in _get_and_set_key_rotation_status\n    lambda: client.get_key_rotation_status(KeyId=key['KeyId']))\n  File \"/home/rami/.local/lib/python3.7/site-packages/ScoutSuite/providers/utils.py\", line 24, in run_concurrently\n    return await run_function_concurrently(function)\n  File \"/usr/lib/python3.7/concurrent/futures/thread.py\", line 57, in run\n    result = self.fn(*self.args, **self.kwargs)\n  File \"/home/rami/.local/lib/python3.7/site-packages/ScoutSuite/providers/aws/facade/kms.py\", line 41, in <lambda>\n    lambda: client.get_key_rotation_status(KeyId=key['KeyId']))\n  File \"/home/rami/.local/lib/python3.7/site-packages/botocore/client.py\", line 316, in _api_call\n    return self._make_api_call(operation_name, kwargs)\n  File \"/home/rami/.local/lib/python3.7/site-packages/botocore/client.py\", line 626, in _make_api_call\n    raise error_class(parsed_response, operation_name)\nbotocore.exceptions.ClientError: An error occurred (AccessDeniedException) when calling the GetKeyRotationStatus operation: User: arn:aws:iam::395822310781:user/rami is not authorized to perform: kms:GetKeyRotationStatus on resource: arn:aws:kms:us-east-1:395822310781:key/10bd8379-dd1d-4058-a6d1-993d3fb92d3f\n"
+    }
+]
