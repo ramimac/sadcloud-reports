@@ -21,6 +21,11 @@ Time to run: 11min (`collect`)
 <https://ramimac.github.io/sadcloud-reports/cloudmapper-reports/web_03_2020/account-data/report.html>  
 <https://ramimac.github.io/sadcloud-reports/cloudmapper-reports/web_11_2019/account-data/report.html>
 
+### Cloudsploit Scans
+
+Time to run: 33s
+
+<https://ramimac.github.io/sadcloud-reports/cloudsploit-scans-reports/scans.04_2020.txt>  
 
 ### tfsec
 

@@ -1,0 +1,2073 @@
+INFO: Determining API calls to make...
+INFO: API calls determined.
+INFO: Collecting metadata. This may take several minutes...
+
+-----------------------
+AWS
+-----------------------
+
+
+INFO: Metadata collection complete. Analyzing...
+INFO: Analysis complete. Scan report to follow...
+
+
+ACM	ACM Certificate Validation	arn:aws:acm:us-east-1:XXXXXXXXXXXX:certificate/87f7afdf-8694-452d-adb4-6775bb063f3f	us-east-1		FAIL	example.com has failed DNS validation.
+ACM	ACM Certificate Validation	N/A	us-east-2		OK	No ACM certificates found
+ACM	ACM Certificate Validation	N/A	us-west-1		OK	No ACM certificates found
+ACM	ACM Certificate Validation	N/A	us-west-2		OK	No ACM certificates found
+ACM	ACM Certificate Validation	N/A	ca-central-1		OK	No ACM certificates found
+ACM	ACM Certificate Validation	N/A	eu-central-1		OK	No ACM certificates found
+ACM	ACM Certificate Validation	N/A	eu-west-1		OK	No ACM certificates found
+ACM	ACM Certificate Validation	N/A	eu-west-2		OK	No ACM certificates found
+ACM	ACM Certificate Validation	N/A	eu-west-3		OK	No ACM certificates found
+ACM	ACM Certificate Validation	N/A	eu-north-1		OK	No ACM certificates found
+ACM	ACM Certificate Validation	N/A	ap-northeast-1		OK	No ACM certificates found
+ACM	ACM Certificate Validation	N/A	ap-northeast-2		OK	No ACM certificates found
+ACM	ACM Certificate Validation	N/A	ap-southeast-1		OK	No ACM certificates found
+ACM	ACM Certificate Validation	N/A	ap-southeast-2		OK	No ACM certificates found
+ACM	ACM Certificate Validation	N/A	ap-south-1		OK	No ACM certificates found
+ACM	ACM Certificate Validation	N/A	sa-east-1		OK	No ACM certificates found
+ACM	ACM Certificate Validation	N/A	ap-east-1		OK	Region is not enabled
+ACM	ACM Certificate Validation	N/A	me-south-1		OK	Region is not enabled
+ACM	ACM Certificate Expiry	arn:aws:acm:us-east-1:XXXXXXXXXXXX:certificate/87f7afdf-8694-452d-adb4-6775bb063f3f	us-east-1		WARN	ACM certificate is not eligible for renewal
+ACM	ACM Certificate Expiry	N/A	us-east-2		OK	No ACM certificates found
+ACM	ACM Certificate Expiry	N/A	us-west-1		OK	No ACM certificates found
+ACM	ACM Certificate Expiry	N/A	us-west-2		OK	No ACM certificates found
+ACM	ACM Certificate Expiry	N/A	ca-central-1		OK	No ACM certificates found
+ACM	ACM Certificate Expiry	N/A	eu-central-1		OK	No ACM certificates found
+ACM	ACM Certificate Expiry	N/A	eu-west-1		OK	No ACM certificates found
+ACM	ACM Certificate Expiry	N/A	eu-west-2		OK	No ACM certificates found
+ACM	ACM Certificate Expiry	N/A	eu-west-3		OK	No ACM certificates found
+ACM	ACM Certificate Expiry	N/A	eu-north-1		OK	No ACM certificates found
+ACM	ACM Certificate Expiry	N/A	ap-northeast-1		OK	No ACM certificates found
+ACM	ACM Certificate Expiry	N/A	ap-northeast-2		OK	No ACM certificates found
+ACM	ACM Certificate Expiry	N/A	ap-southeast-1		OK	No ACM certificates found
+ACM	ACM Certificate Expiry	N/A	ap-southeast-2		OK	No ACM certificates found
+ACM	ACM Certificate Expiry	N/A	ap-south-1		OK	No ACM certificates found
+ACM	ACM Certificate Expiry	N/A	sa-east-1		OK	No ACM certificates found
+ACM	ACM Certificate Expiry	N/A	ap-east-1		OK	Region is not enabled
+ACM	ACM Certificate Expiry	N/A	me-south-1		OK	Region is not enabled
+AutoScaling	ASG Multiple AZ	N/A	us-east-1		OK	No auto scaling groups found
+AutoScaling	ASG Multiple AZ	N/A	us-east-2		OK	No auto scaling groups found
+AutoScaling	ASG Multiple AZ	N/A	us-west-1		OK	No auto scaling groups found
+AutoScaling	ASG Multiple AZ	N/A	us-west-2		OK	No auto scaling groups found
+AutoScaling	ASG Multiple AZ	N/A	ca-central-1		OK	No auto scaling groups found
+AutoScaling	ASG Multiple AZ	N/A	eu-central-1		OK	No auto scaling groups found
+AutoScaling	ASG Multiple AZ	N/A	eu-west-1		OK	No auto scaling groups found
+AutoScaling	ASG Multiple AZ	N/A	eu-west-2		OK	No auto scaling groups found
+AutoScaling	ASG Multiple AZ	N/A	eu-west-3		OK	No auto scaling groups found
+AutoScaling	ASG Multiple AZ	N/A	eu-north-1		OK	No auto scaling groups found
+AutoScaling	ASG Multiple AZ	N/A	ap-northeast-1		OK	No auto scaling groups found
+AutoScaling	ASG Multiple AZ	N/A	ap-northeast-2		OK	No auto scaling groups found
+AutoScaling	ASG Multiple AZ	N/A	ap-southeast-1		OK	No auto scaling groups found
+AutoScaling	ASG Multiple AZ	N/A	ap-southeast-2		OK	No auto scaling groups found
+AutoScaling	ASG Multiple AZ	N/A	ap-south-1		OK	No auto scaling groups found
+AutoScaling	ASG Multiple AZ	N/A	sa-east-1		OK	No auto scaling groups found
+AutoScaling	ASG Multiple AZ	N/A	ap-east-1		OK	Region is not enabled
+AutoScaling	ASG Multiple AZ	N/A	me-south-1		OK	Region is not enabled
+Athena	Workgroup Encrypted	arn:aws:athena:us-east-1:XXXXXXXXXXXX:workgroup/primary	us-east-1		OK	Athena primary workgroup does not have encryption enabled but is not in use.
+Athena	Workgroup Encrypted	arn:aws:athena:us-east-2:XXXXXXXXXXXX:workgroup/primary	us-east-2		OK	Athena primary workgroup does not have encryption enabled but is not in use.
+Athena	Workgroup Encrypted	arn:aws:athena:us-west-2:XXXXXXXXXXXX:workgroup/primary	us-west-2		OK	Athena primary workgroup does not have encryption enabled but is not in use.
+Athena	Workgroup Encrypted	arn:aws:athena:ca-central-1:XXXXXXXXXXXX:workgroup/primary	ca-central-1		OK	Athena primary workgroup does not have encryption enabled but is not in use.
+Athena	Workgroup Encrypted	arn:aws:athena:eu-west-1:XXXXXXXXXXXX:workgroup/primary	eu-west-1		OK	Athena primary workgroup does not have encryption enabled but is not in use.
+Athena	Workgroup Encrypted	arn:aws:athena:eu-central-1:XXXXXXXXXXXX:workgroup/primary	eu-central-1		OK	Athena primary workgroup does not have encryption enabled but is not in use.
+Athena	Workgroup Encrypted	arn:aws:athena:eu-west-2:XXXXXXXXXXXX:workgroup/primary	eu-west-2		OK	Athena primary workgroup does not have encryption enabled but is not in use.
+Athena	Workgroup Encrypted	arn:aws:athena:ap-southeast-1:XXXXXXXXXXXX:workgroup/primary	ap-southeast-1		OK	Athena primary workgroup does not have encryption enabled but is not in use.
+Athena	Workgroup Encrypted	arn:aws:athena:ap-northeast-1:XXXXXXXXXXXX:workgroup/primary	ap-northeast-1		OK	Athena primary workgroup does not have encryption enabled but is not in use.
+Athena	Workgroup Encrypted	arn:aws:athena:ap-southeast-2:XXXXXXXXXXXX:workgroup/primary	ap-southeast-2		OK	Athena primary workgroup does not have encryption enabled but is not in use.
+Athena	Workgroup Encrypted	arn:aws:athena:ap-northeast-2:XXXXXXXXXXXX:workgroup/primary	ap-northeast-2		OK	Athena primary workgroup does not have encryption enabled but is not in use.
+Athena	Workgroup Encrypted	arn:aws:athena:ap-south-1:XXXXXXXXXXXX:workgroup/primary	ap-south-1		OK	Athena primary workgroup does not have encryption enabled but is not in use.
+Athena	Workgroup Enforce Configuration	arn:aws:athena:us-east-1:XXXXXXXXXXXX:workgroup/primary	us-east-1		OK	Athena primary workgroup is not enforcing configuration options but is not in use
+Athena	Workgroup Enforce Configuration	arn:aws:athena:us-east-2:XXXXXXXXXXXX:workgroup/primary	us-east-2		OK	Athena primary workgroup is not enforcing configuration options but is not in use
+Athena	Workgroup Enforce Configuration	arn:aws:athena:us-west-2:XXXXXXXXXXXX:workgroup/primary	us-west-2		OK	Athena primary workgroup is not enforcing configuration options but is not in use
+Athena	Workgroup Enforce Configuration	arn:aws:athena:ca-central-1:XXXXXXXXXXXX:workgroup/primary	ca-central-1		OK	Athena primary workgroup is not enforcing configuration options but is not in use
+Athena	Workgroup Enforce Configuration	arn:aws:athena:eu-west-1:XXXXXXXXXXXX:workgroup/primary	eu-west-1		OK	Athena primary workgroup is not enforcing configuration options but is not in use
+Athena	Workgroup Enforce Configuration	arn:aws:athena:eu-central-1:XXXXXXXXXXXX:workgroup/primary	eu-central-1		OK	Athena primary workgroup is not enforcing configuration options but is not in use
+Athena	Workgroup Enforce Configuration	arn:aws:athena:eu-west-2:XXXXXXXXXXXX:workgroup/primary	eu-west-2		OK	Athena primary workgroup is not enforcing configuration options but is not in use
+Athena	Workgroup Enforce Configuration	arn:aws:athena:ap-southeast-1:XXXXXXXXXXXX:workgroup/primary	ap-southeast-1		OK	Athena primary workgroup is not enforcing configuration options but is not in use
+Athena	Workgroup Enforce Configuration	arn:aws:athena:ap-northeast-1:XXXXXXXXXXXX:workgroup/primary	ap-northeast-1		OK	Athena primary workgroup is not enforcing configuration options but is not in use
+Athena	Workgroup Enforce Configuration	arn:aws:athena:ap-southeast-2:XXXXXXXXXXXX:workgroup/primary	ap-southeast-2		OK	Athena primary workgroup is not enforcing configuration options but is not in use
+Athena	Workgroup Enforce Configuration	arn:aws:athena:ap-northeast-2:XXXXXXXXXXXX:workgroup/primary	ap-northeast-2		OK	Athena primary workgroup is not enforcing configuration options but is not in use
+Athena	Workgroup Enforce Configuration	arn:aws:athena:ap-south-1:XXXXXXXXXXXX:workgroup/primary	ap-south-1		OK	Athena primary workgroup is not enforcing configuration options but is not in use
+CloudFront	Public S3 CloudFront Origin	N/A	global		OK	No CloudFront distributions found
+CloudFront	Secure CloudFront Origin	N/A	global		OK	No CloudFront distributions found
+CloudFront	Secure CloudFront Origin	N/A	global		OK	No CloudFront origins without HTTPS or with insecure protocols found
+CloudFront	Insecure CloudFront Protocols	N/A	global		OK	No CloudFront distributions found
+CloudFront	CloudFront HTTPS Only	N/A	global		OK	No CloudFront distributions found
+CloudFront	CloudFront Logging Enabled	N/A	global		OK	No CloudFront distributions found
+CloudFront	CloudFront WAF Enabled	N/A	global		OK	No CloudFront distributions found
+CloudTrail	CloudTrail Bucket Access Logging	N/A	us-east-1		OK	No S3 buckets to check
+CloudTrail	CloudTrail Bucket Access Logging	N/A	us-east-2		OK	No S3 buckets to check
+CloudTrail	CloudTrail Bucket Access Logging	N/A	us-west-1		OK	No S3 buckets to check
+CloudTrail	CloudTrail Bucket Access Logging	N/A	us-west-2		OK	No S3 buckets to check
+CloudTrail	CloudTrail Bucket Access Logging	N/A	ca-central-1		OK	No S3 buckets to check
+CloudTrail	CloudTrail Bucket Access Logging	N/A	eu-central-1		OK	No S3 buckets to check
+CloudTrail	CloudTrail Bucket Access Logging	N/A	eu-west-1		OK	No S3 buckets to check
+CloudTrail	CloudTrail Bucket Access Logging	N/A	eu-west-2		OK	No S3 buckets to check
+CloudTrail	CloudTrail Bucket Access Logging	N/A	eu-west-3		OK	No S3 buckets to check
+CloudTrail	CloudTrail Bucket Access Logging	N/A	eu-north-1		OK	No S3 buckets to check
+CloudTrail	CloudTrail Bucket Access Logging	N/A	ap-northeast-1		OK	No S3 buckets to check
+CloudTrail	CloudTrail Bucket Access Logging	N/A	ap-northeast-2		OK	No S3 buckets to check
+CloudTrail	CloudTrail Bucket Access Logging	N/A	ap-southeast-1		OK	No S3 buckets to check
+CloudTrail	CloudTrail Bucket Access Logging	N/A	ap-southeast-2		OK	No S3 buckets to check
+CloudTrail	CloudTrail Bucket Access Logging	N/A	ap-south-1		OK	No S3 buckets to check
+CloudTrail	CloudTrail Bucket Access Logging	N/A	sa-east-1		OK	No S3 buckets to check
+CloudTrail	CloudTrail Bucket Access Logging	N/A	ap-east-1		OK	Region is not enabled
+CloudTrail	CloudTrail Bucket Access Logging	N/A	me-south-1		OK	Region is not enabled
+CloudTrail	CloudTrail Bucket Delete Policy	N/A	us-east-1		OK	No S3 buckets to check
+CloudTrail	CloudTrail Bucket Delete Policy	N/A	us-east-2		OK	No S3 buckets to check
+CloudTrail	CloudTrail Bucket Delete Policy	N/A	us-west-1		OK	No S3 buckets to check
+CloudTrail	CloudTrail Bucket Delete Policy	N/A	us-west-2		OK	No S3 buckets to check
+CloudTrail	CloudTrail Bucket Delete Policy	N/A	ca-central-1		OK	No S3 buckets to check
+CloudTrail	CloudTrail Bucket Delete Policy	N/A	eu-central-1		OK	No S3 buckets to check
+CloudTrail	CloudTrail Bucket Delete Policy	N/A	eu-west-1		OK	No S3 buckets to check
+CloudTrail	CloudTrail Bucket Delete Policy	N/A	eu-west-2		OK	No S3 buckets to check
+CloudTrail	CloudTrail Bucket Delete Policy	N/A	eu-west-3		OK	No S3 buckets to check
+CloudTrail	CloudTrail Bucket Delete Policy	N/A	eu-north-1		OK	No S3 buckets to check
+CloudTrail	CloudTrail Bucket Delete Policy	N/A	ap-northeast-1		OK	No S3 buckets to check
+CloudTrail	CloudTrail Bucket Delete Policy	N/A	ap-northeast-2		OK	No S3 buckets to check
+CloudTrail	CloudTrail Bucket Delete Policy	N/A	ap-southeast-1		OK	No S3 buckets to check
+CloudTrail	CloudTrail Bucket Delete Policy	N/A	ap-southeast-2		OK	No S3 buckets to check
+CloudTrail	CloudTrail Bucket Delete Policy	N/A	ap-south-1		OK	No S3 buckets to check
+CloudTrail	CloudTrail Bucket Delete Policy	N/A	sa-east-1		OK	No S3 buckets to check
+CloudTrail	CloudTrail Bucket Delete Policy	N/A	ap-east-1		OK	Region is not enabled
+CloudTrail	CloudTrail Bucket Delete Policy	N/A	me-south-1		OK	Region is not enabled
+CloudTrail	CloudTrail Enabled	N/A	us-east-1		FAIL	CloudTrail is not enabled
+CloudTrail	CloudTrail Enabled	N/A	us-east-2		FAIL	CloudTrail is not enabled
+CloudTrail	CloudTrail Enabled	N/A	us-west-1		FAIL	CloudTrail is not enabled
+CloudTrail	CloudTrail Enabled	N/A	us-west-2		FAIL	CloudTrail is not enabled
+CloudTrail	CloudTrail Enabled	N/A	ca-central-1		FAIL	CloudTrail is not enabled
+CloudTrail	CloudTrail Enabled	N/A	eu-central-1		FAIL	CloudTrail is not enabled
+CloudTrail	CloudTrail Enabled	N/A	eu-west-1		FAIL	CloudTrail is not enabled
+CloudTrail	CloudTrail Enabled	N/A	eu-west-2		FAIL	CloudTrail is not enabled
+CloudTrail	CloudTrail Enabled	N/A	eu-west-3		FAIL	CloudTrail is not enabled
+CloudTrail	CloudTrail Enabled	N/A	eu-north-1		FAIL	CloudTrail is not enabled
+CloudTrail	CloudTrail Enabled	N/A	ap-northeast-1		FAIL	CloudTrail is not enabled
+CloudTrail	CloudTrail Enabled	N/A	ap-northeast-2		FAIL	CloudTrail is not enabled
+CloudTrail	CloudTrail Enabled	N/A	ap-southeast-1		FAIL	CloudTrail is not enabled
+CloudTrail	CloudTrail Enabled	N/A	ap-southeast-2		FAIL	CloudTrail is not enabled
+CloudTrail	CloudTrail Enabled	N/A	ap-south-1		FAIL	CloudTrail is not enabled
+CloudTrail	CloudTrail Enabled	N/A	sa-east-1		FAIL	CloudTrail is not enabled
+CloudTrail	CloudTrail Enabled	N/A	ap-east-1		OK	Region is not enabled
+CloudTrail	CloudTrail Enabled	N/A	me-south-1		OK	Region is not enabled
+CloudTrail	CloudTrail Enabled	N/A	global		FAIL	CloudTrail is not configured to monitor global services
+CloudTrail	CloudTrail Encryption	N/A	us-east-1		FAIL	CloudTrail is not enabled
+CloudTrail	CloudTrail Encryption	N/A	us-east-2		FAIL	CloudTrail is not enabled
+CloudTrail	CloudTrail Encryption	N/A	us-west-1		FAIL	CloudTrail is not enabled
+CloudTrail	CloudTrail Encryption	N/A	us-west-2		FAIL	CloudTrail is not enabled
+CloudTrail	CloudTrail Encryption	N/A	ca-central-1		FAIL	CloudTrail is not enabled
+CloudTrail	CloudTrail Encryption	N/A	eu-central-1		FAIL	CloudTrail is not enabled
+CloudTrail	CloudTrail Encryption	N/A	eu-west-1		FAIL	CloudTrail is not enabled
+CloudTrail	CloudTrail Encryption	N/A	eu-west-2		FAIL	CloudTrail is not enabled
+CloudTrail	CloudTrail Encryption	N/A	eu-west-3		FAIL	CloudTrail is not enabled
+CloudTrail	CloudTrail Encryption	N/A	eu-north-1		FAIL	CloudTrail is not enabled
+CloudTrail	CloudTrail Encryption	N/A	ap-northeast-1		FAIL	CloudTrail is not enabled
+CloudTrail	CloudTrail Encryption	N/A	ap-northeast-2		FAIL	CloudTrail is not enabled
+CloudTrail	CloudTrail Encryption	N/A	ap-southeast-1		FAIL	CloudTrail is not enabled
+CloudTrail	CloudTrail Encryption	N/A	ap-southeast-2		FAIL	CloudTrail is not enabled
+CloudTrail	CloudTrail Encryption	N/A	ap-south-1		FAIL	CloudTrail is not enabled
+CloudTrail	CloudTrail Encryption	N/A	sa-east-1		FAIL	CloudTrail is not enabled
+CloudTrail	CloudTrail Encryption	N/A	ap-east-1		OK	Region is not enabled
+CloudTrail	CloudTrail Encryption	N/A	me-south-1		OK	Region is not enabled
+CloudTrail	CloudTrail File Validation	N/A	us-east-1		FAIL	CloudTrail is not enabled
+CloudTrail	CloudTrail File Validation	N/A	us-east-2		FAIL	CloudTrail is not enabled
+CloudTrail	CloudTrail File Validation	N/A	us-west-1		FAIL	CloudTrail is not enabled
+CloudTrail	CloudTrail File Validation	N/A	us-west-2		FAIL	CloudTrail is not enabled
+CloudTrail	CloudTrail File Validation	N/A	ca-central-1		FAIL	CloudTrail is not enabled
+CloudTrail	CloudTrail File Validation	N/A	eu-central-1		FAIL	CloudTrail is not enabled
+CloudTrail	CloudTrail File Validation	N/A	eu-west-1		FAIL	CloudTrail is not enabled
+CloudTrail	CloudTrail File Validation	N/A	eu-west-2		FAIL	CloudTrail is not enabled
+CloudTrail	CloudTrail File Validation	N/A	eu-west-3		FAIL	CloudTrail is not enabled
+CloudTrail	CloudTrail File Validation	N/A	eu-north-1		FAIL	CloudTrail is not enabled
+CloudTrail	CloudTrail File Validation	N/A	ap-northeast-1		FAIL	CloudTrail is not enabled
+CloudTrail	CloudTrail File Validation	N/A	ap-northeast-2		FAIL	CloudTrail is not enabled
+CloudTrail	CloudTrail File Validation	N/A	ap-southeast-1		FAIL	CloudTrail is not enabled
+CloudTrail	CloudTrail File Validation	N/A	ap-southeast-2		FAIL	CloudTrail is not enabled
+CloudTrail	CloudTrail File Validation	N/A	ap-south-1		FAIL	CloudTrail is not enabled
+CloudTrail	CloudTrail File Validation	N/A	sa-east-1		FAIL	CloudTrail is not enabled
+CloudTrail	CloudTrail File Validation	N/A	ap-east-1		OK	Region is not enabled
+CloudTrail	CloudTrail File Validation	N/A	me-south-1		OK	Region is not enabled
+CloudTrail	CloudTrail To CloudWatch	N/A	us-east-1		FAIL	CloudTrail is not enabled
+CloudTrail	CloudTrail To CloudWatch	N/A	us-east-2		FAIL	CloudTrail is not enabled
+CloudTrail	CloudTrail To CloudWatch	N/A	us-west-1		FAIL	CloudTrail is not enabled
+CloudTrail	CloudTrail To CloudWatch	N/A	us-west-2		FAIL	CloudTrail is not enabled
+CloudTrail	CloudTrail To CloudWatch	N/A	ca-central-1		FAIL	CloudTrail is not enabled
+CloudTrail	CloudTrail To CloudWatch	N/A	eu-central-1		FAIL	CloudTrail is not enabled
+CloudTrail	CloudTrail To CloudWatch	N/A	eu-west-1		FAIL	CloudTrail is not enabled
+CloudTrail	CloudTrail To CloudWatch	N/A	eu-west-2		FAIL	CloudTrail is not enabled
+CloudTrail	CloudTrail To CloudWatch	N/A	eu-west-3		FAIL	CloudTrail is not enabled
+CloudTrail	CloudTrail To CloudWatch	N/A	eu-north-1		FAIL	CloudTrail is not enabled
+CloudTrail	CloudTrail To CloudWatch	N/A	ap-northeast-1		FAIL	CloudTrail is not enabled
+CloudTrail	CloudTrail To CloudWatch	N/A	ap-northeast-2		FAIL	CloudTrail is not enabled
+CloudTrail	CloudTrail To CloudWatch	N/A	ap-southeast-1		FAIL	CloudTrail is not enabled
+CloudTrail	CloudTrail To CloudWatch	N/A	ap-southeast-2		FAIL	CloudTrail is not enabled
+CloudTrail	CloudTrail To CloudWatch	N/A	ap-south-1		FAIL	CloudTrail is not enabled
+CloudTrail	CloudTrail To CloudWatch	N/A	sa-east-1		FAIL	CloudTrail is not enabled
+CloudTrail	CloudTrail To CloudWatch	N/A	ap-east-1		OK	Region is not enabled
+CloudTrail	CloudTrail To CloudWatch	N/A	me-south-1		OK	Region is not enabled
+CloudTrail	CloudTrail Bucket Private	N/A	us-east-1		OK	No S3 buckets to check
+CloudTrail	CloudTrail Bucket Private	N/A	us-east-2		OK	No S3 buckets to check
+CloudTrail	CloudTrail Bucket Private	N/A	us-west-1		OK	No S3 buckets to check
+CloudTrail	CloudTrail Bucket Private	N/A	us-west-2		OK	No S3 buckets to check
+CloudTrail	CloudTrail Bucket Private	N/A	ca-central-1		OK	No S3 buckets to check
+CloudTrail	CloudTrail Bucket Private	N/A	eu-central-1		OK	No S3 buckets to check
+CloudTrail	CloudTrail Bucket Private	N/A	eu-west-1		OK	No S3 buckets to check
+CloudTrail	CloudTrail Bucket Private	N/A	eu-west-2		OK	No S3 buckets to check
+CloudTrail	CloudTrail Bucket Private	N/A	eu-west-3		OK	No S3 buckets to check
+CloudTrail	CloudTrail Bucket Private	N/A	eu-north-1		OK	No S3 buckets to check
+CloudTrail	CloudTrail Bucket Private	N/A	ap-northeast-1		OK	No S3 buckets to check
+CloudTrail	CloudTrail Bucket Private	N/A	ap-northeast-2		OK	No S3 buckets to check
+CloudTrail	CloudTrail Bucket Private	N/A	ap-southeast-1		OK	No S3 buckets to check
+CloudTrail	CloudTrail Bucket Private	N/A	ap-southeast-2		OK	No S3 buckets to check
+CloudTrail	CloudTrail Bucket Private	N/A	ap-south-1		OK	No S3 buckets to check
+CloudTrail	CloudTrail Bucket Private	N/A	sa-east-1		OK	No S3 buckets to check
+CloudTrail	CloudTrail Bucket Private	N/A	ap-east-1		OK	Region is not enabled
+CloudTrail	CloudTrail Bucket Private	N/A	me-south-1		OK	Region is not enabled
+ConfigService	Config Service Enabled	N/A	us-east-1		FAIL	Config Service is configured but not recording
+ConfigService	Config Service Enabled	N/A	us-east-2		FAIL	Config Service is not configured
+ConfigService	Config Service Enabled	N/A	us-west-1		FAIL	Config Service is not configured
+ConfigService	Config Service Enabled	N/A	us-west-2		FAIL	Config Service is not configured
+ConfigService	Config Service Enabled	N/A	ca-central-1		FAIL	Config Service is not configured
+ConfigService	Config Service Enabled	N/A	eu-central-1		FAIL	Config Service is not configured
+ConfigService	Config Service Enabled	N/A	eu-west-1		FAIL	Config Service is not configured
+ConfigService	Config Service Enabled	N/A	eu-west-2		FAIL	Config Service is not configured
+ConfigService	Config Service Enabled	N/A	eu-west-3		FAIL	Config Service is not configured
+ConfigService	Config Service Enabled	N/A	eu-north-1		FAIL	Config Service is not configured
+ConfigService	Config Service Enabled	N/A	ap-northeast-1		FAIL	Config Service is not configured
+ConfigService	Config Service Enabled	N/A	ap-northeast-2		FAIL	Config Service is not configured
+ConfigService	Config Service Enabled	N/A	ap-southeast-1		FAIL	Config Service is not configured
+ConfigService	Config Service Enabled	N/A	ap-southeast-2		FAIL	Config Service is not configured
+ConfigService	Config Service Enabled	N/A	ap-south-1		FAIL	Config Service is not configured
+ConfigService	Config Service Enabled	N/A	sa-east-1		FAIL	Config Service is not configured
+ConfigService	Config Service Enabled	N/A	ap-east-1		OK	Region is not enabled
+ConfigService	Config Service Enabled	N/A	me-south-1		OK	Region is not enabled
+ConfigService	Config Service Enabled	N/A	global		OK	Config Service is monitoring global services
+DynamoDB	DynamoDB KMS Encryption	N/A	us-east-1		OK	No DynamoDB tables found
+DynamoDB	DynamoDB KMS Encryption	N/A	us-east-2		OK	No DynamoDB tables found
+DynamoDB	DynamoDB KMS Encryption	N/A	us-west-1		OK	No DynamoDB tables found
+DynamoDB	DynamoDB KMS Encryption	N/A	us-west-2		OK	No DynamoDB tables found
+DynamoDB	DynamoDB KMS Encryption	N/A	ca-central-1		OK	No DynamoDB tables found
+DynamoDB	DynamoDB KMS Encryption	N/A	eu-central-1		OK	No DynamoDB tables found
+DynamoDB	DynamoDB KMS Encryption	N/A	eu-west-1		OK	No DynamoDB tables found
+DynamoDB	DynamoDB KMS Encryption	N/A	eu-west-2		OK	No DynamoDB tables found
+DynamoDB	DynamoDB KMS Encryption	N/A	eu-west-3		OK	No DynamoDB tables found
+DynamoDB	DynamoDB KMS Encryption	N/A	eu-north-1		OK	No DynamoDB tables found
+DynamoDB	DynamoDB KMS Encryption	N/A	ap-northeast-1		OK	No DynamoDB tables found
+DynamoDB	DynamoDB KMS Encryption	N/A	ap-northeast-2		OK	No DynamoDB tables found
+DynamoDB	DynamoDB KMS Encryption	N/A	ap-southeast-1		OK	No DynamoDB tables found
+DynamoDB	DynamoDB KMS Encryption	N/A	ap-southeast-2		OK	No DynamoDB tables found
+DynamoDB	DynamoDB KMS Encryption	N/A	ap-south-1		OK	No DynamoDB tables found
+DynamoDB	DynamoDB KMS Encryption	N/A	sa-east-1		OK	No DynamoDB tables found
+DynamoDB	DynamoDB KMS Encryption	N/A	ap-east-1		OK	Region is not enabled
+DynamoDB	DynamoDB KMS Encryption	N/A	me-south-1		OK	Region is not enabled
+EC2	Default Security Group	arn:aws:ec2:us-east-1:XXXXXXXXXXXX:security-group/sg-094ea42002bc2153f	us-east-1		FAIL	Default security group has 1 inbound and 1 outbound rules
+EC2	Default Security Group	arn:aws:ec2:us-east-1:XXXXXXXXXXXX:security-group/sg-0cb9e75c	us-east-1		FAIL	Default security group has 1 inbound and 1 outbound rules
+EC2	Default Security Group	arn:aws:ec2:us-east-2:XXXXXXXXXXXX:security-group/sg-3b5bcb59	us-east-2		FAIL	Default security group has 1 inbound and 1 outbound rules
+EC2	Default Security Group	arn:aws:ec2:us-west-1:XXXXXXXXXXXX:security-group/sg-71045d0e	us-west-1		FAIL	Default security group has 1 inbound and 1 outbound rules
+EC2	Default Security Group	arn:aws:ec2:us-west-2:XXXXXXXXXXXX:security-group/sg-e2dbc7a1	us-west-2		FAIL	Default security group has 1 inbound and 1 outbound rules
+EC2	Default Security Group	arn:aws:ec2:ca-central-1:XXXXXXXXXXXX:security-group/sg-0f096f60	ca-central-1		FAIL	Default security group has 1 inbound and 1 outbound rules
+EC2	Default Security Group	arn:aws:ec2:eu-central-1:XXXXXXXXXXXX:security-group/sg-eab6d388	eu-central-1		FAIL	Default security group has 1 inbound and 1 outbound rules
+EC2	Default Security Group	arn:aws:ec2:eu-west-1:XXXXXXXXXXXX:security-group/sg-951c16e3	eu-west-1		FAIL	Default security group has 1 inbound and 1 outbound rules
+EC2	Default Security Group	arn:aws:ec2:eu-west-2:XXXXXXXXXXXX:security-group/sg-8b6607e5	eu-west-2		FAIL	Default security group has 1 inbound and 1 outbound rules
+EC2	Default Security Group	arn:aws:ec2:eu-west-3:XXXXXXXXXXXX:security-group/sg-97039dfa	eu-west-3		FAIL	Default security group has 1 inbound and 1 outbound rules
+EC2	Default Security Group	arn:aws:ec2:eu-north-1:XXXXXXXXXXXX:security-group/sg-d9e049b2	eu-north-1		FAIL	Default security group has 1 inbound and 1 outbound rules
+EC2	Default Security Group	arn:aws:ec2:ap-northeast-1:XXXXXXXXXXXX:security-group/sg-480eca38	ap-northeast-1		FAIL	Default security group has 1 inbound and 1 outbound rules
+EC2	Default Security Group	arn:aws:ec2:ap-northeast-2:XXXXXXXXXXXX:security-group/sg-5463d935	ap-northeast-2		FAIL	Default security group has 1 inbound and 1 outbound rules
+EC2	Default Security Group	arn:aws:ec2:ap-southeast-1:XXXXXXXXXXXX:security-group/sg-ab2b43d4	ap-southeast-1		FAIL	Default security group has 1 inbound and 1 outbound rules
+EC2	Default Security Group	arn:aws:ec2:ap-southeast-2:XXXXXXXXXXXX:security-group/sg-9176c5ef	ap-southeast-2		FAIL	Default security group has 1 inbound and 1 outbound rules
+EC2	Default Security Group	arn:aws:ec2:ap-south-1:XXXXXXXXXXXX:security-group/sg-e34a0e8d	ap-south-1		FAIL	Default security group has 1 inbound and 1 outbound rules
+EC2	Default Security Group	arn:aws:ec2:sa-east-1:XXXXXXXXXXXX:security-group/sg-75bb840f	sa-east-1		FAIL	Default security group has 1 inbound and 1 outbound rules
+EC2	Default Security Group	N/A	ap-east-1		OK	Region is not enabled
+EC2	Default Security Group	N/A	me-south-1		OK	Region is not enabled
+EC2	Elastic IP Limit	N/A	us-east-1		OK	No Elastic IPs found
+EC2	Elastic IP Limit	N/A	us-east-2		OK	No Elastic IPs found
+EC2	Elastic IP Limit	N/A	us-west-1		OK	No Elastic IPs found
+EC2	Elastic IP Limit	N/A	us-west-2		OK	No Elastic IPs found
+EC2	Elastic IP Limit	N/A	ca-central-1		OK	No Elastic IPs found
+EC2	Elastic IP Limit	N/A	eu-central-1		OK	No Elastic IPs found
+EC2	Elastic IP Limit	N/A	eu-west-1		OK	No Elastic IPs found
+EC2	Elastic IP Limit	N/A	eu-west-2		OK	No Elastic IPs found
+EC2	Elastic IP Limit	N/A	eu-west-3		OK	No Elastic IPs found
+EC2	Elastic IP Limit	N/A	eu-north-1		OK	No Elastic IPs found
+EC2	Elastic IP Limit	N/A	ap-northeast-1		OK	No Elastic IPs found
+EC2	Elastic IP Limit	N/A	ap-northeast-2		OK	No Elastic IPs found
+EC2	Elastic IP Limit	N/A	ap-southeast-1		OK	No Elastic IPs found
+EC2	Elastic IP Limit	N/A	ap-southeast-2		OK	No Elastic IPs found
+EC2	Elastic IP Limit	N/A	ap-south-1		OK	No Elastic IPs found
+EC2	Elastic IP Limit	N/A	sa-east-1		OK	No Elastic IPs found
+EC2	Elastic IP Limit	N/A	ap-east-1		OK	Region is not enabled
+EC2	Elastic IP Limit	N/A	me-south-1		OK	Region is not enabled
+EC2	Subnet IP Availability	arn:aws:ec2:us-east-1:XXXXXXXXXXXX:subnet/subnet-0f4722bbaadd00fa2	us-east-1		OK	Subnet subnet-0f4722bbaadd00fa2 is using 8 of 256 (4%) available IPs.
+EC2	Subnet IP Availability	arn:aws:ec2:us-east-1:XXXXXXXXXXXX:subnet/subnet-3b291315	us-east-1		OK	Subnet subnet-3b291315 is using 6 of 4096 (1%) available IPs.
+EC2	Subnet IP Availability	arn:aws:ec2:us-east-1:XXXXXXXXXXXX:subnet/subnet-a571329b	us-east-1		OK	Subnet subnet-a571329b is using 5 of 4096 (1%) available IPs.
+EC2	Subnet IP Availability	arn:aws:ec2:us-east-1:XXXXXXXXXXXX:subnet/subnet-6fc30c22	us-east-1		OK	Subnet subnet-6fc30c22 is using 5 of 4096 (1%) available IPs.
+EC2	Subnet IP Availability	arn:aws:ec2:us-east-1:XXXXXXXXXXXX:subnet/subnet-79291125	us-east-1		OK	Subnet subnet-79291125 is using 5 of 4096 (1%) available IPs.
+EC2	Subnet IP Availability	arn:aws:ec2:us-east-1:XXXXXXXXXXXX:subnet/subnet-03d0d72c364e81c60	us-east-1		OK	Subnet subnet-03d0d72c364e81c60 is using 8 of 256 (4%) available IPs.
+EC2	Subnet IP Availability	arn:aws:ec2:us-east-1:XXXXXXXXXXXX:subnet/subnet-d6a498b1	us-east-1		OK	Subnet subnet-d6a498b1 is using 5 of 4096 (1%) available IPs.
+EC2	Subnet IP Availability	arn:aws:ec2:us-east-1:XXXXXXXXXXXX:subnet/subnet-e49869ea	us-east-1		OK	Subnet subnet-e49869ea is using 5 of 4096 (1%) available IPs.
+EC2	Subnet IP Availability	arn:aws:ec2:us-east-2:XXXXXXXXXXXX:subnet/subnet-9da0b8f5	us-east-2		OK	Subnet subnet-9da0b8f5 is using 5 of 4096 (1%) available IPs.
+EC2	Subnet IP Availability	arn:aws:ec2:us-east-2:XXXXXXXXXXXX:subnet/subnet-4d962f01	us-east-2		OK	Subnet subnet-4d962f01 is using 5 of 4096 (1%) available IPs.
+EC2	Subnet IP Availability	arn:aws:ec2:us-east-2:XXXXXXXXXXXX:subnet/subnet-4b3a6b31	us-east-2		OK	Subnet subnet-4b3a6b31 is using 5 of 4096 (1%) available IPs.
+EC2	Subnet IP Availability	arn:aws:ec2:us-west-1:XXXXXXXXXXXX:subnet/subnet-b1322dea	us-west-1		OK	Subnet subnet-b1322dea is using 5 of 4096 (1%) available IPs.
+EC2	Subnet IP Availability	arn:aws:ec2:us-west-1:XXXXXXXXXXXX:subnet/subnet-42fa3924	us-west-1		OK	Subnet subnet-42fa3924 is using 5 of 4096 (1%) available IPs.
+EC2	Subnet IP Availability	arn:aws:ec2:us-west-2:XXXXXXXXXXXX:subnet/subnet-21afcd0a	us-west-2		OK	Subnet subnet-21afcd0a is using 5 of 4096 (1%) available IPs.
+EC2	Subnet IP Availability	arn:aws:ec2:us-west-2:XXXXXXXXXXXX:subnet/subnet-e2856fbf	us-west-2		OK	Subnet subnet-e2856fbf is using 5 of 4096 (1%) available IPs.
+EC2	Subnet IP Availability	arn:aws:ec2:us-west-2:XXXXXXXXXXXX:subnet/subnet-a8cacfe3	us-west-2		OK	Subnet subnet-a8cacfe3 is using 5 of 4096 (1%) available IPs.
+EC2	Subnet IP Availability	arn:aws:ec2:us-west-2:XXXXXXXXXXXX:subnet/subnet-af8890d6	us-west-2		OK	Subnet subnet-af8890d6 is using 5 of 4096 (1%) available IPs.
+EC2	Subnet IP Availability	arn:aws:ec2:ca-central-1:XXXXXXXXXXXX:subnet/subnet-af307ef3	ca-central-1		OK	Subnet subnet-af307ef3 is using 5 of 4096 (1%) available IPs.
+EC2	Subnet IP Availability	arn:aws:ec2:ca-central-1:XXXXXXXXXXXX:subnet/subnet-987518f0	ca-central-1		OK	Subnet subnet-987518f0 is using 5 of 4096 (1%) available IPs.
+EC2	Subnet IP Availability	arn:aws:ec2:ca-central-1:XXXXXXXXXXXX:subnet/subnet-a61aa4dc	ca-central-1		OK	Subnet subnet-a61aa4dc is using 5 of 4096 (1%) available IPs.
+EC2	Subnet IP Availability	arn:aws:ec2:eu-central-1:XXXXXXXXXXXX:subnet/subnet-d7efffaa	eu-central-1		OK	Subnet subnet-d7efffaa is using 5 of 4096 (1%) available IPs.
+EC2	Subnet IP Availability	arn:aws:ec2:eu-central-1:XXXXXXXXXXXX:subnet/subnet-0b04e347	eu-central-1		OK	Subnet subnet-0b04e347 is using 5 of 4096 (1%) available IPs.
+EC2	Subnet IP Availability	arn:aws:ec2:eu-central-1:XXXXXXXXXXXX:subnet/subnet-33a20759	eu-central-1		OK	Subnet subnet-33a20759 is using 5 of 4096 (1%) available IPs.
+EC2	Subnet IP Availability	arn:aws:ec2:eu-west-1:XXXXXXXXXXXX:subnet/subnet-4064ee1a	eu-west-1		OK	Subnet subnet-4064ee1a is using 5 of 4096 (1%) available IPs.
+EC2	Subnet IP Availability	arn:aws:ec2:eu-west-1:XXXXXXXXXXXX:subnet/subnet-3d2a625b	eu-west-1		OK	Subnet subnet-3d2a625b is using 5 of 4096 (1%) available IPs.
+EC2	Subnet IP Availability	arn:aws:ec2:eu-west-1:XXXXXXXXXXXX:subnet/subnet-04de864c	eu-west-1		OK	Subnet subnet-04de864c is using 5 of 4096 (1%) available IPs.
+EC2	Subnet IP Availability	arn:aws:ec2:eu-west-2:XXXXXXXXXXXX:subnet/subnet-c87df8b2	eu-west-2		OK	Subnet subnet-c87df8b2 is using 5 of 4096 (1%) available IPs.
+EC2	Subnet IP Availability	arn:aws:ec2:eu-west-2:XXXXXXXXXXXX:subnet/subnet-70c2093c	eu-west-2		OK	Subnet subnet-70c2093c is using 5 of 4096 (1%) available IPs.
+EC2	Subnet IP Availability	arn:aws:ec2:eu-west-2:XXXXXXXXXXXX:subnet/subnet-b5e39adc	eu-west-2		OK	Subnet subnet-b5e39adc is using 5 of 4096 (1%) available IPs.
+EC2	Subnet IP Availability	arn:aws:ec2:eu-west-3:XXXXXXXXXXXX:subnet/subnet-28971f65	eu-west-3		OK	Subnet subnet-28971f65 is using 5 of 4096 (1%) available IPs.
+EC2	Subnet IP Availability	arn:aws:ec2:eu-west-3:XXXXXXXXXXXX:subnet/subnet-d51e32bc	eu-west-3		OK	Subnet subnet-d51e32bc is using 5 of 4096 (1%) available IPs.
+EC2	Subnet IP Availability	arn:aws:ec2:eu-west-3:XXXXXXXXXXXX:subnet/subnet-4d753236	eu-west-3		OK	Subnet subnet-4d753236 is using 5 of 4096 (1%) available IPs.
+EC2	Subnet IP Availability	arn:aws:ec2:eu-north-1:XXXXXXXXXXXX:subnet/subnet-d465adbd	eu-north-1		OK	Subnet subnet-d465adbd is using 5 of 4096 (1%) available IPs.
+EC2	Subnet IP Availability	arn:aws:ec2:eu-north-1:XXXXXXXXXXXX:subnet/subnet-88876df3	eu-north-1		OK	Subnet subnet-88876df3 is using 5 of 4096 (1%) available IPs.
+EC2	Subnet IP Availability	arn:aws:ec2:eu-north-1:XXXXXXXXXXXX:subnet/subnet-87e3f6cd	eu-north-1		OK	Subnet subnet-87e3f6cd is using 5 of 4096 (1%) available IPs.
+EC2	Subnet IP Availability	arn:aws:ec2:ap-northeast-1:XXXXXXXXXXXX:subnet/subnet-16517b4d	ap-northeast-1		OK	Subnet subnet-16517b4d is using 5 of 4096 (1%) available IPs.
+EC2	Subnet IP Availability	arn:aws:ec2:ap-northeast-1:XXXXXXXXXXXX:subnet/subnet-77ff073f	ap-northeast-1		OK	Subnet subnet-77ff073f is using 5 of 4096 (1%) available IPs.
+EC2	Subnet IP Availability	arn:aws:ec2:ap-northeast-1:XXXXXXXXXXXX:subnet/subnet-ffdb18d4	ap-northeast-1		OK	Subnet subnet-ffdb18d4 is using 5 of 4096 (1%) available IPs.
+EC2	Subnet IP Availability	arn:aws:ec2:ap-northeast-2:XXXXXXXXXXXX:subnet/subnet-22fb4e59	ap-northeast-2		OK	Subnet subnet-22fb4e59 is using 5 of 4096 (1%) available IPs.
+EC2	Subnet IP Availability	arn:aws:ec2:ap-northeast-2:XXXXXXXXXXXX:subnet/subnet-c694b98a	ap-northeast-2		OK	Subnet subnet-c694b98a is using 5 of 4096 (1%) available IPs.
+EC2	Subnet IP Availability	arn:aws:ec2:ap-northeast-2:XXXXXXXXXXXX:subnet/subnet-c743baac	ap-northeast-2		OK	Subnet subnet-c743baac is using 5 of 4096 (1%) available IPs.
+EC2	Subnet IP Availability	arn:aws:ec2:ap-southeast-1:XXXXXXXXXXXX:subnet/subnet-3be10073	ap-southeast-1		OK	Subnet subnet-3be10073 is using 5 of 4096 (1%) available IPs.
+EC2	Subnet IP Availability	arn:aws:ec2:ap-southeast-1:XXXXXXXXXXXX:subnet/subnet-6e2ddc08	ap-southeast-1		OK	Subnet subnet-6e2ddc08 is using 5 of 4096 (1%) available IPs.
+EC2	Subnet IP Availability	arn:aws:ec2:ap-southeast-1:XXXXXXXXXXXX:subnet/subnet-f1822ea8	ap-southeast-1		OK	Subnet subnet-f1822ea8 is using 5 of 4096 (1%) available IPs.
+EC2	Subnet IP Availability	arn:aws:ec2:ap-southeast-2:XXXXXXXXXXXX:subnet/subnet-cb6b7e82	ap-southeast-2		OK	Subnet subnet-cb6b7e82 is using 5 of 4096 (1%) available IPs.
+EC2	Subnet IP Availability	arn:aws:ec2:ap-southeast-2:XXXXXXXXXXXX:subnet/subnet-e8c7df8f	ap-southeast-2		OK	Subnet subnet-e8c7df8f is using 5 of 4096 (1%) available IPs.
+EC2	Subnet IP Availability	arn:aws:ec2:ap-southeast-2:XXXXXXXXXXXX:subnet/subnet-843ab1dc	ap-southeast-2		OK	Subnet subnet-843ab1dc is using 5 of 4096 (1%) available IPs.
+EC2	Subnet IP Availability	arn:aws:ec2:ap-south-1:XXXXXXXXXXXX:subnet/subnet-5cc05d10	ap-south-1		OK	Subnet subnet-5cc05d10 is using 5 of 4096 (1%) available IPs.
+EC2	Subnet IP Availability	arn:aws:ec2:ap-south-1:XXXXXXXXXXXX:subnet/subnet-1d278366	ap-south-1		OK	Subnet subnet-1d278366 is using 5 of 4096 (1%) available IPs.
+EC2	Subnet IP Availability	arn:aws:ec2:ap-south-1:XXXXXXXXXXXX:subnet/subnet-dd0d21b5	ap-south-1		OK	Subnet subnet-dd0d21b5 is using 5 of 4096 (1%) available IPs.
+EC2	Subnet IP Availability	arn:aws:ec2:sa-east-1:XXXXXXXXXXXX:subnet/subnet-3e7db577	sa-east-1		OK	Subnet subnet-3e7db577 is using 5 of 4096 (1%) available IPs.
+EC2	Subnet IP Availability	arn:aws:ec2:sa-east-1:XXXXXXXXXXXX:subnet/subnet-90f044cb	sa-east-1		OK	Subnet subnet-90f044cb is using 5 of 4096 (1%) available IPs.
+EC2	Subnet IP Availability	arn:aws:ec2:sa-east-1:XXXXXXXXXXXX:subnet/subnet-aa69c7cc	sa-east-1		OK	Subnet subnet-aa69c7cc is using 5 of 4096 (1%) available IPs.
+EC2	Subnet IP Availability	N/A	ap-east-1		OK	Region is not enabled
+EC2	Subnet IP Availability	N/A	me-south-1		OK	Region is not enabled
+EC2	Excessive Security Groups	N/A	us-east-1		OK	Acceptable number of security groups: 18 groups present
+EC2	Excessive Security Groups	N/A	us-east-2		OK	Acceptable number of security groups: 1 groups present
+EC2	Excessive Security Groups	N/A	us-west-1		OK	Acceptable number of security groups: 1 groups present
+EC2	Excessive Security Groups	N/A	us-west-2		OK	Acceptable number of security groups: 1 groups present
+EC2	Excessive Security Groups	N/A	ca-central-1		OK	Acceptable number of security groups: 1 groups present
+EC2	Excessive Security Groups	N/A	eu-central-1		OK	Acceptable number of security groups: 1 groups present
+EC2	Excessive Security Groups	N/A	eu-west-1		OK	Acceptable number of security groups: 1 groups present
+EC2	Excessive Security Groups	N/A	eu-west-2		OK	Acceptable number of security groups: 1 groups present
+EC2	Excessive Security Groups	N/A	eu-west-3		OK	Acceptable number of security groups: 1 groups present
+EC2	Excessive Security Groups	N/A	eu-north-1		OK	Acceptable number of security groups: 1 groups present
+EC2	Excessive Security Groups	N/A	ap-northeast-1		OK	Acceptable number of security groups: 1 groups present
+EC2	Excessive Security Groups	N/A	ap-northeast-2		OK	Acceptable number of security groups: 1 groups present
+EC2	Excessive Security Groups	N/A	ap-southeast-1		OK	Acceptable number of security groups: 1 groups present
+EC2	Excessive Security Groups	N/A	ap-southeast-2		OK	Acceptable number of security groups: 1 groups present
+EC2	Excessive Security Groups	N/A	ap-south-1		OK	Acceptable number of security groups: 1 groups present
+EC2	Excessive Security Groups	N/A	sa-east-1		OK	Acceptable number of security groups: 1 groups present
+EC2	Excessive Security Groups	N/A	ap-east-1		OK	Region is not enabled
+EC2	Excessive Security Groups	N/A	me-south-1		OK	Region is not enabled
+EC2	Instance Limit	N/A	us-east-1		OK	Account contains 1 of 20 (5%) available instances
+EC2	Instance Limit	N/A	us-east-2		OK	No instances found
+EC2	Instance Limit	N/A	us-west-1		OK	No instances found
+EC2	Instance Limit	N/A	us-west-2		OK	No instances found
+EC2	Instance Limit	N/A	ca-central-1		OK	No instances found
+EC2	Instance Limit	N/A	eu-central-1		OK	No instances found
+EC2	Instance Limit	N/A	eu-west-1		OK	No instances found
+EC2	Instance Limit	N/A	eu-west-2		OK	No instances found
+EC2	Instance Limit	N/A	eu-west-3		OK	No instances found
+EC2	Instance Limit	N/A	eu-north-1		OK	No instances found
+EC2	Instance Limit	N/A	ap-northeast-1		OK	No instances found
+EC2	Instance Limit	N/A	ap-northeast-2		OK	No instances found
+EC2	Instance Limit	N/A	ap-southeast-1		OK	No instances found
+EC2	Instance Limit	N/A	ap-southeast-2		OK	No instances found
+EC2	Instance Limit	N/A	ap-south-1		OK	No instances found
+EC2	Instance Limit	N/A	sa-east-1		OK	No instances found
+EC2	Instance Limit	N/A	ap-east-1		OK	Region is not enabled
+EC2	Instance Limit	N/A	me-south-1		OK	Region is not enabled
+EC2	Instance vCPU On-Demand Based Limits	N/A	us-east-1		OK	Account contains 1 of 32 vCPUs (4%) for on-demand A, C, D, H, I, M, R, T, Z instances
+EC2	Instance vCPU On-Demand Based Limits	N/A	us-east-2		OK	No instances found
+EC2	Instance vCPU On-Demand Based Limits	N/A	us-west-1		OK	No instances found
+EC2	Instance vCPU On-Demand Based Limits	N/A	us-west-2		OK	No instances found
+EC2	Instance vCPU On-Demand Based Limits	N/A	ca-central-1		OK	No instances found
+EC2	Instance vCPU On-Demand Based Limits	N/A	eu-central-1		OK	No instances found
+EC2	Instance vCPU On-Demand Based Limits	N/A	eu-west-1		OK	No instances found
+EC2	Instance vCPU On-Demand Based Limits	N/A	eu-west-2		OK	No instances found
+EC2	Instance vCPU On-Demand Based Limits	N/A	eu-west-3		OK	No instances found
+EC2	Instance vCPU On-Demand Based Limits	N/A	eu-north-1		OK	No instances found
+EC2	Instance vCPU On-Demand Based Limits	N/A	ap-northeast-1		OK	No instances found
+EC2	Instance vCPU On-Demand Based Limits	N/A	ap-northeast-2		OK	No instances found
+EC2	Instance vCPU On-Demand Based Limits	N/A	ap-southeast-1		OK	No instances found
+EC2	Instance vCPU On-Demand Based Limits	N/A	ap-southeast-2		OK	No instances found
+EC2	Instance vCPU On-Demand Based Limits	N/A	ap-south-1		OK	No instances found
+EC2	Instance vCPU On-Demand Based Limits	N/A	sa-east-1		OK	No instances found
+EC2	Instance vCPU On-Demand Based Limits	N/A	ap-east-1		OK	Region is not enabled
+EC2	Instance vCPU On-Demand Based Limits	N/A	me-south-1		OK	Region is not enabled
+EC2	EC2 Max Instances	N/A	us-east-1		OK	1 instances in the region are within the regional expected count of: 100
+EC2	EC2 Max Instances	N/A	us-east-2		OK	No instances found
+EC2	EC2 Max Instances	N/A	us-west-1		OK	No instances found
+EC2	EC2 Max Instances	N/A	us-west-2		OK	No instances found
+EC2	EC2 Max Instances	N/A	ca-central-1		OK	No instances found
+EC2	EC2 Max Instances	N/A	eu-central-1		OK	No instances found
+EC2	EC2 Max Instances	N/A	eu-west-1		OK	No instances found
+EC2	EC2 Max Instances	N/A	eu-west-2		OK	No instances found
+EC2	EC2 Max Instances	N/A	eu-west-3		OK	No instances found
+EC2	EC2 Max Instances	N/A	eu-north-1		OK	No instances found
+EC2	EC2 Max Instances	N/A	ap-northeast-1		OK	No instances found
+EC2	EC2 Max Instances	N/A	ap-northeast-2		OK	No instances found
+EC2	EC2 Max Instances	N/A	ap-southeast-1		OK	No instances found
+EC2	EC2 Max Instances	N/A	ap-southeast-2		OK	No instances found
+EC2	EC2 Max Instances	N/A	ap-south-1		OK	No instances found
+EC2	EC2 Max Instances	N/A	sa-east-1		OK	No instances found
+EC2	EC2 Max Instances	N/A	ap-east-1		OK	Region is not enabled
+EC2	EC2 Max Instances	N/A	me-south-1		OK	Region is not enabled
+EC2	EC2 Max Instances	N/A	global		OK	1 instances in the account are within the global expected count of: 200
+EC2	EC2 Instance Key Based Login	arn:aws:ec2:us-east-1:XXXXXXXXXXXX:instance/i-01133c160483837cb	us-east-1		FAIL	Instance does not have associated keys for password-less SSH login
+EC2	EC2 Instance Key Based Login	N/A	us-east-2		OK	No instances found
+EC2	EC2 Instance Key Based Login	N/A	us-west-1		OK	No instances found
+EC2	EC2 Instance Key Based Login	N/A	us-west-2		OK	No instances found
+EC2	EC2 Instance Key Based Login	N/A	ca-central-1		OK	No instances found
+EC2	EC2 Instance Key Based Login	N/A	eu-central-1		OK	No instances found
+EC2	EC2 Instance Key Based Login	N/A	eu-west-1		OK	No instances found
+EC2	EC2 Instance Key Based Login	N/A	eu-west-2		OK	No instances found
+EC2	EC2 Instance Key Based Login	N/A	eu-west-3		OK	No instances found
+EC2	EC2 Instance Key Based Login	N/A	eu-north-1		OK	No instances found
+EC2	EC2 Instance Key Based Login	N/A	ap-northeast-1		OK	No instances found
+EC2	EC2 Instance Key Based Login	N/A	ap-northeast-2		OK	No instances found
+EC2	EC2 Instance Key Based Login	N/A	ap-southeast-1		OK	No instances found
+EC2	EC2 Instance Key Based Login	N/A	ap-southeast-2		OK	No instances found
+EC2	EC2 Instance Key Based Login	N/A	ap-south-1		OK	No instances found
+EC2	EC2 Instance Key Based Login	N/A	sa-east-1		OK	No instances found
+EC2	EC2 Instance Key Based Login	N/A	ap-east-1		OK	Region is not enabled
+EC2	EC2 Instance Key Based Login	N/A	me-south-1		OK	Region is not enabled
+EC2	Open All Ports Protocols	arn:aws:ec2:us-east-1:XXXXXXXXXXXX:security-group/sg-0843dfaee2588dea5	us-east-1		FAIL	Security group: sg-0843dfaee2588dea5 (sadcloud-ec2-all_ports_to_self) has all ports open to 0.0.0.0/0 and all protocols open to 0.0.0.0/0
+EC2	Open All Ports Protocols	arn:aws:ec2:us-east-1:XXXXXXXXXXXX:security-group/sg-09b0be6077bd2e91b	us-east-1		FAIL	Security group: sg-09b0be6077bd2e91b (sadcloud-ec2-all_ports_to_all) has all ports open to 0.0.0.0/0 and all protocols open to 0.0.0.0/0
+EC2	Open All Ports Protocols	arn:aws:ec2:us-east-1:XXXXXXXXXXXX:security-group/sg-0a1f6fa76d2ddf06b	us-east-1		FAIL	Security group: sg-0a1f6fa76d2ddf06b (sadcloud-ec2-icmp_to_all) has all ports open to 0.0.0.0/0
+EC2	Open All Ports Protocols	N/A	us-east-2		OK	No public open ports found
+EC2	Open All Ports Protocols	N/A	us-west-1		OK	No public open ports found
+EC2	Open All Ports Protocols	N/A	us-west-2		OK	No public open ports found
+EC2	Open All Ports Protocols	N/A	ca-central-1		OK	No public open ports found
+EC2	Open All Ports Protocols	N/A	eu-central-1		OK	No public open ports found
+EC2	Open All Ports Protocols	N/A	eu-west-1		OK	No public open ports found
+EC2	Open All Ports Protocols	N/A	eu-west-2		OK	No public open ports found
+EC2	Open All Ports Protocols	N/A	eu-west-3		OK	No public open ports found
+EC2	Open All Ports Protocols	N/A	eu-north-1		OK	No public open ports found
+EC2	Open All Ports Protocols	N/A	ap-northeast-1		OK	No public open ports found
+EC2	Open All Ports Protocols	N/A	ap-northeast-2		OK	No public open ports found
+EC2	Open All Ports Protocols	N/A	ap-southeast-1		OK	No public open ports found
+EC2	Open All Ports Protocols	N/A	ap-southeast-2		OK	No public open ports found
+EC2	Open All Ports Protocols	N/A	ap-south-1		OK	No public open ports found
+EC2	Open All Ports Protocols	N/A	sa-east-1		OK	No public open ports found
+EC2	Open All Ports Protocols	N/A	ap-east-1		OK	Region is not enabled
+EC2	Open All Ports Protocols	N/A	me-south-1		OK	Region is not enabled
+EC2	Open CIFS	N/A	us-east-1		OK	No public open ports found
+EC2	Open CIFS	N/A	us-east-2		OK	No public open ports found
+EC2	Open CIFS	N/A	us-west-1		OK	No public open ports found
+EC2	Open CIFS	N/A	us-west-2		OK	No public open ports found
+EC2	Open CIFS	N/A	ca-central-1		OK	No public open ports found
+EC2	Open CIFS	N/A	eu-central-1		OK	No public open ports found
+EC2	Open CIFS	N/A	eu-west-1		OK	No public open ports found
+EC2	Open CIFS	N/A	eu-west-2		OK	No public open ports found
+EC2	Open CIFS	N/A	eu-west-3		OK	No public open ports found
+EC2	Open CIFS	N/A	eu-north-1		OK	No public open ports found
+EC2	Open CIFS	N/A	ap-northeast-1		OK	No public open ports found
+EC2	Open CIFS	N/A	ap-northeast-2		OK	No public open ports found
+EC2	Open CIFS	N/A	ap-southeast-1		OK	No public open ports found
+EC2	Open CIFS	N/A	ap-southeast-2		OK	No public open ports found
+EC2	Open CIFS	N/A	ap-south-1		OK	No public open ports found
+EC2	Open CIFS	N/A	sa-east-1		OK	No public open ports found
+EC2	Open CIFS	N/A	ap-east-1		OK	Region is not enabled
+EC2	Open CIFS	N/A	me-south-1		OK	Region is not enabled
+EC2	Open DNS	arn:aws:ec2:us-east-1:XXXXXXXXXXXX:security-group/sg-0612dcea28c7f4f57	us-east-1		FAIL	Security group: sg-0612dcea28c7f4f57 (sadcloud-ec2-known_port_to_all) has DNS: UDP port 53 open to 0.0.0.0/0
+EC2	Open DNS	N/A	us-east-2		OK	No public open ports found
+EC2	Open DNS	N/A	us-west-1		OK	No public open ports found
+EC2	Open DNS	N/A	us-west-2		OK	No public open ports found
+EC2	Open DNS	N/A	ca-central-1		OK	No public open ports found
+EC2	Open DNS	N/A	eu-central-1		OK	No public open ports found
+EC2	Open DNS	N/A	eu-west-1		OK	No public open ports found
+EC2	Open DNS	N/A	eu-west-2		OK	No public open ports found
+EC2	Open DNS	N/A	eu-west-3		OK	No public open ports found
+EC2	Open DNS	N/A	eu-north-1		OK	No public open ports found
+EC2	Open DNS	N/A	ap-northeast-1		OK	No public open ports found
+EC2	Open DNS	N/A	ap-northeast-2		OK	No public open ports found
+EC2	Open DNS	N/A	ap-southeast-1		OK	No public open ports found
+EC2	Open DNS	N/A	ap-southeast-2		OK	No public open ports found
+EC2	Open DNS	N/A	ap-south-1		OK	No public open ports found
+EC2	Open DNS	N/A	sa-east-1		OK	No public open ports found
+EC2	Open DNS	N/A	ap-east-1		OK	Region is not enabled
+EC2	Open DNS	N/A	me-south-1		OK	Region is not enabled
+EC2	Open FTP	arn:aws:ec2:us-east-1:XXXXXXXXXXXX:security-group/sg-01424978162d2cac2	us-east-1		FAIL	Security group: sg-01424978162d2cac2 (sadcloud-ec2-opens_port_range) has FTP: TCP port 21 open to 0.0.0.0/0
+EC2	Open FTP	arn:aws:ec2:us-east-1:XXXXXXXXXXXX:security-group/sg-090ed83bfbf1dbd70	us-east-1		FAIL	Security group: sg-090ed83bfbf1dbd70 (sadcloud-ec2-opens_plaintext_port) has FTP: TCP port 21 open to 0.0.0.0/0
+EC2	Open FTP	arn:aws:ec2:us-east-1:XXXXXXXXXXXX:security-group/sg-0ab790f01b64b9615	us-east-1		FAIL	Security group: sg-0ab790f01b64b9615 (sadcloud-ec2-opens_port_to_all) has FTP: TCP port 21 open to 0.0.0.0/0
+EC2	Open FTP	N/A	us-east-2		OK	No public open ports found
+EC2	Open FTP	N/A	us-west-1		OK	No public open ports found
+EC2	Open FTP	N/A	us-west-2		OK	No public open ports found
+EC2	Open FTP	N/A	ca-central-1		OK	No public open ports found
+EC2	Open FTP	N/A	eu-central-1		OK	No public open ports found
+EC2	Open FTP	N/A	eu-west-1		OK	No public open ports found
+EC2	Open FTP	N/A	eu-west-2		OK	No public open ports found
+EC2	Open FTP	N/A	eu-west-3		OK	No public open ports found
+EC2	Open FTP	N/A	eu-north-1		OK	No public open ports found
+EC2	Open FTP	N/A	ap-northeast-1		OK	No public open ports found
+EC2	Open FTP	N/A	ap-northeast-2		OK	No public open ports found
+EC2	Open FTP	N/A	ap-southeast-1		OK	No public open ports found
+EC2	Open FTP	N/A	ap-southeast-2		OK	No public open ports found
+EC2	Open FTP	N/A	ap-south-1		OK	No public open ports found
+EC2	Open FTP	N/A	sa-east-1		OK	No public open ports found
+EC2	Open FTP	N/A	ap-east-1		OK	Region is not enabled
+EC2	Open FTP	N/A	me-south-1		OK	Region is not enabled
+EC2	Open Hadoop HDFS NameNode Metadata Service	N/A	us-east-1		OK	No public open ports found
+EC2	Open Hadoop HDFS NameNode Metadata Service	N/A	us-east-2		OK	No public open ports found
+EC2	Open Hadoop HDFS NameNode Metadata Service	N/A	us-west-1		OK	No public open ports found
+EC2	Open Hadoop HDFS NameNode Metadata Service	N/A	us-west-2		OK	No public open ports found
+EC2	Open Hadoop HDFS NameNode Metadata Service	N/A	ca-central-1		OK	No public open ports found
+EC2	Open Hadoop HDFS NameNode Metadata Service	N/A	eu-central-1		OK	No public open ports found
+EC2	Open Hadoop HDFS NameNode Metadata Service	N/A	eu-west-1		OK	No public open ports found
+EC2	Open Hadoop HDFS NameNode Metadata Service	N/A	eu-west-2		OK	No public open ports found
+EC2	Open Hadoop HDFS NameNode Metadata Service	N/A	eu-west-3		OK	No public open ports found
+EC2	Open Hadoop HDFS NameNode Metadata Service	N/A	eu-north-1		OK	No public open ports found
+EC2	Open Hadoop HDFS NameNode Metadata Service	N/A	ap-northeast-1		OK	No public open ports found
+EC2	Open Hadoop HDFS NameNode Metadata Service	N/A	ap-northeast-2		OK	No public open ports found
+EC2	Open Hadoop HDFS NameNode Metadata Service	N/A	ap-southeast-1		OK	No public open ports found
+EC2	Open Hadoop HDFS NameNode Metadata Service	N/A	ap-southeast-2		OK	No public open ports found
+EC2	Open Hadoop HDFS NameNode Metadata Service	N/A	ap-south-1		OK	No public open ports found
+EC2	Open Hadoop HDFS NameNode Metadata Service	N/A	sa-east-1		OK	No public open ports found
+EC2	Open Hadoop HDFS NameNode Metadata Service	N/A	ap-east-1		OK	Region is not enabled
+EC2	Open Hadoop HDFS NameNode Metadata Service	N/A	me-south-1		OK	Region is not enabled
+EC2	Open Hadoop HDFS NameNode WebUI	N/A	us-east-1		OK	No public open ports found
+EC2	Open Hadoop HDFS NameNode WebUI	N/A	us-east-2		OK	No public open ports found
+EC2	Open Hadoop HDFS NameNode WebUI	N/A	us-west-1		OK	No public open ports found
+EC2	Open Hadoop HDFS NameNode WebUI	N/A	us-west-2		OK	No public open ports found
+EC2	Open Hadoop HDFS NameNode WebUI	N/A	ca-central-1		OK	No public open ports found
+EC2	Open Hadoop HDFS NameNode WebUI	N/A	eu-central-1		OK	No public open ports found
+EC2	Open Hadoop HDFS NameNode WebUI	N/A	eu-west-1		OK	No public open ports found
+EC2	Open Hadoop HDFS NameNode WebUI	N/A	eu-west-2		OK	No public open ports found
+EC2	Open Hadoop HDFS NameNode WebUI	N/A	eu-west-3		OK	No public open ports found
+EC2	Open Hadoop HDFS NameNode WebUI	N/A	eu-north-1		OK	No public open ports found
+EC2	Open Hadoop HDFS NameNode WebUI	N/A	ap-northeast-1		OK	No public open ports found
+EC2	Open Hadoop HDFS NameNode WebUI	N/A	ap-northeast-2		OK	No public open ports found
+EC2	Open Hadoop HDFS NameNode WebUI	N/A	ap-southeast-1		OK	No public open ports found
+EC2	Open Hadoop HDFS NameNode WebUI	N/A	ap-southeast-2		OK	No public open ports found
+EC2	Open Hadoop HDFS NameNode WebUI	N/A	ap-south-1		OK	No public open ports found
+EC2	Open Hadoop HDFS NameNode WebUI	N/A	sa-east-1		OK	No public open ports found
+EC2	Open Hadoop HDFS NameNode WebUI	N/A	ap-east-1		OK	Region is not enabled
+EC2	Open Hadoop HDFS NameNode WebUI	N/A	me-south-1		OK	Region is not enabled
+EC2	Open Kibana	N/A	us-east-1		OK	No public open ports found
+EC2	Open Kibana	N/A	us-east-2		OK	No public open ports found
+EC2	Open Kibana	N/A	us-west-1		OK	No public open ports found
+EC2	Open Kibana	N/A	us-west-2		OK	No public open ports found
+EC2	Open Kibana	N/A	ca-central-1		OK	No public open ports found
+EC2	Open Kibana	N/A	eu-central-1		OK	No public open ports found
+EC2	Open Kibana	N/A	eu-west-1		OK	No public open ports found
+EC2	Open Kibana	N/A	eu-west-2		OK	No public open ports found
+EC2	Open Kibana	N/A	eu-west-3		OK	No public open ports found
+EC2	Open Kibana	N/A	eu-north-1		OK	No public open ports found
+EC2	Open Kibana	N/A	ap-northeast-1		OK	No public open ports found
+EC2	Open Kibana	N/A	ap-northeast-2		OK	No public open ports found
+EC2	Open Kibana	N/A	ap-southeast-1		OK	No public open ports found
+EC2	Open Kibana	N/A	ap-southeast-2		OK	No public open ports found
+EC2	Open Kibana	N/A	ap-south-1		OK	No public open ports found
+EC2	Open Kibana	N/A	sa-east-1		OK	No public open ports found
+EC2	Open Kibana	N/A	ap-east-1		OK	Region is not enabled
+EC2	Open Kibana	N/A	me-south-1		OK	Region is not enabled
+EC2	Open MySQL	arn:aws:ec2:us-east-1:XXXXXXXXXXXX:security-group/sg-0612dcea28c7f4f57	us-east-1		FAIL	Security group: sg-0612dcea28c7f4f57 (sadcloud-ec2-known_port_to_all) has MySQL: TCP port 3306 open to 0.0.0.0/0
+EC2	Open MySQL	N/A	us-east-2		OK	No public open ports found
+EC2	Open MySQL	N/A	us-west-1		OK	No public open ports found
+EC2	Open MySQL	N/A	us-west-2		OK	No public open ports found
+EC2	Open MySQL	N/A	ca-central-1		OK	No public open ports found
+EC2	Open MySQL	N/A	eu-central-1		OK	No public open ports found
+EC2	Open MySQL	N/A	eu-west-1		OK	No public open ports found
+EC2	Open MySQL	N/A	eu-west-2		OK	No public open ports found
+EC2	Open MySQL	N/A	eu-west-3		OK	No public open ports found
+EC2	Open MySQL	N/A	eu-north-1		OK	No public open ports found
+EC2	Open MySQL	N/A	ap-northeast-1		OK	No public open ports found
+EC2	Open MySQL	N/A	ap-northeast-2		OK	No public open ports found
+EC2	Open MySQL	N/A	ap-southeast-1		OK	No public open ports found
+EC2	Open MySQL	N/A	ap-southeast-2		OK	No public open ports found
+EC2	Open MySQL	N/A	ap-south-1		OK	No public open ports found
+EC2	Open MySQL	N/A	sa-east-1		OK	No public open ports found
+EC2	Open MySQL	N/A	ap-east-1		OK	Region is not enabled
+EC2	Open MySQL	N/A	me-south-1		OK	Region is not enabled
+EC2	Open Oracle	arn:aws:ec2:us-east-1:XXXXXXXXXXXX:security-group/sg-0612dcea28c7f4f57	us-east-1		FAIL	Security group: sg-0612dcea28c7f4f57 (sadcloud-ec2-known_port_to_all) has Oracle: TCP port 1521 open to 0.0.0.0/0
+EC2	Open Oracle	N/A	us-east-2		OK	No public open ports found
+EC2	Open Oracle	N/A	us-west-1		OK	No public open ports found
+EC2	Open Oracle	N/A	us-west-2		OK	No public open ports found
+EC2	Open Oracle	N/A	ca-central-1		OK	No public open ports found
+EC2	Open Oracle	N/A	eu-central-1		OK	No public open ports found
+EC2	Open Oracle	N/A	eu-west-1		OK	No public open ports found
+EC2	Open Oracle	N/A	eu-west-2		OK	No public open ports found
+EC2	Open Oracle	N/A	eu-west-3		OK	No public open ports found
+EC2	Open Oracle	N/A	eu-north-1		OK	No public open ports found
+EC2	Open Oracle	N/A	ap-northeast-1		OK	No public open ports found
+EC2	Open Oracle	N/A	ap-northeast-2		OK	No public open ports found
+EC2	Open Oracle	N/A	ap-southeast-1		OK	No public open ports found
+EC2	Open Oracle	N/A	ap-southeast-2		OK	No public open ports found
+EC2	Open Oracle	N/A	ap-south-1		OK	No public open ports found
+EC2	Open Oracle	N/A	sa-east-1		OK	No public open ports found
+EC2	Open Oracle	N/A	ap-east-1		OK	Region is not enabled
+EC2	Open Oracle	N/A	me-south-1		OK	Region is not enabled
+EC2	Open NetBIOS	N/A	us-east-1		OK	No public open ports found
+EC2	Open NetBIOS	N/A	us-east-2		OK	No public open ports found
+EC2	Open NetBIOS	N/A	us-west-1		OK	No public open ports found
+EC2	Open NetBIOS	N/A	us-west-2		OK	No public open ports found
+EC2	Open NetBIOS	N/A	ca-central-1		OK	No public open ports found
+EC2	Open NetBIOS	N/A	eu-central-1		OK	No public open ports found
+EC2	Open NetBIOS	N/A	eu-west-1		OK	No public open ports found
+EC2	Open NetBIOS	N/A	eu-west-2		OK	No public open ports found
+EC2	Open NetBIOS	N/A	eu-west-3		OK	No public open ports found
+EC2	Open NetBIOS	N/A	eu-north-1		OK	No public open ports found
+EC2	Open NetBIOS	N/A	ap-northeast-1		OK	No public open ports found
+EC2	Open NetBIOS	N/A	ap-northeast-2		OK	No public open ports found
+EC2	Open NetBIOS	N/A	ap-southeast-1		OK	No public open ports found
+EC2	Open NetBIOS	N/A	ap-southeast-2		OK	No public open ports found
+EC2	Open NetBIOS	N/A	ap-south-1		OK	No public open ports found
+EC2	Open NetBIOS	N/A	sa-east-1		OK	No public open ports found
+EC2	Open NetBIOS	N/A	ap-east-1		OK	Region is not enabled
+EC2	Open NetBIOS	N/A	me-south-1		OK	Region is not enabled
+EC2	Open PostgreSQL	arn:aws:ec2:us-east-1:XXXXXXXXXXXX:security-group/sg-0612dcea28c7f4f57	us-east-1		FAIL	Security group: sg-0612dcea28c7f4f57 (sadcloud-ec2-known_port_to_all) has PostgreSQL: TCP port 5432 open to 0.0.0.0/0
+EC2	Open PostgreSQL	N/A	us-east-2		OK	No public open ports found
+EC2	Open PostgreSQL	N/A	us-west-1		OK	No public open ports found
+EC2	Open PostgreSQL	N/A	us-west-2		OK	No public open ports found
+EC2	Open PostgreSQL	N/A	ca-central-1		OK	No public open ports found
+EC2	Open PostgreSQL	N/A	eu-central-1		OK	No public open ports found
+EC2	Open PostgreSQL	N/A	eu-west-1		OK	No public open ports found
+EC2	Open PostgreSQL	N/A	eu-west-2		OK	No public open ports found
+EC2	Open PostgreSQL	N/A	eu-west-3		OK	No public open ports found
+EC2	Open PostgreSQL	N/A	eu-north-1		OK	No public open ports found
+EC2	Open PostgreSQL	N/A	ap-northeast-1		OK	No public open ports found
+EC2	Open PostgreSQL	N/A	ap-northeast-2		OK	No public open ports found
+EC2	Open PostgreSQL	N/A	ap-southeast-1		OK	No public open ports found
+EC2	Open PostgreSQL	N/A	ap-southeast-2		OK	No public open ports found
+EC2	Open PostgreSQL	N/A	ap-south-1		OK	No public open ports found
+EC2	Open PostgreSQL	N/A	sa-east-1		OK	No public open ports found
+EC2	Open PostgreSQL	N/A	ap-east-1		OK	Region is not enabled
+EC2	Open PostgreSQL	N/A	me-south-1		OK	Region is not enabled
+EC2	Open RDP	arn:aws:ec2:us-east-1:XXXXXXXXXXXX:security-group/sg-0612dcea28c7f4f57	us-east-1		FAIL	Security group: sg-0612dcea28c7f4f57 (sadcloud-ec2-known_port_to_all) has RDP: TCP port 3389 open to 0.0.0.0/0
+EC2	Open RDP	N/A	us-east-2		OK	No public open ports found
+EC2	Open RDP	N/A	us-west-1		OK	No public open ports found
+EC2	Open RDP	N/A	us-west-2		OK	No public open ports found
+EC2	Open RDP	N/A	ca-central-1		OK	No public open ports found
+EC2	Open RDP	N/A	eu-central-1		OK	No public open ports found
+EC2	Open RDP	N/A	eu-west-1		OK	No public open ports found
+EC2	Open RDP	N/A	eu-west-2		OK	No public open ports found
+EC2	Open RDP	N/A	eu-west-3		OK	No public open ports found
+EC2	Open RDP	N/A	eu-north-1		OK	No public open ports found
+EC2	Open RDP	N/A	ap-northeast-1		OK	No public open ports found
+EC2	Open RDP	N/A	ap-northeast-2		OK	No public open ports found
+EC2	Open RDP	N/A	ap-southeast-1		OK	No public open ports found
+EC2	Open RDP	N/A	ap-southeast-2		OK	No public open ports found
+EC2	Open RDP	N/A	ap-south-1		OK	No public open ports found
+EC2	Open RDP	N/A	sa-east-1		OK	No public open ports found
+EC2	Open RDP	N/A	ap-east-1		OK	Region is not enabled
+EC2	Open RDP	N/A	me-south-1		OK	Region is not enabled
+EC2	Open RPC	N/A	us-east-1		OK	No public open ports found
+EC2	Open RPC	N/A	us-east-2		OK	No public open ports found
+EC2	Open RPC	N/A	us-west-1		OK	No public open ports found
+EC2	Open RPC	N/A	us-west-2		OK	No public open ports found
+EC2	Open RPC	N/A	ca-central-1		OK	No public open ports found
+EC2	Open RPC	N/A	eu-central-1		OK	No public open ports found
+EC2	Open RPC	N/A	eu-west-1		OK	No public open ports found
+EC2	Open RPC	N/A	eu-west-2		OK	No public open ports found
+EC2	Open RPC	N/A	eu-west-3		OK	No public open ports found
+EC2	Open RPC	N/A	eu-north-1		OK	No public open ports found
+EC2	Open RPC	N/A	ap-northeast-1		OK	No public open ports found
+EC2	Open RPC	N/A	ap-northeast-2		OK	No public open ports found
+EC2	Open RPC	N/A	ap-southeast-1		OK	No public open ports found
+EC2	Open RPC	N/A	ap-southeast-2		OK	No public open ports found
+EC2	Open RPC	N/A	ap-south-1		OK	No public open ports found
+EC2	Open RPC	N/A	sa-east-1		OK	No public open ports found
+EC2	Open RPC	N/A	ap-east-1		OK	Region is not enabled
+EC2	Open RPC	N/A	me-south-1		OK	Region is not enabled
+EC2	Open SMBoTCP	N/A	us-east-1		OK	No public open ports found
+EC2	Open SMBoTCP	N/A	us-east-2		OK	No public open ports found
+EC2	Open SMBoTCP	N/A	us-west-1		OK	No public open ports found
+EC2	Open SMBoTCP	N/A	us-west-2		OK	No public open ports found
+EC2	Open SMBoTCP	N/A	ca-central-1		OK	No public open ports found
+EC2	Open SMBoTCP	N/A	eu-central-1		OK	No public open ports found
+EC2	Open SMBoTCP	N/A	eu-west-1		OK	No public open ports found
+EC2	Open SMBoTCP	N/A	eu-west-2		OK	No public open ports found
+EC2	Open SMBoTCP	N/A	eu-west-3		OK	No public open ports found
+EC2	Open SMBoTCP	N/A	eu-north-1		OK	No public open ports found
+EC2	Open SMBoTCP	N/A	ap-northeast-1		OK	No public open ports found
+EC2	Open SMBoTCP	N/A	ap-northeast-2		OK	No public open ports found
+EC2	Open SMBoTCP	N/A	ap-southeast-1		OK	No public open ports found
+EC2	Open SMBoTCP	N/A	ap-southeast-2		OK	No public open ports found
+EC2	Open SMBoTCP	N/A	ap-south-1		OK	No public open ports found
+EC2	Open SMBoTCP	N/A	sa-east-1		OK	No public open ports found
+EC2	Open SMBoTCP	N/A	ap-east-1		OK	Region is not enabled
+EC2	Open SMBoTCP	N/A	me-south-1		OK	Region is not enabled
+EC2	Open SMTP	arn:aws:ec2:us-east-1:XXXXXXXXXXXX:security-group/sg-01424978162d2cac2	us-east-1		FAIL	Security group: sg-01424978162d2cac2 (sadcloud-ec2-opens_port_range) has SMTP: TCP port 25 open to 0.0.0.0/0
+EC2	Open SMTP	arn:aws:ec2:us-east-1:XXXXXXXXXXXX:security-group/sg-0612dcea28c7f4f57	us-east-1		FAIL	Security group: sg-0612dcea28c7f4f57 (sadcloud-ec2-known_port_to_all) has SMTP: TCP port 25 open to 0.0.0.0/0
+EC2	Open SMTP	N/A	us-east-2		OK	No public open ports found
+EC2	Open SMTP	N/A	us-west-1		OK	No public open ports found
+EC2	Open SMTP	N/A	us-west-2		OK	No public open ports found
+EC2	Open SMTP	N/A	ca-central-1		OK	No public open ports found
+EC2	Open SMTP	N/A	eu-central-1		OK	No public open ports found
+EC2	Open SMTP	N/A	eu-west-1		OK	No public open ports found
+EC2	Open SMTP	N/A	eu-west-2		OK	No public open ports found
+EC2	Open SMTP	N/A	eu-west-3		OK	No public open ports found
+EC2	Open SMTP	N/A	eu-north-1		OK	No public open ports found
+EC2	Open SMTP	N/A	ap-northeast-1		OK	No public open ports found
+EC2	Open SMTP	N/A	ap-northeast-2		OK	No public open ports found
+EC2	Open SMTP	N/A	ap-southeast-1		OK	No public open ports found
+EC2	Open SMTP	N/A	ap-southeast-2		OK	No public open ports found
+EC2	Open SMTP	N/A	ap-south-1		OK	No public open ports found
+EC2	Open SMTP	N/A	sa-east-1		OK	No public open ports found
+EC2	Open SMTP	N/A	ap-east-1		OK	Region is not enabled
+EC2	Open SMTP	N/A	me-south-1		OK	Region is not enabled
+EC2	Open SQL Server	arn:aws:ec2:us-east-1:XXXXXXXXXXXX:security-group/sg-0612dcea28c7f4f57	us-east-1		FAIL	Security group: sg-0612dcea28c7f4f57 (sadcloud-ec2-known_port_to_all) has SQL Server: TCP port 1433 open to 0.0.0.0/0
+EC2	Open SQL Server	N/A	us-east-2		OK	No public open ports found
+EC2	Open SQL Server	N/A	us-west-1		OK	No public open ports found
+EC2	Open SQL Server	N/A	us-west-2		OK	No public open ports found
+EC2	Open SQL Server	N/A	ca-central-1		OK	No public open ports found
+EC2	Open SQL Server	N/A	eu-central-1		OK	No public open ports found
+EC2	Open SQL Server	N/A	eu-west-1		OK	No public open ports found
+EC2	Open SQL Server	N/A	eu-west-2		OK	No public open ports found
+EC2	Open SQL Server	N/A	eu-west-3		OK	No public open ports found
+EC2	Open SQL Server	N/A	eu-north-1		OK	No public open ports found
+EC2	Open SQL Server	N/A	ap-northeast-1		OK	No public open ports found
+EC2	Open SQL Server	N/A	ap-northeast-2		OK	No public open ports found
+EC2	Open SQL Server	N/A	ap-southeast-1		OK	No public open ports found
+EC2	Open SQL Server	N/A	ap-southeast-2		OK	No public open ports found
+EC2	Open SQL Server	N/A	ap-south-1		OK	No public open ports found
+EC2	Open SQL Server	N/A	sa-east-1		OK	No public open ports found
+EC2	Open SQL Server	N/A	ap-east-1		OK	Region is not enabled
+EC2	Open SQL Server	N/A	me-south-1		OK	Region is not enabled
+EC2	Open SSH	arn:aws:ec2:us-east-1:XXXXXXXXXXXX:security-group/sg-01424978162d2cac2	us-east-1		FAIL	Security group: sg-01424978162d2cac2 (sadcloud-ec2-opens_port_range) has SSH: TCP port 22 open to 0.0.0.0/0
+EC2	Open SSH	arn:aws:ec2:us-east-1:XXXXXXXXXXXX:security-group/sg-0612dcea28c7f4f57	us-east-1		FAIL	Security group: sg-0612dcea28c7f4f57 (sadcloud-ec2-known_port_to_all) has SSH: TCP port 22 open to 0.0.0.0/0
+EC2	Open SSH	N/A	us-east-2		OK	No public open ports found
+EC2	Open SSH	N/A	us-west-1		OK	No public open ports found
+EC2	Open SSH	N/A	us-west-2		OK	No public open ports found
+EC2	Open SSH	N/A	ca-central-1		OK	No public open ports found
+EC2	Open SSH	N/A	eu-central-1		OK	No public open ports found
+EC2	Open SSH	N/A	eu-west-1		OK	No public open ports found
+EC2	Open SSH	N/A	eu-west-2		OK	No public open ports found
+EC2	Open SSH	N/A	eu-west-3		OK	No public open ports found
+EC2	Open SSH	N/A	eu-north-1		OK	No public open ports found
+EC2	Open SSH	N/A	ap-northeast-1		OK	No public open ports found
+EC2	Open SSH	N/A	ap-northeast-2		OK	No public open ports found
+EC2	Open SSH	N/A	ap-southeast-1		OK	No public open ports found
+EC2	Open SSH	N/A	ap-southeast-2		OK	No public open ports found
+EC2	Open SSH	N/A	ap-south-1		OK	No public open ports found
+EC2	Open SSH	N/A	sa-east-1		OK	No public open ports found
+EC2	Open SSH	N/A	ap-east-1		OK	Region is not enabled
+EC2	Open SSH	N/A	me-south-1		OK	Region is not enabled
+EC2	Open Telnet	arn:aws:ec2:us-east-1:XXXXXXXXXXXX:security-group/sg-01424978162d2cac2	us-east-1		FAIL	Security group: sg-01424978162d2cac2 (sadcloud-ec2-opens_port_range) has Telnet: TCP port 23 open to 0.0.0.0/0
+EC2	Open Telnet	arn:aws:ec2:us-east-1:XXXXXXXXXXXX:security-group/sg-090ed83bfbf1dbd70	us-east-1		FAIL	Security group: sg-090ed83bfbf1dbd70 (sadcloud-ec2-opens_plaintext_port) has Telnet: TCP port 23 open to 0.0.0.0/0
+EC2	Open Telnet	N/A	us-east-2		OK	No public open ports found
+EC2	Open Telnet	N/A	us-west-1		OK	No public open ports found
+EC2	Open Telnet	N/A	us-west-2		OK	No public open ports found
+EC2	Open Telnet	N/A	ca-central-1		OK	No public open ports found
+EC2	Open Telnet	N/A	eu-central-1		OK	No public open ports found
+EC2	Open Telnet	N/A	eu-west-1		OK	No public open ports found
+EC2	Open Telnet	N/A	eu-west-2		OK	No public open ports found
+EC2	Open Telnet	N/A	eu-west-3		OK	No public open ports found
+EC2	Open Telnet	N/A	eu-north-1		OK	No public open ports found
+EC2	Open Telnet	N/A	ap-northeast-1		OK	No public open ports found
+EC2	Open Telnet	N/A	ap-northeast-2		OK	No public open ports found
+EC2	Open Telnet	N/A	ap-southeast-1		OK	No public open ports found
+EC2	Open Telnet	N/A	ap-southeast-2		OK	No public open ports found
+EC2	Open Telnet	N/A	ap-south-1		OK	No public open ports found
+EC2	Open Telnet	N/A	sa-east-1		OK	No public open ports found
+EC2	Open Telnet	N/A	ap-east-1		OK	Region is not enabled
+EC2	Open Telnet	N/A	me-south-1		OK	Region is not enabled
+EC2	Open VNC Client	N/A	us-east-1		OK	No public open ports found
+EC2	Open VNC Client	N/A	us-east-2		OK	No public open ports found
+EC2	Open VNC Client	N/A	us-west-1		OK	No public open ports found
+EC2	Open VNC Client	N/A	us-west-2		OK	No public open ports found
+EC2	Open VNC Client	N/A	ca-central-1		OK	No public open ports found
+EC2	Open VNC Client	N/A	eu-central-1		OK	No public open ports found
+EC2	Open VNC Client	N/A	eu-west-1		OK	No public open ports found
+EC2	Open VNC Client	N/A	eu-west-2		OK	No public open ports found
+EC2	Open VNC Client	N/A	eu-west-3		OK	No public open ports found
+EC2	Open VNC Client	N/A	eu-north-1		OK	No public open ports found
+EC2	Open VNC Client	N/A	ap-northeast-1		OK	No public open ports found
+EC2	Open VNC Client	N/A	ap-northeast-2		OK	No public open ports found
+EC2	Open VNC Client	N/A	ap-southeast-1		OK	No public open ports found
+EC2	Open VNC Client	N/A	ap-southeast-2		OK	No public open ports found
+EC2	Open VNC Client	N/A	ap-south-1		OK	No public open ports found
+EC2	Open VNC Client	N/A	sa-east-1		OK	No public open ports found
+EC2	Open VNC Client	N/A	ap-east-1		OK	Region is not enabled
+EC2	Open VNC Client	N/A	me-south-1		OK	Region is not enabled
+EC2	Open VNC Server	N/A	us-east-1		OK	No public open ports found
+EC2	Open VNC Server	N/A	us-east-2		OK	No public open ports found
+EC2	Open VNC Server	N/A	us-west-1		OK	No public open ports found
+EC2	Open VNC Server	N/A	us-west-2		OK	No public open ports found
+EC2	Open VNC Server	N/A	ca-central-1		OK	No public open ports found
+EC2	Open VNC Server	N/A	eu-central-1		OK	No public open ports found
+EC2	Open VNC Server	N/A	eu-west-1		OK	No public open ports found
+EC2	Open VNC Server	N/A	eu-west-2		OK	No public open ports found
+EC2	Open VNC Server	N/A	eu-west-3		OK	No public open ports found
+EC2	Open VNC Server	N/A	eu-north-1		OK	No public open ports found
+EC2	Open VNC Server	N/A	ap-northeast-1		OK	No public open ports found
+EC2	Open VNC Server	N/A	ap-northeast-2		OK	No public open ports found
+EC2	Open VNC Server	N/A	ap-southeast-1		OK	No public open ports found
+EC2	Open VNC Server	N/A	ap-southeast-2		OK	No public open ports found
+EC2	Open VNC Server	N/A	ap-south-1		OK	No public open ports found
+EC2	Open VNC Server	N/A	sa-east-1		OK	No public open ports found
+EC2	Open VNC Server	N/A	ap-east-1		OK	Region is not enabled
+EC2	Open VNC Server	N/A	me-south-1		OK	Region is not enabled
+EC2	Open Elasticsearch	N/A	us-east-1		OK	No public open ports found
+EC2	Open Elasticsearch	N/A	us-east-2		OK	No public open ports found
+EC2	Open Elasticsearch	N/A	us-west-1		OK	No public open ports found
+EC2	Open Elasticsearch	N/A	us-west-2		OK	No public open ports found
+EC2	Open Elasticsearch	N/A	ca-central-1		OK	No public open ports found
+EC2	Open Elasticsearch	N/A	eu-central-1		OK	No public open ports found
+EC2	Open Elasticsearch	N/A	eu-west-1		OK	No public open ports found
+EC2	Open Elasticsearch	N/A	eu-west-2		OK	No public open ports found
+EC2	Open Elasticsearch	N/A	eu-west-3		OK	No public open ports found
+EC2	Open Elasticsearch	N/A	eu-north-1		OK	No public open ports found
+EC2	Open Elasticsearch	N/A	ap-northeast-1		OK	No public open ports found
+EC2	Open Elasticsearch	N/A	ap-northeast-2		OK	No public open ports found
+EC2	Open Elasticsearch	N/A	ap-southeast-1		OK	No public open ports found
+EC2	Open Elasticsearch	N/A	ap-southeast-2		OK	No public open ports found
+EC2	Open Elasticsearch	N/A	ap-south-1		OK	No public open ports found
+EC2	Open Elasticsearch	N/A	sa-east-1		OK	No public open ports found
+EC2	Open Elasticsearch	N/A	ap-east-1		OK	Region is not enabled
+EC2	Open Elasticsearch	N/A	me-south-1		OK	Region is not enabled
+EC2	VPC Elastic IP Limit	N/A	us-east-1		OK	No VPC Elastic IPs found
+EC2	VPC Elastic IP Limit	N/A	us-east-2		OK	No VPC Elastic IPs found
+EC2	VPC Elastic IP Limit	N/A	us-west-1		OK	No VPC Elastic IPs found
+EC2	VPC Elastic IP Limit	N/A	us-west-2		OK	No VPC Elastic IPs found
+EC2	VPC Elastic IP Limit	N/A	ca-central-1		OK	No VPC Elastic IPs found
+EC2	VPC Elastic IP Limit	N/A	eu-central-1		OK	No VPC Elastic IPs found
+EC2	VPC Elastic IP Limit	N/A	eu-west-1		OK	No VPC Elastic IPs found
+EC2	VPC Elastic IP Limit	N/A	eu-west-2		OK	No VPC Elastic IPs found
+EC2	VPC Elastic IP Limit	N/A	eu-west-3		OK	No VPC Elastic IPs found
+EC2	VPC Elastic IP Limit	N/A	eu-north-1		OK	No VPC Elastic IPs found
+EC2	VPC Elastic IP Limit	N/A	ap-northeast-1		OK	No VPC Elastic IPs found
+EC2	VPC Elastic IP Limit	N/A	ap-northeast-2		OK	No VPC Elastic IPs found
+EC2	VPC Elastic IP Limit	N/A	ap-southeast-1		OK	No VPC Elastic IPs found
+EC2	VPC Elastic IP Limit	N/A	ap-southeast-2		OK	No VPC Elastic IPs found
+EC2	VPC Elastic IP Limit	N/A	ap-south-1		OK	No VPC Elastic IPs found
+EC2	VPC Elastic IP Limit	N/A	sa-east-1		OK	No VPC Elastic IPs found
+EC2	VPC Elastic IP Limit	N/A	ap-east-1		OK	Region is not enabled
+EC2	VPC Elastic IP Limit	N/A	me-south-1		OK	Region is not enabled
+EC2	Detect EC2 Classic Instances	N/A	us-east-1		OK	There are 1 instances in a VPC
+EC2	Detect EC2 Classic Instances	N/A	us-east-2		OK	No instances found
+EC2	Detect EC2 Classic Instances	N/A	us-west-1		OK	No instances found
+EC2	Detect EC2 Classic Instances	N/A	us-west-2		OK	No instances found
+EC2	Detect EC2 Classic Instances	N/A	ca-central-1		OK	No instances found
+EC2	Detect EC2 Classic Instances	N/A	eu-central-1		OK	No instances found
+EC2	Detect EC2 Classic Instances	N/A	eu-west-1		OK	No instances found
+EC2	Detect EC2 Classic Instances	N/A	eu-west-2		OK	No instances found
+EC2	Detect EC2 Classic Instances	N/A	eu-west-3		OK	No instances found
+EC2	Detect EC2 Classic Instances	N/A	eu-north-1		OK	No instances found
+EC2	Detect EC2 Classic Instances	N/A	ap-northeast-1		OK	No instances found
+EC2	Detect EC2 Classic Instances	N/A	ap-northeast-2		OK	No instances found
+EC2	Detect EC2 Classic Instances	N/A	ap-southeast-1		OK	No instances found
+EC2	Detect EC2 Classic Instances	N/A	ap-southeast-2		OK	No instances found
+EC2	Detect EC2 Classic Instances	N/A	ap-south-1		OK	No instances found
+EC2	Detect EC2 Classic Instances	N/A	sa-east-1		OK	No instances found
+EC2	Detect EC2 Classic Instances	N/A	ap-east-1		OK	Region is not enabled
+EC2	Detect EC2 Classic Instances	N/A	me-south-1		OK	Region is not enabled
+EC2	VPC Flow Logs Enabled	vpc-0d28589d765faeee9	us-east-1		FAIL	VPC flow logs are not enabled
+EC2	VPC Flow Logs Enabled	vpc-9ddd95e7	us-east-1		FAIL	VPC flow logs are not enabled
+EC2	VPC Flow Logs Enabled	vpc-0a689861	us-east-2		FAIL	VPC flow logs are not enabled
+EC2	VPC Flow Logs Enabled	vpc-452f3f22	us-west-1		FAIL	VPC flow logs are not enabled
+EC2	VPC Flow Logs Enabled	vpc-f8ec6280	us-west-2		FAIL	VPC flow logs are not enabled
+EC2	VPC Flow Logs Enabled	vpc-1ed5a976	ca-central-1		FAIL	VPC flow logs are not enabled
+EC2	VPC Flow Logs Enabled	vpc-b3b449d9	eu-central-1		FAIL	VPC flow logs are not enabled
+EC2	VPC Flow Logs Enabled	vpc-8ad7c8ec	eu-west-1		FAIL	VPC flow logs are not enabled
+EC2	VPC Flow Logs Enabled	vpc-4cd6a124	eu-west-2		FAIL	VPC flow logs are not enabled
+EC2	VPC Flow Logs Enabled	vpc-6300010a	eu-west-3		FAIL	VPC flow logs are not enabled
+EC2	VPC Flow Logs Enabled	vpc-10b77d79	eu-north-1		FAIL	VPC flow logs are not enabled
+EC2	VPC Flow Logs Enabled	vpc-92cdf2f5	ap-northeast-1		FAIL	VPC flow logs are not enabled
+EC2	VPC Flow Logs Enabled	vpc-fe22ed95	ap-northeast-2		FAIL	VPC flow logs are not enabled
+EC2	VPC Flow Logs Enabled	vpc-d16569b6	ap-southeast-1		FAIL	VPC flow logs are not enabled
+EC2	VPC Flow Logs Enabled	vpc-9c0b3bfb	ap-southeast-2		FAIL	VPC flow logs are not enabled
+EC2	VPC Flow Logs Enabled	vpc-69d3d401	ap-south-1		FAIL	VPC flow logs are not enabled
+EC2	VPC Flow Logs Enabled	vpc-75ccf112	sa-east-1		FAIL	VPC flow logs are not enabled
+EC2	VPC Flow Logs Enabled	N/A	ap-east-1		OK	Region is not enabled
+EC2	VPC Flow Logs Enabled	N/A	me-south-1		OK	Region is not enabled
+EC2	VPC Multiple Subnets	N/A	us-east-1		OK	Multiple (2) VPCs are used.
+EC2	VPC Multiple Subnets	vpc-0a689861	us-east-2		OK	There are 3 subnets used in one VPC.
+EC2	VPC Multiple Subnets	vpc-452f3f22	us-west-1		OK	There are 2 subnets used in one VPC.
+EC2	VPC Multiple Subnets	vpc-f8ec6280	us-west-2		OK	There are 4 subnets used in one VPC.
+EC2	VPC Multiple Subnets	vpc-1ed5a976	ca-central-1		OK	There are 3 subnets used in one VPC.
+EC2	VPC Multiple Subnets	vpc-b3b449d9	eu-central-1		OK	There are 3 subnets used in one VPC.
+EC2	VPC Multiple Subnets	vpc-8ad7c8ec	eu-west-1		OK	There are 3 subnets used in one VPC.
+EC2	VPC Multiple Subnets	vpc-4cd6a124	eu-west-2		OK	There are 3 subnets used in one VPC.
+EC2	VPC Multiple Subnets	vpc-6300010a	eu-west-3		OK	There are 3 subnets used in one VPC.
+EC2	VPC Multiple Subnets	vpc-10b77d79	eu-north-1		OK	There are 3 subnets used in one VPC.
+EC2	VPC Multiple Subnets	vpc-92cdf2f5	ap-northeast-1		OK	There are 3 subnets used in one VPC.
+EC2	VPC Multiple Subnets	vpc-fe22ed95	ap-northeast-2		OK	There are 3 subnets used in one VPC.
+EC2	VPC Multiple Subnets	vpc-d16569b6	ap-southeast-1		OK	There are 3 subnets used in one VPC.
+EC2	VPC Multiple Subnets	vpc-9c0b3bfb	ap-southeast-2		OK	There are 3 subnets used in one VPC.
+EC2	VPC Multiple Subnets	vpc-69d3d401	ap-south-1		OK	There are 3 subnets used in one VPC.
+EC2	VPC Multiple Subnets	vpc-75ccf112	sa-east-1		OK	There are 3 subnets used in one VPC.
+EC2	VPC Multiple Subnets	N/A	ap-east-1		OK	Region is not enabled
+EC2	VPC Multiple Subnets	N/A	me-south-1		OK	Region is not enabled
+EC2	Overlapping Security Groups	N/A	us-east-1		OK	No overlapping instance security groups found
+EC2	Overlapping Security Groups	N/A	us-east-2		OK	No instances found
+EC2	Overlapping Security Groups	N/A	us-west-1		OK	No instances found
+EC2	Overlapping Security Groups	N/A	us-west-2		OK	No instances found
+EC2	Overlapping Security Groups	N/A	ca-central-1		OK	No instances found
+EC2	Overlapping Security Groups	N/A	eu-central-1		OK	No instances found
+EC2	Overlapping Security Groups	N/A	eu-west-1		OK	No instances found
+EC2	Overlapping Security Groups	N/A	eu-west-2		OK	No instances found
+EC2	Overlapping Security Groups	N/A	eu-west-3		OK	No instances found
+EC2	Overlapping Security Groups	N/A	eu-north-1		OK	No instances found
+EC2	Overlapping Security Groups	N/A	ap-northeast-1		OK	No instances found
+EC2	Overlapping Security Groups	N/A	ap-northeast-2		OK	No instances found
+EC2	Overlapping Security Groups	N/A	ap-southeast-1		OK	No instances found
+EC2	Overlapping Security Groups	N/A	ap-southeast-2		OK	No instances found
+EC2	Overlapping Security Groups	N/A	ap-south-1		OK	No instances found
+EC2	Overlapping Security Groups	N/A	sa-east-1		OK	No instances found
+EC2	Overlapping Security Groups	N/A	ap-east-1		OK	Region is not enabled
+EC2	Overlapping Security Groups	N/A	me-south-1		OK	Region is not enabled
+EC2	Public AMI	N/A	us-east-1		OK	No AMIs found
+EC2	Public AMI	N/A	us-east-2		OK	No AMIs found
+EC2	Public AMI	N/A	us-west-1		OK	No AMIs found
+EC2	Public AMI	N/A	us-west-2		OK	No AMIs found
+EC2	Public AMI	N/A	ca-central-1		OK	No AMIs found
+EC2	Public AMI	N/A	eu-central-1		OK	No AMIs found
+EC2	Public AMI	N/A	eu-west-1		OK	No AMIs found
+EC2	Public AMI	N/A	eu-west-2		OK	No AMIs found
+EC2	Public AMI	N/A	eu-west-3		OK	No AMIs found
+EC2	Public AMI	N/A	eu-north-1		OK	No AMIs found
+EC2	Public AMI	N/A	ap-northeast-1		OK	No AMIs found
+EC2	Public AMI	N/A	ap-northeast-2		OK	No AMIs found
+EC2	Public AMI	N/A	ap-southeast-1		OK	No AMIs found
+EC2	Public AMI	N/A	ap-southeast-2		OK	No AMIs found
+EC2	Public AMI	N/A	ap-south-1		OK	No AMIs found
+EC2	Public AMI	N/A	sa-east-1		OK	No AMIs found
+EC2	Public AMI	N/A	ap-east-1		OK	Region is not enabled
+EC2	Public AMI	N/A	me-south-1		OK	Region is not enabled
+EC2	Encrypted AMI	N/A	us-east-1		OK	No AMIs found
+EC2	Encrypted AMI	N/A	us-east-2		OK	No AMIs found
+EC2	Encrypted AMI	N/A	us-west-1		OK	No AMIs found
+EC2	Encrypted AMI	N/A	us-west-2		OK	No AMIs found
+EC2	Encrypted AMI	N/A	ca-central-1		OK	No AMIs found
+EC2	Encrypted AMI	N/A	eu-central-1		OK	No AMIs found
+EC2	Encrypted AMI	N/A	eu-west-1		OK	No AMIs found
+EC2	Encrypted AMI	N/A	eu-west-2		OK	No AMIs found
+EC2	Encrypted AMI	N/A	eu-west-3		OK	No AMIs found
+EC2	Encrypted AMI	N/A	eu-north-1		OK	No AMIs found
+EC2	Encrypted AMI	N/A	ap-northeast-1		OK	No AMIs found
+EC2	Encrypted AMI	N/A	ap-northeast-2		OK	No AMIs found
+EC2	Encrypted AMI	N/A	ap-southeast-1		OK	No AMIs found
+EC2	Encrypted AMI	N/A	ap-southeast-2		OK	No AMIs found
+EC2	Encrypted AMI	N/A	ap-south-1		OK	No AMIs found
+EC2	Encrypted AMI	N/A	sa-east-1		OK	No AMIs found
+EC2	Encrypted AMI	N/A	ap-east-1		OK	Region is not enabled
+EC2	Encrypted AMI	N/A	me-south-1		OK	Region is not enabled
+EC2	Instance IAM Role	arn:aws:ec2:us-east-1:XXXXXXXXXXXX:instance/i-01133c160483837cb	us-east-1		FAIL	Instance does not use an IAM role
+EC2	Instance IAM Role	N/A	us-east-2		OK	No instances found
+EC2	Instance IAM Role	N/A	us-west-1		OK	No instances found
+EC2	Instance IAM Role	N/A	us-west-2		OK	No instances found
+EC2	Instance IAM Role	N/A	ca-central-1		OK	No instances found
+EC2	Instance IAM Role	N/A	eu-central-1		OK	No instances found
+EC2	Instance IAM Role	N/A	eu-west-1		OK	No instances found
+EC2	Instance IAM Role	N/A	eu-west-2		OK	No instances found
+EC2	Instance IAM Role	N/A	eu-west-3		OK	No instances found
+EC2	Instance IAM Role	N/A	eu-north-1		OK	No instances found
+EC2	Instance IAM Role	N/A	ap-northeast-1		OK	No instances found
+EC2	Instance IAM Role	N/A	ap-northeast-2		OK	No instances found
+EC2	Instance IAM Role	N/A	ap-southeast-1		OK	No instances found
+EC2	Instance IAM Role	N/A	ap-southeast-2		OK	No instances found
+EC2	Instance IAM Role	N/A	ap-south-1		OK	No instances found
+EC2	Instance IAM Role	N/A	sa-east-1		OK	No instances found
+EC2	Instance IAM Role	N/A	ap-east-1		OK	Region is not enabled
+EC2	Instance IAM Role	N/A	me-south-1		OK	Region is not enabled
+EC2	EBS Encryption Enabled	vol-019e387c7dd1d580e	us-east-1		FAIL	EBS volume is unencrypted
+EC2	EBS Encryption Enabled	vol-06b980b944f9f3084	us-east-1		FAIL	EBS volume is unencrypted
+EC2	EBS Encryption Enabled	N/A	us-east-2		OK	No EBS volumes present
+EC2	EBS Encryption Enabled	N/A	us-west-1		OK	No EBS volumes present
+EC2	EBS Encryption Enabled	N/A	us-west-2		OK	No EBS volumes present
+EC2	EBS Encryption Enabled	N/A	ca-central-1		OK	No EBS volumes present
+EC2	EBS Encryption Enabled	N/A	eu-central-1		OK	No EBS volumes present
+EC2	EBS Encryption Enabled	N/A	eu-west-1		OK	No EBS volumes present
+EC2	EBS Encryption Enabled	N/A	eu-west-2		OK	No EBS volumes present
+EC2	EBS Encryption Enabled	N/A	eu-west-3		OK	No EBS volumes present
+EC2	EBS Encryption Enabled	N/A	eu-north-1		OK	No EBS volumes present
+EC2	EBS Encryption Enabled	N/A	ap-northeast-1		OK	No EBS volumes present
+EC2	EBS Encryption Enabled	N/A	ap-northeast-2		OK	No EBS volumes present
+EC2	EBS Encryption Enabled	N/A	ap-southeast-1		OK	No EBS volumes present
+EC2	EBS Encryption Enabled	N/A	ap-southeast-2		OK	No EBS volumes present
+EC2	EBS Encryption Enabled	N/A	ap-south-1		OK	No EBS volumes present
+EC2	EBS Encryption Enabled	N/A	sa-east-1		OK	No EBS volumes present
+EC2	EBS Encryption Enabled	N/A	ap-east-1		OK	Region is not enabled
+EC2	EBS Encryption Enabled	N/A	me-south-1		OK	Region is not enabled
+EC2	NAT Multiple AZ	N/A	us-east-1		OK	No VPCs with NAT gateways found
+EC2	NAT Multiple AZ	N/A	us-east-2		OK	No VPCs with NAT gateways found
+EC2	NAT Multiple AZ	N/A	us-west-1		OK	No VPCs with NAT gateways found
+EC2	NAT Multiple AZ	N/A	us-west-2		OK	No VPCs with NAT gateways found
+EC2	NAT Multiple AZ	N/A	ca-central-1		OK	No VPCs with NAT gateways found
+EC2	NAT Multiple AZ	N/A	eu-central-1		OK	No VPCs with NAT gateways found
+EC2	NAT Multiple AZ	N/A	eu-west-1		OK	No VPCs with NAT gateways found
+EC2	NAT Multiple AZ	N/A	eu-west-2		OK	No VPCs with NAT gateways found
+EC2	NAT Multiple AZ	N/A	eu-west-3		OK	No VPCs with NAT gateways found
+EC2	NAT Multiple AZ	N/A	eu-north-1		OK	No VPCs with NAT gateways found
+EC2	NAT Multiple AZ	N/A	ap-northeast-1		OK	No VPCs with NAT gateways found
+EC2	NAT Multiple AZ	N/A	ap-northeast-2		OK	No VPCs with NAT gateways found
+EC2	NAT Multiple AZ	N/A	ap-southeast-1		OK	No VPCs with NAT gateways found
+EC2	NAT Multiple AZ	N/A	ap-southeast-2		OK	No VPCs with NAT gateways found
+EC2	NAT Multiple AZ	N/A	ap-south-1		OK	No VPCs with NAT gateways found
+EC2	NAT Multiple AZ	N/A	sa-east-1		OK	No VPCs with NAT gateways found
+EC2	NAT Multiple AZ	N/A	ap-east-1		OK	Region is not enabled
+EC2	NAT Multiple AZ	N/A	me-south-1		OK	Region is not enabled
+EC2	Default VPC In Use	N/A	us-east-1		FAIL	Default VPC is in use: 0 EC2 instances; 1 ELB; 0 Lambda functions; 0 RDS instances; 0 Redshift clusters
+EC2	Default VPC In Use	N/A	us-east-2		OK	Default VPC is not in use
+EC2	Default VPC In Use	N/A	us-west-1		OK	Default VPC is not in use
+EC2	Default VPC In Use	N/A	us-west-2		OK	Default VPC is not in use
+EC2	Default VPC In Use	N/A	ca-central-1		OK	Default VPC is not in use
+EC2	Default VPC In Use	N/A	eu-central-1		OK	Default VPC is not in use
+EC2	Default VPC In Use	N/A	eu-west-1		OK	Default VPC is not in use
+EC2	Default VPC In Use	N/A	eu-west-2		OK	Default VPC is not in use
+EC2	Default VPC In Use	N/A	eu-west-3		OK	Default VPC is not in use
+EC2	Default VPC In Use	N/A	eu-north-1		OK	Default VPC is not in use
+EC2	Default VPC In Use	N/A	ap-northeast-1		OK	Default VPC is not in use
+EC2	Default VPC In Use	N/A	ap-northeast-2		OK	Default VPC is not in use
+EC2	Default VPC In Use	N/A	ap-southeast-1		OK	Default VPC is not in use
+EC2	Default VPC In Use	N/A	ap-southeast-2		OK	Default VPC is not in use
+EC2	Default VPC In Use	N/A	ap-south-1		OK	Default VPC is not in use
+EC2	Default VPC In Use	N/A	sa-east-1		OK	Default VPC is not in use
+EC2	Default VPC In Use	N/A	ap-east-1		OK	Region is not enabled
+EC2	Default VPC In Use	N/A	me-south-1		OK	Region is not enabled
+EC2	Default VPC Exists	arn:aws:ec2:us-east-1:XXXXXXXXXXXX:vpc/vpc-9ddd95e7	us-east-1		FAIL	Default VPC present
+EC2	Default VPC Exists	arn:aws:ec2:us-east-2:XXXXXXXXXXXX:vpc/vpc-0a689861	us-east-2		FAIL	Default VPC present
+EC2	Default VPC Exists	arn:aws:ec2:us-west-1:XXXXXXXXXXXX:vpc/vpc-452f3f22	us-west-1		FAIL	Default VPC present
+EC2	Default VPC Exists	arn:aws:ec2:us-west-2:XXXXXXXXXXXX:vpc/vpc-f8ec6280	us-west-2		FAIL	Default VPC present
+EC2	Default VPC Exists	arn:aws:ec2:ca-central-1:XXXXXXXXXXXX:vpc/vpc-1ed5a976	ca-central-1		FAIL	Default VPC present
+EC2	Default VPC Exists	arn:aws:ec2:eu-central-1:XXXXXXXXXXXX:vpc/vpc-b3b449d9	eu-central-1		FAIL	Default VPC present
+EC2	Default VPC Exists	arn:aws:ec2:eu-west-1:XXXXXXXXXXXX:vpc/vpc-8ad7c8ec	eu-west-1		FAIL	Default VPC present
+EC2	Default VPC Exists	arn:aws:ec2:eu-west-2:XXXXXXXXXXXX:vpc/vpc-4cd6a124	eu-west-2		FAIL	Default VPC present
+EC2	Default VPC Exists	arn:aws:ec2:eu-west-3:XXXXXXXXXXXX:vpc/vpc-6300010a	eu-west-3		FAIL	Default VPC present
+EC2	Default VPC Exists	arn:aws:ec2:eu-north-1:XXXXXXXXXXXX:vpc/vpc-10b77d79	eu-north-1		FAIL	Default VPC present
+EC2	Default VPC Exists	arn:aws:ec2:ap-northeast-1:XXXXXXXXXXXX:vpc/vpc-92cdf2f5	ap-northeast-1		FAIL	Default VPC present
+EC2	Default VPC Exists	arn:aws:ec2:ap-northeast-2:XXXXXXXXXXXX:vpc/vpc-fe22ed95	ap-northeast-2		FAIL	Default VPC present
+EC2	Default VPC Exists	arn:aws:ec2:ap-southeast-1:XXXXXXXXXXXX:vpc/vpc-d16569b6	ap-southeast-1		FAIL	Default VPC present
+EC2	Default VPC Exists	arn:aws:ec2:ap-southeast-2:XXXXXXXXXXXX:vpc/vpc-9c0b3bfb	ap-southeast-2		FAIL	Default VPC present
+EC2	Default VPC Exists	arn:aws:ec2:ap-south-1:XXXXXXXXXXXX:vpc/vpc-69d3d401	ap-south-1		FAIL	Default VPC present
+EC2	Default VPC Exists	arn:aws:ec2:sa-east-1:XXXXXXXXXXXX:vpc/vpc-75ccf112	sa-east-1		FAIL	Default VPC present
+EC2	Default VPC Exists	N/A	ap-east-1		OK	Region is not enabled
+EC2	Default VPC Exists	N/A	me-south-1		OK	Region is not enabled
+EC2	Cross VPC Public Private Communication	N/A	us-east-1		OK	No public private subnets connection found
+EC2	Cross VPC Public Private Communication	N/A	us-east-2		OK	No public private subnets connection found
+EC2	Cross VPC Public Private Communication	N/A	us-west-1		OK	No public private subnets connection found
+EC2	Cross VPC Public Private Communication	N/A	us-west-2		OK	No public private subnets connection found
+EC2	Cross VPC Public Private Communication	N/A	ca-central-1		OK	No public private subnets connection found
+EC2	Cross VPC Public Private Communication	N/A	eu-central-1		OK	No public private subnets connection found
+EC2	Cross VPC Public Private Communication	N/A	eu-west-1		OK	No public private subnets connection found
+EC2	Cross VPC Public Private Communication	N/A	eu-west-2		OK	No public private subnets connection found
+EC2	Cross VPC Public Private Communication	N/A	eu-west-3		OK	No public private subnets connection found
+EC2	Cross VPC Public Private Communication	N/A	eu-north-1		OK	No public private subnets connection found
+EC2	Cross VPC Public Private Communication	N/A	ap-northeast-1		OK	No public private subnets connection found
+EC2	Cross VPC Public Private Communication	N/A	ap-northeast-2		OK	No public private subnets connection found
+EC2	Cross VPC Public Private Communication	N/A	ap-southeast-1		OK	No public private subnets connection found
+EC2	Cross VPC Public Private Communication	N/A	ap-southeast-2		OK	No public private subnets connection found
+EC2	Cross VPC Public Private Communication	N/A	ap-south-1		OK	No public private subnets connection found
+EC2	Cross VPC Public Private Communication	N/A	sa-east-1		OK	No public private subnets connection found
+EC2	Cross VPC Public Private Communication	N/A	ap-east-1		OK	Region is not enabled
+EC2	Cross VPC Public Private Communication	N/A	me-south-1		OK	Region is not enabled
+EC2	EBS Encrypted Snapshots	arn:aws:ec2:us-east-1:XXXXXXXXXXXX:snapshot/snap-0d308a46700f862dc	us-east-1		FAIL	EBS snapshot is unencrypted
+EC2	EBS Encrypted Snapshots	N/A	us-east-2		OK	No EBS snapshots present
+EC2	EBS Encrypted Snapshots	N/A	us-west-1		OK	No EBS snapshots present
+EC2	EBS Encrypted Snapshots	N/A	us-west-2		OK	No EBS snapshots present
+EC2	EBS Encrypted Snapshots	N/A	ca-central-1		OK	No EBS snapshots present
+EC2	EBS Encrypted Snapshots	N/A	eu-central-1		OK	No EBS snapshots present
+EC2	EBS Encrypted Snapshots	N/A	eu-west-1		OK	No EBS snapshots present
+EC2	EBS Encrypted Snapshots	N/A	eu-west-2		OK	No EBS snapshots present
+EC2	EBS Encrypted Snapshots	N/A	eu-west-3		OK	No EBS snapshots present
+EC2	EBS Encrypted Snapshots	N/A	eu-north-1		OK	No EBS snapshots present
+EC2	EBS Encrypted Snapshots	N/A	ap-northeast-1		OK	No EBS snapshots present
+EC2	EBS Encrypted Snapshots	N/A	ap-northeast-2		OK	No EBS snapshots present
+EC2	EBS Encrypted Snapshots	N/A	ap-southeast-1		OK	No EBS snapshots present
+EC2	EBS Encrypted Snapshots	N/A	ap-southeast-2		OK	No EBS snapshots present
+EC2	EBS Encrypted Snapshots	N/A	ap-south-1		OK	No EBS snapshots present
+EC2	EBS Encrypted Snapshots	N/A	sa-east-1		OK	No EBS snapshots present
+EC2	EBS Encrypted Snapshots	N/A	ap-east-1		OK	Region is not enabled
+EC2	EBS Encrypted Snapshots	N/A	me-south-1		OK	Region is not enabled
+EC2	Insecure EC2 Metadata Options	arn:aws:ec2:us-east-1:XXXXXXXXXXXX:instance/i-01133c160483837cb	us-east-1		FAIL	Instance has instance metadata endpoint enabled and does not require HttpTokens
+EC2	Insecure EC2 Metadata Options	N/A	us-east-2		OK	No instances found
+EC2	Insecure EC2 Metadata Options	N/A	us-west-1		OK	No instances found
+EC2	Insecure EC2 Metadata Options	N/A	us-west-2		OK	No instances found
+EC2	Insecure EC2 Metadata Options	N/A	ca-central-1		OK	No instances found
+EC2	Insecure EC2 Metadata Options	N/A	eu-central-1		OK	No instances found
+EC2	Insecure EC2 Metadata Options	N/A	eu-west-1		OK	No instances found
+EC2	Insecure EC2 Metadata Options	N/A	eu-west-2		OK	No instances found
+EC2	Insecure EC2 Metadata Options	N/A	eu-west-3		OK	No instances found
+EC2	Insecure EC2 Metadata Options	N/A	eu-north-1		OK	No instances found
+EC2	Insecure EC2 Metadata Options	N/A	ap-northeast-1		OK	No instances found
+EC2	Insecure EC2 Metadata Options	N/A	ap-northeast-2		OK	No instances found
+EC2	Insecure EC2 Metadata Options	N/A	ap-southeast-1		OK	No instances found
+EC2	Insecure EC2 Metadata Options	N/A	ap-southeast-2		OK	No instances found
+EC2	Insecure EC2 Metadata Options	N/A	ap-south-1		OK	No instances found
+EC2	Insecure EC2 Metadata Options	N/A	sa-east-1		OK	No instances found
+EC2	Insecure EC2 Metadata Options	N/A	ap-east-1		OK	Region is not enabled
+EC2	Insecure EC2 Metadata Options	N/A	me-south-1		OK	Region is not enabled
+EFS	EFS Encryption Enabled	N/A	eu-west-2		OK	No EFS file systems present
+EFS	EFS Encryption Enabled	N/A	eu-west-1		OK	No EFS file systems present
+EFS	EFS Encryption Enabled	N/A	ap-northeast-2		OK	No EFS file systems present
+EFS	EFS Encryption Enabled	N/A	ap-northeast-1		OK	No EFS file systems present
+EFS	EFS Encryption Enabled	N/A	ap-southeast-1		OK	No EFS file systems present
+EFS	EFS Encryption Enabled	N/A	ap-southeast-2		OK	No EFS file systems present
+EFS	EFS Encryption Enabled	N/A	eu-central-1		OK	No EFS file systems present
+EFS	EFS Encryption Enabled	N/A	us-east-1		OK	No EFS file systems present
+EFS	EFS Encryption Enabled	N/A	us-east-2		OK	No EFS file systems present
+EFS	EFS Encryption Enabled	N/A	us-west-1		OK	No EFS file systems present
+EFS	EFS Encryption Enabled	N/A	us-west-2		OK	No EFS file systems present
+ECR	ECR Repository Policy	arn:aws:ecr:us-east-1:XXXXXXXXXXXX:repository/sadcloud	us-east-1		FAIL	Repository allows global access for actions: ecr:GetDownloadUrlForLayer, ecr:BatchGetImage, ecr:BatchCheckLayerAvailability, ecr:PutImage, ecr:InitiateLayerUpload, ecr:UploadLayerPart, ecr:CompleteLayerUpload, ecr:DescribeRepositories, ecr:GetRepositoryPolicy, ecr:ListImages, ecr:DeleteRepository, ecr:BatchDeleteImage, ecr:SetRepositoryPolicy, ecr:DeleteRepositoryPolicy.
+ECR	ECR Repository Policy	N/A	us-east-2		OK	No ECR repositories present
+ECR	ECR Repository Policy	N/A	us-west-1		OK	No ECR repositories present
+ECR	ECR Repository Policy	N/A	us-west-2		OK	No ECR repositories present
+ECR	ECR Repository Policy	N/A	ca-central-1		OK	No ECR repositories present
+ECR	ECR Repository Policy	N/A	eu-central-1		OK	No ECR repositories present
+ECR	ECR Repository Policy	N/A	eu-west-1		OK	No ECR repositories present
+ECR	ECR Repository Policy	N/A	eu-west-2		OK	No ECR repositories present
+ECR	ECR Repository Policy	N/A	eu-west-3		OK	No ECR repositories present
+ECR	ECR Repository Policy	N/A	eu-north-1		OK	No ECR repositories present
+ECR	ECR Repository Policy	N/A	ap-northeast-1		OK	No ECR repositories present
+ECR	ECR Repository Policy	N/A	ap-northeast-2		OK	No ECR repositories present
+ECR	ECR Repository Policy	N/A	ap-southeast-1		OK	No ECR repositories present
+ECR	ECR Repository Policy	N/A	ap-southeast-2		OK	No ECR repositories present
+ECR	ECR Repository Policy	N/A	ap-south-1		OK	No ECR repositories present
+ECR	ECR Repository Policy	N/A	sa-east-1		OK	No ECR repositories present
+ECR	ECR Repository Policy	N/A	ap-east-1		OK	Region is not enabled
+ECR	ECR Repository Policy	N/A	me-south-1		OK	Region is not enabled
+ECR	ECR Repository Tag Immutability	arn:aws:ecr:us-east-1:XXXXXXXXXXXX:repository/sadcloud	us-east-1		FAIL	ECR repository mutability setting is set to MUTABLE
+ECR	ECR Repository Tag Immutability	N/A	us-east-2		OK	No ECR repositories present
+ECR	ECR Repository Tag Immutability	N/A	us-west-1		OK	No ECR repositories present
+ECR	ECR Repository Tag Immutability	N/A	us-west-2		OK	No ECR repositories present
+ECR	ECR Repository Tag Immutability	N/A	ca-central-1		OK	No ECR repositories present
+ECR	ECR Repository Tag Immutability	N/A	eu-central-1		OK	No ECR repositories present
+ECR	ECR Repository Tag Immutability	N/A	eu-west-1		OK	No ECR repositories present
+ECR	ECR Repository Tag Immutability	N/A	eu-west-2		OK	No ECR repositories present
+ECR	ECR Repository Tag Immutability	N/A	eu-west-3		OK	No ECR repositories present
+ECR	ECR Repository Tag Immutability	N/A	eu-north-1		OK	No ECR repositories present
+ECR	ECR Repository Tag Immutability	N/A	ap-northeast-1		OK	No ECR repositories present
+ECR	ECR Repository Tag Immutability	N/A	ap-northeast-2		OK	No ECR repositories present
+ECR	ECR Repository Tag Immutability	N/A	ap-southeast-1		OK	No ECR repositories present
+ECR	ECR Repository Tag Immutability	N/A	ap-southeast-2		OK	No ECR repositories present
+ECR	ECR Repository Tag Immutability	N/A	ap-south-1		OK	No ECR repositories present
+ECR	ECR Repository Tag Immutability	N/A	sa-east-1		OK	No ECR repositories present
+ECR	ECR Repository Tag Immutability	N/A	ap-east-1		OK	Region is not enabled
+ECR	ECR Repository Tag Immutability	N/A	me-south-1		OK	Region is not enabled
+EKS	EKS Kubernetes Version	arn:aws:eks:us-east-1:XXXXXXXXXXXX:cluster/example	us-east-1		OK	EKS cluster is running a current version of Kubernetes: 1.14
+EKS	EKS Kubernetes Version	N/A	us-east-2		OK	No EKS clusters present
+EKS	EKS Kubernetes Version	N/A	us-west-2		OK	No EKS clusters present
+EKS	EKS Kubernetes Version	N/A	eu-west-1		OK	No EKS clusters present
+EKS	EKS Kubernetes Version	N/A	eu-central-1		OK	No EKS clusters present
+EKS	EKS Kubernetes Version	N/A	eu-west-2		OK	No EKS clusters present
+EKS	EKS Kubernetes Version	N/A	eu-west-3		OK	No EKS clusters present
+EKS	EKS Kubernetes Version	N/A	eu-north-1		OK	No EKS clusters present
+EKS	EKS Kubernetes Version	N/A	ap-southeast-1		OK	No EKS clusters present
+EKS	EKS Kubernetes Version	N/A	ap-northeast-1		OK	No EKS clusters present
+EKS	EKS Kubernetes Version	N/A	ap-southeast-2		OK	No EKS clusters present
+EKS	EKS Kubernetes Version	N/A	ap-northeast-2		OK	No EKS clusters present
+EKS	EKS Kubernetes Version	N/A	ap-south-1		OK	No EKS clusters present
+EKS	EKS Logging Enabled	arn:aws:eks:us-east-1:XXXXXXXXXXXX:cluster/example	us-east-1		FAIL	EKS cluster logging is disabled for: api, audit, authenticator, controllerManager, scheduler logs
+EKS	EKS Logging Enabled	N/A	us-east-2		OK	No EKS clusters present
+EKS	EKS Logging Enabled	N/A	us-west-2		OK	No EKS clusters present
+EKS	EKS Logging Enabled	N/A	eu-west-1		OK	No EKS clusters present
+EKS	EKS Logging Enabled	N/A	eu-central-1		OK	No EKS clusters present
+EKS	EKS Logging Enabled	N/A	eu-west-2		OK	No EKS clusters present
+EKS	EKS Logging Enabled	N/A	eu-west-3		OK	No EKS clusters present
+EKS	EKS Logging Enabled	N/A	eu-north-1		OK	No EKS clusters present
+EKS	EKS Logging Enabled	N/A	ap-southeast-1		OK	No EKS clusters present
+EKS	EKS Logging Enabled	N/A	ap-northeast-1		OK	No EKS clusters present
+EKS	EKS Logging Enabled	N/A	ap-southeast-2		OK	No EKS clusters present
+EKS	EKS Logging Enabled	N/A	ap-northeast-2		OK	No EKS clusters present
+EKS	EKS Logging Enabled	N/A	ap-south-1		OK	No EKS clusters present
+EKS	EKS Private Endpoint	arn:aws:eks:us-east-1:XXXXXXXXXXXX:cluster/example	us-east-1		FAIL	EKS cluster does not have private endpoint enabled
+EKS	EKS Private Endpoint	N/A	us-east-2		OK	No EKS clusters present
+EKS	EKS Private Endpoint	N/A	us-west-2		OK	No EKS clusters present
+EKS	EKS Private Endpoint	N/A	eu-west-1		OK	No EKS clusters present
+EKS	EKS Private Endpoint	N/A	eu-central-1		OK	No EKS clusters present
+EKS	EKS Private Endpoint	N/A	eu-west-2		OK	No EKS clusters present
+EKS	EKS Private Endpoint	N/A	eu-west-3		OK	No EKS clusters present
+EKS	EKS Private Endpoint	N/A	eu-north-1		OK	No EKS clusters present
+EKS	EKS Private Endpoint	N/A	ap-southeast-1		OK	No EKS clusters present
+EKS	EKS Private Endpoint	N/A	ap-northeast-1		OK	No EKS clusters present
+EKS	EKS Private Endpoint	N/A	ap-southeast-2		OK	No EKS clusters present
+EKS	EKS Private Endpoint	N/A	ap-northeast-2		OK	No EKS clusters present
+EKS	EKS Private Endpoint	N/A	ap-south-1		OK	No EKS clusters present
+EKS	EKS Security Groups	arn:aws:eks:us-east-1:XXXXXXXXXXXX:cluster/example	us-east-1		WARN	EKS control plane does not have security groups configured
+EKS	EKS Security Groups	N/A	us-east-2		OK	No EKS clusters present
+EKS	EKS Security Groups	N/A	us-west-2		OK	No EKS clusters present
+EKS	EKS Security Groups	N/A	eu-west-1		OK	No EKS clusters present
+EKS	EKS Security Groups	N/A	eu-central-1		OK	No EKS clusters present
+EKS	EKS Security Groups	N/A	eu-west-2		OK	No EKS clusters present
+EKS	EKS Security Groups	N/A	eu-west-3		OK	No EKS clusters present
+EKS	EKS Security Groups	N/A	eu-north-1		OK	No EKS clusters present
+EKS	EKS Security Groups	N/A	ap-southeast-1		OK	No EKS clusters present
+EKS	EKS Security Groups	N/A	ap-northeast-1		OK	No EKS clusters present
+EKS	EKS Security Groups	N/A	ap-southeast-2		OK	No EKS clusters present
+EKS	EKS Security Groups	N/A	ap-northeast-2		OK	No EKS clusters present
+EKS	EKS Security Groups	N/A	ap-south-1		OK	No EKS clusters present
+ELB	Insecure Ciphers	N/A	us-east-2		OK	No load balancers present
+ELB	Insecure Ciphers	N/A	us-west-1		OK	No load balancers present
+ELB	Insecure Ciphers	N/A	us-west-2		OK	No load balancers present
+ELB	Insecure Ciphers	N/A	ca-central-1		OK	No load balancers present
+ELB	Insecure Ciphers	N/A	eu-central-1		OK	No load balancers present
+ELB	Insecure Ciphers	N/A	eu-west-1		OK	No load balancers present
+ELB	Insecure Ciphers	N/A	eu-west-2		OK	No load balancers present
+ELB	Insecure Ciphers	N/A	eu-west-3		OK	No load balancers present
+ELB	Insecure Ciphers	N/A	eu-north-1		OK	No load balancers present
+ELB	Insecure Ciphers	N/A	ap-northeast-1		OK	No load balancers present
+ELB	Insecure Ciphers	N/A	ap-northeast-2		OK	No load balancers present
+ELB	Insecure Ciphers	N/A	ap-southeast-1		OK	No load balancers present
+ELB	Insecure Ciphers	N/A	ap-southeast-2		OK	No load balancers present
+ELB	Insecure Ciphers	N/A	ap-south-1		OK	No load balancers present
+ELB	Insecure Ciphers	N/A	sa-east-1		OK	No load balancers present
+ELB	Insecure Ciphers	N/A	ap-east-1		OK	Region is not enabled
+ELB	Insecure Ciphers	N/A	me-south-1		OK	Region is not enabled
+ELB	ELB HTTPS Only	arn:aws:elasticloadbalancing:us-east-1:XXXXXXXXXXXX:loadbalancer/sadcloud-elb	us-east-1		FAIL	The following listeners are not using HTTPS-only: HTTP / 80
+ELB	ELB HTTPS Only	N/A	us-east-2		OK	No load balancers present
+ELB	ELB HTTPS Only	N/A	us-west-1		OK	No load balancers present
+ELB	ELB HTTPS Only	N/A	us-west-2		OK	No load balancers present
+ELB	ELB HTTPS Only	N/A	ca-central-1		OK	No load balancers present
+ELB	ELB HTTPS Only	N/A	eu-central-1		OK	No load balancers present
+ELB	ELB HTTPS Only	N/A	eu-west-1		OK	No load balancers present
+ELB	ELB HTTPS Only	N/A	eu-west-2		OK	No load balancers present
+ELB	ELB HTTPS Only	N/A	eu-west-3		OK	No load balancers present
+ELB	ELB HTTPS Only	N/A	eu-north-1		OK	No load balancers present
+ELB	ELB HTTPS Only	N/A	ap-northeast-1		OK	No load balancers present
+ELB	ELB HTTPS Only	N/A	ap-northeast-2		OK	No load balancers present
+ELB	ELB HTTPS Only	N/A	ap-southeast-1		OK	No load balancers present
+ELB	ELB HTTPS Only	N/A	ap-southeast-2		OK	No load balancers present
+ELB	ELB HTTPS Only	N/A	ap-south-1		OK	No load balancers present
+ELB	ELB HTTPS Only	N/A	sa-east-1		OK	No load balancers present
+ELB	ELB HTTPS Only	N/A	ap-east-1		OK	Region is not enabled
+ELB	ELB HTTPS Only	N/A	me-south-1		OK	Region is not enabled
+ELB	ELB Logging Enabled	sadcloud-elb-1130713406.us-east-1.elb.amazonaws.com	us-east-1		FAIL	Logging not enabled for sadcloud-elb-1130713406.us-east-1.elb.amazonaws.com
+ELB	ELB Logging Enabled	N/A	us-east-2		OK	No load balancers present
+ELB	ELB Logging Enabled	N/A	us-west-1		OK	No load balancers present
+ELB	ELB Logging Enabled	N/A	us-west-2		OK	No load balancers present
+ELB	ELB Logging Enabled	N/A	ca-central-1		OK	No load balancers present
+ELB	ELB Logging Enabled	N/A	eu-central-1		OK	No load balancers present
+ELB	ELB Logging Enabled	N/A	eu-west-1		OK	No load balancers present
+ELB	ELB Logging Enabled	N/A	eu-west-2		OK	No load balancers present
+ELB	ELB Logging Enabled	N/A	eu-west-3		OK	No load balancers present
+ELB	ELB Logging Enabled	N/A	eu-north-1		OK	No load balancers present
+ELB	ELB Logging Enabled	N/A	ap-northeast-1		OK	No load balancers present
+ELB	ELB Logging Enabled	N/A	ap-northeast-2		OK	No load balancers present
+ELB	ELB Logging Enabled	N/A	ap-southeast-1		OK	No load balancers present
+ELB	ELB Logging Enabled	N/A	ap-southeast-2		OK	No load balancers present
+ELB	ELB Logging Enabled	N/A	ap-south-1		OK	No load balancers present
+ELB	ELB Logging Enabled	N/A	sa-east-1		OK	No load balancers present
+ELB	ELB Logging Enabled	N/A	ap-east-1		OK	Region is not enabled
+ELB	ELB Logging Enabled	N/A	me-south-1		OK	Region is not enabled
+ELB	ELB No Instances	arn:aws:elasticloadbalancing:us-east-1:XXXXXXXXXXXX:loadbalancer/sadcloud-elb	us-east-1		WARN	ELB does not have backend instances
+ELB	ELB No Instances	N/A	us-east-2		OK	No load balancers present
+ELB	ELB No Instances	N/A	us-west-1		OK	No load balancers present
+ELB	ELB No Instances	N/A	us-west-2		OK	No load balancers present
+ELB	ELB No Instances	N/A	ca-central-1		OK	No load balancers present
+ELB	ELB No Instances	N/A	eu-central-1		OK	No load balancers present
+ELB	ELB No Instances	N/A	eu-west-1		OK	No load balancers present
+ELB	ELB No Instances	N/A	eu-west-2		OK	No load balancers present
+ELB	ELB No Instances	N/A	eu-west-3		OK	No load balancers present
+ELB	ELB No Instances	N/A	eu-north-1		OK	No load balancers present
+ELB	ELB No Instances	N/A	ap-northeast-1		OK	No load balancers present
+ELB	ELB No Instances	N/A	ap-northeast-2		OK	No load balancers present
+ELB	ELB No Instances	N/A	ap-southeast-1		OK	No load balancers present
+ELB	ELB No Instances	N/A	ap-southeast-2		OK	No load balancers present
+ELB	ELB No Instances	N/A	ap-south-1		OK	No load balancers present
+ELB	ELB No Instances	N/A	sa-east-1		OK	No load balancers present
+ELB	ELB No Instances	N/A	ap-east-1		OK	Region is not enabled
+ELB	ELB No Instances	N/A	me-south-1		OK	Region is not enabled
+ELB	ELB WAF Enabled	N/A	us-east-2		OK	No Load Balancers found
+ELB	ELB WAF Enabled	N/A	us-west-1		OK	No Load Balancers found
+ELB	ELB WAF Enabled	N/A	us-west-2		OK	No Load Balancers found
+ELB	ELB WAF Enabled	N/A	ca-central-1		OK	No Load Balancers found
+ELB	ELB WAF Enabled	N/A	eu-central-1		OK	No Load Balancers found
+ELB	ELB WAF Enabled	N/A	eu-west-1		OK	No Load Balancers found
+ELB	ELB WAF Enabled	N/A	eu-west-2		OK	No Load Balancers found
+ELB	ELB WAF Enabled	N/A	eu-west-3		OK	No Load Balancers found
+ELB	ELB WAF Enabled	N/A	eu-north-1		OK	No Load Balancers found
+ELB	ELB WAF Enabled	N/A	ap-northeast-1		OK	No Load Balancers found
+ELB	ELB WAF Enabled	N/A	ap-northeast-2		OK	No Load Balancers found
+ELB	ELB WAF Enabled	N/A	ap-southeast-1		OK	No Load Balancers found
+ELB	ELB WAF Enabled	N/A	ap-southeast-2		OK	No Load Balancers found
+ELB	ELB WAF Enabled	N/A	ap-south-1		OK	No Load Balancers found
+ELB	ELB WAF Enabled	N/A	sa-east-1		OK	No Load Balancers found
+ELB	ELB WAF Enabled	N/A	ap-east-1		OK	Region is not enabled
+ELB	ELB WAF Enabled	N/A	me-south-1		OK	Region is not enabled
+ELB	ELB WAF Enabled	N/A	us-east-1		OK	No WAFs found
+ELB	ELB WAF Enabled	N/A	global		FAIL	The following Application Load Balancers do not have WAF Enabled: arn:aws:elasticloadbalancing:us-east-1:XXXXXXXXXXXX:loadbalancer/app/tf-lb-20200403183836571900000010/34a559dfe403950f
+ES	ElasticSearch Public Service Domain	arn:aws:es:us-east-1:XXXXXXXXXXXX:domain/sadcloud	us-east-1		FAIL	ES domain is configured to use a public endpoint
+ES	ElasticSearch Public Service Domain	N/A	us-east-2		OK	No ES domains found
+ES	ElasticSearch Public Service Domain	N/A	us-west-1		OK	No ES domains found
+ES	ElasticSearch Public Service Domain	N/A	us-west-2		OK	No ES domains found
+ES	ElasticSearch Public Service Domain	N/A	ca-central-1		OK	No ES domains found
+ES	ElasticSearch Public Service Domain	N/A	eu-central-1		OK	No ES domains found
+ES	ElasticSearch Public Service Domain	N/A	eu-west-1		OK	No ES domains found
+ES	ElasticSearch Public Service Domain	N/A	eu-west-2		OK	No ES domains found
+ES	ElasticSearch Public Service Domain	N/A	eu-west-3		OK	No ES domains found
+ES	ElasticSearch Public Service Domain	N/A	eu-north-1		OK	No ES domains found
+ES	ElasticSearch Public Service Domain	N/A	ap-northeast-1		OK	No ES domains found
+ES	ElasticSearch Public Service Domain	N/A	ap-northeast-2		OK	No ES domains found
+ES	ElasticSearch Public Service Domain	N/A	ap-southeast-1		OK	No ES domains found
+ES	ElasticSearch Public Service Domain	N/A	ap-southeast-2		OK	No ES domains found
+ES	ElasticSearch Public Service Domain	N/A	ap-south-1		OK	No ES domains found
+ES	ElasticSearch Public Service Domain	N/A	sa-east-1		OK	No ES domains found
+ES	ElasticSearch Public Service Domain	N/A	ap-east-1		OK	Region is not enabled
+ES	ElasticSearch Public Service Domain	N/A	me-south-1		OK	Region is not enabled
+ES	ElasticSearch Encrypted Domain	arn:aws:es:us-east-1:XXXXXXXXXXXX:domain/sadcloud	us-east-1		FAIL	ES domain is not configured to use encryption at rest
+ES	ElasticSearch Encrypted Domain	N/A	us-east-2		OK	No ES domains found
+ES	ElasticSearch Encrypted Domain	N/A	us-west-1		OK	No ES domains found
+ES	ElasticSearch Encrypted Domain	N/A	us-west-2		OK	No ES domains found
+ES	ElasticSearch Encrypted Domain	N/A	ca-central-1		OK	No ES domains found
+ES	ElasticSearch Encrypted Domain	N/A	eu-central-1		OK	No ES domains found
+ES	ElasticSearch Encrypted Domain	N/A	eu-west-1		OK	No ES domains found
+ES	ElasticSearch Encrypted Domain	N/A	eu-west-2		OK	No ES domains found
+ES	ElasticSearch Encrypted Domain	N/A	eu-west-3		OK	No ES domains found
+ES	ElasticSearch Encrypted Domain	N/A	eu-north-1		OK	No ES domains found
+ES	ElasticSearch Encrypted Domain	N/A	ap-northeast-1		OK	No ES domains found
+ES	ElasticSearch Encrypted Domain	N/A	ap-northeast-2		OK	No ES domains found
+ES	ElasticSearch Encrypted Domain	N/A	ap-southeast-1		OK	No ES domains found
+ES	ElasticSearch Encrypted Domain	N/A	ap-southeast-2		OK	No ES domains found
+ES	ElasticSearch Encrypted Domain	N/A	ap-south-1		OK	No ES domains found
+ES	ElasticSearch Encrypted Domain	N/A	sa-east-1		OK	No ES domains found
+ES	ElasticSearch Encrypted Domain	N/A	ap-east-1		OK	Region is not enabled
+ES	ElasticSearch Encrypted Domain	N/A	me-south-1		OK	Region is not enabled
+ES	ElasticSearch Node To Node Encryption	arn:aws:es:us-east-1:XXXXXXXXXXXX:domain/sadcloud	us-east-1		FAIL	ES domain is not configured to use node-to-node encryption
+ES	ElasticSearch Node To Node Encryption	N/A	us-east-2		OK	No ES domains found
+ES	ElasticSearch Node To Node Encryption	N/A	us-west-1		OK	No ES domains found
+ES	ElasticSearch Node To Node Encryption	N/A	us-west-2		OK	No ES domains found
+ES	ElasticSearch Node To Node Encryption	N/A	ca-central-1		OK	No ES domains found
+ES	ElasticSearch Node To Node Encryption	N/A	eu-central-1		OK	No ES domains found
+ES	ElasticSearch Node To Node Encryption	N/A	eu-west-1		OK	No ES domains found
+ES	ElasticSearch Node To Node Encryption	N/A	eu-west-2		OK	No ES domains found
+ES	ElasticSearch Node To Node Encryption	N/A	eu-west-3		OK	No ES domains found
+ES	ElasticSearch Node To Node Encryption	N/A	eu-north-1		OK	No ES domains found
+ES	ElasticSearch Node To Node Encryption	N/A	ap-northeast-1		OK	No ES domains found
+ES	ElasticSearch Node To Node Encryption	N/A	ap-northeast-2		OK	No ES domains found
+ES	ElasticSearch Node To Node Encryption	N/A	ap-southeast-1		OK	No ES domains found
+ES	ElasticSearch Node To Node Encryption	N/A	ap-southeast-2		OK	No ES domains found
+ES	ElasticSearch Node To Node Encryption	N/A	ap-south-1		OK	No ES domains found
+ES	ElasticSearch Node To Node Encryption	N/A	sa-east-1		OK	No ES domains found
+ES	ElasticSearch Node To Node Encryption	N/A	ap-east-1		OK	Region is not enabled
+ES	ElasticSearch Node To Node Encryption	N/A	me-south-1		OK	Region is not enabled
+ES	ElasticSearch Logging Enabled	arn:aws:es:us-east-1:XXXXXXXXXXXX:domain/sadcloud	us-east-1		FAIL	The following logs are not configured for the ES domain: SEARCH SLOW LOGS, INDEX SLOW LOGS, ES APPLICATION LOGS
+ES	ElasticSearch Logging Enabled	N/A	us-east-2		OK	No ES domains found
+ES	ElasticSearch Logging Enabled	N/A	us-west-1		OK	No ES domains found
+ES	ElasticSearch Logging Enabled	N/A	us-west-2		OK	No ES domains found
+ES	ElasticSearch Logging Enabled	N/A	ca-central-1		OK	No ES domains found
+ES	ElasticSearch Logging Enabled	N/A	eu-central-1		OK	No ES domains found
+ES	ElasticSearch Logging Enabled	N/A	eu-west-1		OK	No ES domains found
+ES	ElasticSearch Logging Enabled	N/A	eu-west-2		OK	No ES domains found
+ES	ElasticSearch Logging Enabled	N/A	eu-west-3		OK	No ES domains found
+ES	ElasticSearch Logging Enabled	N/A	eu-north-1		OK	No ES domains found
+ES	ElasticSearch Logging Enabled	N/A	ap-northeast-1		OK	No ES domains found
+ES	ElasticSearch Logging Enabled	N/A	ap-northeast-2		OK	No ES domains found
+ES	ElasticSearch Logging Enabled	N/A	ap-southeast-1		OK	No ES domains found
+ES	ElasticSearch Logging Enabled	N/A	ap-southeast-2		OK	No ES domains found
+ES	ElasticSearch Logging Enabled	N/A	ap-south-1		OK	No ES domains found
+ES	ElasticSearch Logging Enabled	N/A	sa-east-1		OK	No ES domains found
+ES	ElasticSearch Logging Enabled	N/A	ap-east-1		OK	Region is not enabled
+ES	ElasticSearch Logging Enabled	N/A	me-south-1		OK	Region is not enabled
+ES	ElasticSearch Upgrade Available	arn:aws:es:us-east-1:XXXXXXXXXXXX:domain/sadcloud	us-east-1		OK	ES domain service software version: R20200310-P1 is the latest eligible upgraded version
+ES	ElasticSearch Upgrade Available	N/A	us-east-2		OK	No ES domains found
+ES	ElasticSearch Upgrade Available	N/A	us-west-1		OK	No ES domains found
+ES	ElasticSearch Upgrade Available	N/A	us-west-2		OK	No ES domains found
+ES	ElasticSearch Upgrade Available	N/A	ca-central-1		OK	No ES domains found
+ES	ElasticSearch Upgrade Available	N/A	eu-central-1		OK	No ES domains found
+ES	ElasticSearch Upgrade Available	N/A	eu-west-1		OK	No ES domains found
+ES	ElasticSearch Upgrade Available	N/A	eu-west-2		OK	No ES domains found
+ES	ElasticSearch Upgrade Available	N/A	eu-west-3		OK	No ES domains found
+ES	ElasticSearch Upgrade Available	N/A	eu-north-1		OK	No ES domains found
+ES	ElasticSearch Upgrade Available	N/A	ap-northeast-1		OK	No ES domains found
+ES	ElasticSearch Upgrade Available	N/A	ap-northeast-2		OK	No ES domains found
+ES	ElasticSearch Upgrade Available	N/A	ap-southeast-1		OK	No ES domains found
+ES	ElasticSearch Upgrade Available	N/A	ap-southeast-2		OK	No ES domains found
+ES	ElasticSearch Upgrade Available	N/A	ap-south-1		OK	No ES domains found
+ES	ElasticSearch Upgrade Available	N/A	sa-east-1		OK	No ES domains found
+ES	ElasticSearch Upgrade Available	N/A	ap-east-1		OK	Region is not enabled
+ES	ElasticSearch Upgrade Available	N/A	me-south-1		OK	Region is not enabled
+ES	ElasticSearch HTTPS Only	arn:aws:es:us-east-1:XXXXXXXXXXXX:domain/sadcloud	us-east-1		FAIL	ES domain is not configured to enforce HTTPS
+ES	ElasticSearch HTTPS Only	N/A	us-east-2		OK	No ES domains found
+ES	ElasticSearch HTTPS Only	N/A	us-west-1		OK	No ES domains found
+ES	ElasticSearch HTTPS Only	N/A	us-west-2		OK	No ES domains found
+ES	ElasticSearch HTTPS Only	N/A	ca-central-1		OK	No ES domains found
+ES	ElasticSearch HTTPS Only	N/A	eu-central-1		OK	No ES domains found
+ES	ElasticSearch HTTPS Only	N/A	eu-west-1		OK	No ES domains found
+ES	ElasticSearch HTTPS Only	N/A	eu-west-2		OK	No ES domains found
+ES	ElasticSearch HTTPS Only	N/A	eu-west-3		OK	No ES domains found
+ES	ElasticSearch HTTPS Only	N/A	eu-north-1		OK	No ES domains found
+ES	ElasticSearch HTTPS Only	N/A	ap-northeast-1		OK	No ES domains found
+ES	ElasticSearch HTTPS Only	N/A	ap-northeast-2		OK	No ES domains found
+ES	ElasticSearch HTTPS Only	N/A	ap-southeast-1		OK	No ES domains found
+ES	ElasticSearch HTTPS Only	N/A	ap-southeast-2		OK	No ES domains found
+ES	ElasticSearch HTTPS Only	N/A	ap-south-1		OK	No ES domains found
+ES	ElasticSearch HTTPS Only	N/A	sa-east-1		OK	No ES domains found
+ES	ElasticSearch HTTPS Only	N/A	ap-east-1		OK	Region is not enabled
+ES	ElasticSearch HTTPS Only	N/A	me-south-1		OK	Region is not enabled
+IAM	Access Keys Extra	arn:aws:iam::XXXXXXXXXXXX:user/jdow	global		OK	User is not using both access keys
+IAM	Access Keys Extra	arn:aws:iam::XXXXXXXXXXXX:user/rami	global		FAIL	User is using both access keys
+IAM	Access Keys Extra	arn:aws:iam::XXXXXXXXXXXX:user/scoutuser	global		OK	User is not using both access keys
+IAM	Access Keys Last Used	arn:aws:iam::XXXXXXXXXXXX:user/jdow:access_key_1	global		WARN	User access key 1: was last used 167 days ago
+IAM	Access Keys Last Used	arn:aws:iam::XXXXXXXXXXXX:user/rami:access_key_1	global		WARN	User access key 1: was last used 167 days ago
+IAM	Access Keys Last Used	arn:aws:iam::XXXXXXXXXXXX:user/rami:access_key_2	global		OK	User access key 2 was last used 0 days ago
+IAM	Access Keys Last Used	arn:aws:iam::XXXXXXXXXXXX:user/scoutuser:access_key_1	global		OK	User access key 1 was last used 4 days ago
+IAM	Access Keys Rotated	arn:aws:iam::XXXXXXXXXXXX:user/jdow:access_key_1	global		WARN	User access key 1 was last rotated 167 days ago
+IAM	Access Keys Rotated	arn:aws:iam::XXXXXXXXXXXX:user/rami:access_key_1	global		WARN	User access key 1 was last rotated 167 days ago
+IAM	Access Keys Rotated	arn:aws:iam::XXXXXXXXXXXX:user/rami:access_key_2	global		WARN	User access key 2 was last rotated 168 days ago
+IAM	Access Keys Rotated	arn:aws:iam::XXXXXXXXXXXX:user/scoutuser:access_key_1	global		OK	User access key 1 was last rotated 4 days ago
+IAM	Certificate Expiry	arn:aws:iam::XXXXXXXXXXXX:server-certificate/test_cert	global		OK	Certificate: test_cert expires in 2731 days
+IAM	Empty Groups	arn:aws:iam::XXXXXXXXXXXX:group/sadcloudInlineGroup	global		WARN	Group: sadcloudInlineGroup does not contain any users
+IAM	Empty Groups	arn:aws:iam::XXXXXXXXXXXX:group/sadcloud_superuser	global		WARN	Group: sadcloud_superuser does not contain any users
+IAM	Empty Groups	arn:aws:iam::XXXXXXXXXXXX:group/Students	global		WARN	Group: Students does not contain any users
+IAM	IAM User Admins	N/A	global		OK	There are 2 IAM user administrators
+IAM	IAM Role Policies	arn:aws:iam::XXXXXXXXXXXX:role/awsconfig-example-role	global		OK	Role does not have overly-permissive policy
+IAM	IAM Role Policies	arn:aws:iam::XXXXXXXXXXXX:role/aws-service-role/guardduty.amazonaws.com/AWSServiceRoleForAmazonGuardDuty	global		OK	Role does not have overly-permissive policy
+IAM	IAM Role Policies	arn:aws:iam::XXXXXXXXXXXX:role/aws-service-role/inspector.amazonaws.com/AWSServiceRoleForAmazonInspector	global		OK	Role does not have overly-permissive policy
+IAM	IAM Role Policies	arn:aws:iam::XXXXXXXXXXXX:role/aws-service-role/config.amazonaws.com/AWSServiceRoleForConfig	global		OK	Role does not have overly-permissive policy
+IAM	IAM Role Policies	arn:aws:iam::XXXXXXXXXXXX:role/aws-service-role/elasticloadbalancing.amazonaws.com/AWSServiceRoleForElasticLoadBalancing	global		OK	Role does not have overly-permissive policy
+IAM	IAM Role Policies	arn:aws:iam::XXXXXXXXXXXX:role/aws-service-role/rds.amazonaws.com/AWSServiceRoleForRDS	global		OK	Role does not have overly-permissive policy
+IAM	IAM Role Policies	arn:aws:iam::XXXXXXXXXXXX:role/aws-service-role/redshift.amazonaws.com/AWSServiceRoleForRedshift	global		OK	Role does not have overly-permissive policy
+IAM	IAM Role Policies	arn:aws:iam::XXXXXXXXXXXX:role/aws-service-role/securityhub.amazonaws.com/AWSServiceRoleForSecurityHub	global		OK	Role does not have overly-permissive policy
+IAM	IAM Role Policies	arn:aws:iam::XXXXXXXXXXXX:role/aws-service-role/support.amazonaws.com/AWSServiceRoleForSupport	global		OK	Role does not have overly-permissive policy
+IAM	IAM Role Policies	arn:aws:iam::XXXXXXXXXXXX:role/aws-service-role/trustedadvisor.amazonaws.com/AWSServiceRoleForTrustedAdvisor	global		OK	Role does not have overly-permissive policy
+IAM	IAM Role Policies	arn:aws:iam::XXXXXXXXXXXX:role/eks-cluster-sadcloud-example	global		OK	Role does not have overly-permissive policy
+IAM	IAM Role Policies	arn:aws:iam::XXXXXXXXXXXX:role/EKSrole	global		OK	Role does not have overly-permissive policy
+IAM	IAM Role Policies	arn:aws:iam::XXXXXXXXXXXX:role/sadcloud-s3-stack	global		FAIL	Role inline policy allows wildcard actions: s3:*
+IAM	IAM Role Policies	arn:aws:iam::XXXXXXXXXXXX:role/terraform-20200403183821166200000001	global		OK	Role does not have overly-permissive policy
+IAM	IAM Role Policies	arn:aws:iam::XXXXXXXXXXXX:role/terraform-20200403183824387100000006	global		OK	Role does not have overly-permissive policy
+IAM	Maximum Password Age	N/A	global		FAIL	Password policy does not specify a maximum password age
+IAM	Minimum Password Length	N/A	global		FAIL	Minimum password length of: 6 is less than 10 characters
+IAM	No User IAM Policies	arn:aws:iam::XXXXXXXXXXXX:user/jdow	global		WARN	User is using attached or inline policies
+IAM	No User IAM Policies	arn:aws:iam::XXXXXXXXXXXX:user/rami	global		WARN	User is using attached or inline policies
+IAM	No User IAM Policies	arn:aws:iam::XXXXXXXXXXXX:user/sadcloudInlineUser	global		WARN	User is using attached or inline policies
+IAM	No User IAM Policies	arn:aws:iam::XXXXXXXXXXXX:user/scoutuser	global		WARN	User is using attached or inline policies
+IAM	Password Expiration	N/A	global		FAIL	Password expiration policy is not set to expire passwords
+IAM	Password Requires Lowercase	N/A	global		WARN	Password policy does not require lowercase characters
+IAM	Password Requires Numbers	N/A	global		WARN	Password policy does not require numbers
+IAM	Password Requires Symbols	N/A	global		WARN	Password policy does not require symbols
+IAM	Password Requires Uppercase	N/A	global		WARN	Password policy does not require uppercase characters
+IAM	Password Reuse Prevention	N/A	global		FAIL	Password policy does not prevent reusing previous passwords
+IAM	Root Access Keys	arn:aws:iam::XXXXXXXXXXXX:root	global		OK	Access keys were not found for the root account
+IAM	Root Account In Use	arn:aws:iam::XXXXXXXXXXXX:root	global		FAIL	Root account was last used 0 days ago
+IAM	Root Hardware MFA	arn:aws:iam::XXXXXXXXXXXX:mfa/root-account-mfa-device	global		FAIL	A virtual MFA device was found for the root account
+IAM	Root MFA Enabled	arn:aws:iam::XXXXXXXXXXXX:root	global		OK	An MFA device was found for the root account
+IAM	SSH Keys Rotated	N/A	global		OK	No SSH keys found
+IAM	Users MFA Enabled	arn:aws:iam::XXXXXXXXXXXX:user/jdow	global		FAIL	User: jdow does not have an MFA device enabled
+IAM	Users Password And Keys	arn:aws:iam::XXXXXXXXXXXX:user/jdow	global		FAIL	User has console access and access key
+IAM	Users Password Last Used	arn:aws:iam::XXXXXXXXXXXX:user/jdow	global		WARN	User password login was last used 167 days ago
+Kinesis	Kinesis Streams Encrypted	N/A	us-east-1		OK	No Kinesis streams found
+Kinesis	Kinesis Streams Encrypted	N/A	us-east-2		OK	No Kinesis streams found
+Kinesis	Kinesis Streams Encrypted	N/A	us-west-1		OK	No Kinesis streams found
+Kinesis	Kinesis Streams Encrypted	N/A	us-west-2		OK	No Kinesis streams found
+Kinesis	Kinesis Streams Encrypted	N/A	ca-central-1		OK	No Kinesis streams found
+Kinesis	Kinesis Streams Encrypted	N/A	eu-central-1		OK	No Kinesis streams found
+Kinesis	Kinesis Streams Encrypted	N/A	eu-west-1		OK	No Kinesis streams found
+Kinesis	Kinesis Streams Encrypted	N/A	eu-west-2		OK	No Kinesis streams found
+Kinesis	Kinesis Streams Encrypted	N/A	eu-west-3		OK	No Kinesis streams found
+Kinesis	Kinesis Streams Encrypted	N/A	eu-north-1		OK	No Kinesis streams found
+Kinesis	Kinesis Streams Encrypted	N/A	ap-northeast-1		OK	No Kinesis streams found
+Kinesis	Kinesis Streams Encrypted	N/A	ap-northeast-2		OK	No Kinesis streams found
+Kinesis	Kinesis Streams Encrypted	N/A	ap-southeast-1		OK	No Kinesis streams found
+Kinesis	Kinesis Streams Encrypted	N/A	ap-southeast-2		OK	No Kinesis streams found
+Kinesis	Kinesis Streams Encrypted	N/A	ap-south-1		OK	No Kinesis streams found
+Kinesis	Kinesis Streams Encrypted	N/A	sa-east-1		OK	No Kinesis streams found
+Kinesis	Kinesis Streams Encrypted	N/A	ap-east-1		OK	Region is not enabled
+Kinesis	Kinesis Streams Encrypted	N/A	me-south-1		OK	Region is not enabled
+Firehose	Firehose Delivery Streams Encrypted	N/A	us-east-1		OK	No Firehose delivery streams found
+Firehose	Firehose Delivery Streams Encrypted	N/A	us-east-2		OK	No Firehose delivery streams found
+Firehose	Firehose Delivery Streams Encrypted	N/A	us-west-1		OK	No Firehose delivery streams found
+Firehose	Firehose Delivery Streams Encrypted	N/A	us-west-2		OK	No Firehose delivery streams found
+Firehose	Firehose Delivery Streams Encrypted	N/A	ca-central-1		OK	No Firehose delivery streams found
+Firehose	Firehose Delivery Streams Encrypted	N/A	eu-central-1		OK	No Firehose delivery streams found
+Firehose	Firehose Delivery Streams Encrypted	N/A	eu-west-1		OK	No Firehose delivery streams found
+Firehose	Firehose Delivery Streams Encrypted	N/A	eu-west-2		OK	No Firehose delivery streams found
+Firehose	Firehose Delivery Streams Encrypted	N/A	eu-west-3		OK	No Firehose delivery streams found
+Firehose	Firehose Delivery Streams Encrypted	N/A	eu-north-1		OK	No Firehose delivery streams found
+Firehose	Firehose Delivery Streams Encrypted	N/A	ap-northeast-1		OK	No Firehose delivery streams found
+Firehose	Firehose Delivery Streams Encrypted	N/A	ap-northeast-2		OK	No Firehose delivery streams found
+Firehose	Firehose Delivery Streams Encrypted	N/A	ap-southeast-1		OK	No Firehose delivery streams found
+Firehose	Firehose Delivery Streams Encrypted	N/A	ap-southeast-2		OK	No Firehose delivery streams found
+Firehose	Firehose Delivery Streams Encrypted	N/A	ap-south-1		OK	No Firehose delivery streams found
+Firehose	Firehose Delivery Streams Encrypted	N/A	sa-east-1		OK	No Firehose delivery streams found
+KMS	KMS Key Rotation	arn:aws:kms:us-east-1:XXXXXXXXXXXX:key/1dd6dd26-6ad6-4c8c-bb3a-91a222d35b76	us-east-1		FAIL	Key rotation is not enabled
+KMS	KMS Key Rotation	arn:aws:kms:us-east-1:XXXXXXXXXXXX:key/63fb3477-6e85-4651-8955-e7ecdafd5020	us-east-1		OK	Key rotation is enabled
+KMS	KMS Key Rotation	arn:aws:kms:us-east-1:XXXXXXXXXXXX:key/f4cc170e-f6ec-4826-af0a-b08d10a970eb	us-east-1		FAIL	Key rotation is not enabled
+KMS	KMS Key Rotation	N/A	us-east-2		OK	No KMS keys found
+KMS	KMS Key Rotation	N/A	us-west-1		OK	No KMS keys found
+KMS	KMS Key Rotation	N/A	us-west-2		OK	No KMS keys found
+KMS	KMS Key Rotation	N/A	ca-central-1		OK	No KMS keys found
+KMS	KMS Key Rotation	N/A	eu-central-1		OK	No KMS keys found
+KMS	KMS Key Rotation	N/A	eu-west-1		OK	No KMS keys found
+KMS	KMS Key Rotation	N/A	eu-west-2		OK	No KMS keys found
+KMS	KMS Key Rotation	N/A	eu-west-3		OK	No KMS keys found
+KMS	KMS Key Rotation	N/A	eu-north-1		OK	No KMS keys found
+KMS	KMS Key Rotation	N/A	ap-northeast-1		OK	No KMS keys found
+KMS	KMS Key Rotation	N/A	ap-northeast-2		OK	No KMS keys found
+KMS	KMS Key Rotation	N/A	ap-southeast-1		OK	No KMS keys found
+KMS	KMS Key Rotation	N/A	ap-southeast-2		OK	No KMS keys found
+KMS	KMS Key Rotation	N/A	ap-south-1		OK	No KMS keys found
+KMS	KMS Key Rotation	N/A	sa-east-1		OK	No KMS keys found
+KMS	KMS Key Rotation	N/A	ap-east-1		OK	Region is not enabled
+KMS	KMS Key Rotation	N/A	me-south-1		OK	Region is not enabled
+KMS	KMS Scheduled Deletion	arn:aws:kms:us-east-1:XXXXXXXXXXXX:key/1dd6dd26-6ad6-4c8c-bb3a-91a222d35b76	us-east-1		OK	Key is not scheduled for deletion
+KMS	KMS Scheduled Deletion	arn:aws:kms:us-east-1:XXXXXXXXXXXX:key/30b1a2c4-4b19-4fdf-8eb4-b290bfb41bfd	us-east-1		WARN	Key is scheduled for deletion
+KMS	KMS Scheduled Deletion	arn:aws:kms:us-east-1:XXXXXXXXXXXX:key/364f95ce-9f0b-4a3f-83bf-85cec9bc764c	us-east-1		WARN	Key is scheduled for deletion
+KMS	KMS Scheduled Deletion	arn:aws:kms:us-east-1:XXXXXXXXXXXX:key/5f7f66b3-a605-4b2c-a95d-6fc9471bc5bd	us-east-1		WARN	Key is scheduled for deletion
+KMS	KMS Scheduled Deletion	arn:aws:kms:us-east-1:XXXXXXXXXXXX:key/63fb3477-6e85-4651-8955-e7ecdafd5020	us-east-1		OK	Key is not scheduled for deletion
+KMS	KMS Scheduled Deletion	arn:aws:kms:us-east-1:XXXXXXXXXXXX:key/814e1eee-a05d-45c3-ae10-dad86e6b02e1	us-east-1		WARN	Key is scheduled for deletion
+KMS	KMS Scheduled Deletion	arn:aws:kms:us-east-1:XXXXXXXXXXXX:key/a6ceac4c-44fb-419e-9f9c-77b7eb6eb832	us-east-1		WARN	Key is scheduled for deletion
+KMS	KMS Scheduled Deletion	arn:aws:kms:us-east-1:XXXXXXXXXXXX:key/aab6951f-d518-4337-8e3f-9538ff1e6364	us-east-1		WARN	Key is scheduled for deletion
+KMS	KMS Scheduled Deletion	arn:aws:kms:us-east-1:XXXXXXXXXXXX:key/f4cc170e-f6ec-4826-af0a-b08d10a970eb	us-east-1		OK	Key is not scheduled for deletion
+KMS	KMS Scheduled Deletion	N/A	us-east-2		OK	No KMS keys found
+KMS	KMS Scheduled Deletion	N/A	us-west-1		OK	No KMS keys found
+KMS	KMS Scheduled Deletion	N/A	us-west-2		OK	No KMS keys found
+KMS	KMS Scheduled Deletion	N/A	ca-central-1		OK	No KMS keys found
+KMS	KMS Scheduled Deletion	N/A	eu-central-1		OK	No KMS keys found
+KMS	KMS Scheduled Deletion	N/A	eu-west-1		OK	No KMS keys found
+KMS	KMS Scheduled Deletion	N/A	eu-west-2		OK	No KMS keys found
+KMS	KMS Scheduled Deletion	N/A	eu-west-3		OK	No KMS keys found
+KMS	KMS Scheduled Deletion	N/A	eu-north-1		OK	No KMS keys found
+KMS	KMS Scheduled Deletion	N/A	ap-northeast-1		OK	No KMS keys found
+KMS	KMS Scheduled Deletion	N/A	ap-northeast-2		OK	No KMS keys found
+KMS	KMS Scheduled Deletion	N/A	ap-southeast-1		OK	No KMS keys found
+KMS	KMS Scheduled Deletion	N/A	ap-southeast-2		OK	No KMS keys found
+KMS	KMS Scheduled Deletion	N/A	ap-south-1		OK	No KMS keys found
+KMS	KMS Scheduled Deletion	N/A	sa-east-1		OK	No KMS keys found
+KMS	KMS Scheduled Deletion	N/A	ap-east-1		OK	Region is not enabled
+KMS	KMS Scheduled Deletion	N/A	me-south-1		OK	Region is not enabled
+KMS	KMS Key Policy	arn:aws:kms:us-east-1:XXXXXXXXXXXX:key/10bd8379-dd1d-4058-a6d1-993d3fb92d3f	us-east-1		OK	Key policy is sufficient
+KMS	KMS Key Policy	arn:aws:kms:us-east-1:XXXXXXXXXXXX:key/1dd6dd26-6ad6-4c8c-bb3a-91a222d35b76	us-east-1		OK	Key policy is sufficient
+KMS	KMS Key Policy	arn:aws:kms:us-east-1:XXXXXXXXXXXX:key/30b1a2c4-4b19-4fdf-8eb4-b290bfb41bfd	us-east-1		FAIL	Key trusts 1 principals with wildcards
+KMS	KMS Key Policy	arn:aws:kms:us-east-1:XXXXXXXXXXXX:key/364f95ce-9f0b-4a3f-83bf-85cec9bc764c	us-east-1		FAIL	Key trusts 1 principals with wildcards
+KMS	KMS Key Policy	arn:aws:kms:us-east-1:XXXXXXXXXXXX:key/5f7f66b3-a605-4b2c-a95d-6fc9471bc5bd	us-east-1		OK	Key policy is sufficient
+KMS	KMS Key Policy	arn:aws:kms:us-east-1:XXXXXXXXXXXX:key/63fb3477-6e85-4651-8955-e7ecdafd5020	us-east-1		FAIL	Key trusts 1 principals with wildcards
+KMS	KMS Key Policy	arn:aws:kms:us-east-1:XXXXXXXXXXXX:key/814e1eee-a05d-45c3-ae10-dad86e6b02e1	us-east-1		OK	Key policy is sufficient
+KMS	KMS Key Policy	arn:aws:kms:us-east-1:XXXXXXXXXXXX:key/8518fbb5-4897-4654-b9c9-5425b8c64c57	us-east-1		OK	Key policy is sufficient
+KMS	KMS Key Policy	arn:aws:kms:us-east-1:XXXXXXXXXXXX:key/a6ceac4c-44fb-419e-9f9c-77b7eb6eb832	us-east-1		FAIL	Key trusts 1 principals with wildcards
+KMS	KMS Key Policy	arn:aws:kms:us-east-1:XXXXXXXXXXXX:key/a909bde1-9eda-4576-976c-f42eab9a0143	us-east-1		OK	Key policy is sufficient
+KMS	KMS Key Policy	arn:aws:kms:us-east-1:XXXXXXXXXXXX:key/aab6951f-d518-4337-8e3f-9538ff1e6364	us-east-1		OK	Key policy is sufficient
+KMS	KMS Key Policy	arn:aws:kms:us-east-1:XXXXXXXXXXXX:key/f4cc170e-f6ec-4826-af0a-b08d10a970eb	us-east-1		WARN	Key trusts 2 third parties
+KMS	KMS Key Policy	N/A	us-east-2		OK	No KMS keys found
+KMS	KMS Key Policy	N/A	us-west-1		OK	No KMS keys found
+KMS	KMS Key Policy	N/A	us-west-2		OK	No KMS keys found
+KMS	KMS Key Policy	N/A	ca-central-1		OK	No KMS keys found
+KMS	KMS Key Policy	N/A	eu-central-1		OK	No KMS keys found
+KMS	KMS Key Policy	N/A	eu-west-1		OK	No KMS keys found
+KMS	KMS Key Policy	N/A	eu-west-2		OK	No KMS keys found
+KMS	KMS Key Policy	N/A	eu-west-3		OK	No KMS keys found
+KMS	KMS Key Policy	N/A	eu-north-1		OK	No KMS keys found
+KMS	KMS Key Policy	N/A	ap-northeast-1		OK	No KMS keys found
+KMS	KMS Key Policy	N/A	ap-northeast-2		OK	No KMS keys found
+KMS	KMS Key Policy	N/A	ap-southeast-1		OK	No KMS keys found
+KMS	KMS Key Policy	N/A	ap-southeast-2		OK	No KMS keys found
+KMS	KMS Key Policy	N/A	ap-south-1		OK	No KMS keys found
+KMS	KMS Key Policy	N/A	sa-east-1		OK	No KMS keys found
+KMS	KMS Key Policy	N/A	ap-east-1		OK	Region is not enabled
+KMS	KMS Key Policy	N/A	me-south-1		OK	Region is not enabled
+KMS	KMS Default Key Usage	N/A	us-east-1		OK	No default KMS keys found in use
+KMS	KMS Default Key Usage	N/A	us-east-2		OK	No KMS keys found
+KMS	KMS Default Key Usage	N/A	us-west-1		OK	No KMS keys found
+KMS	KMS Default Key Usage	N/A	us-west-2		OK	No KMS keys found
+KMS	KMS Default Key Usage	N/A	ca-central-1		OK	No KMS keys found
+KMS	KMS Default Key Usage	N/A	eu-central-1		OK	No KMS keys found
+KMS	KMS Default Key Usage	N/A	eu-west-1		OK	No KMS keys found
+KMS	KMS Default Key Usage	N/A	eu-west-2		OK	No KMS keys found
+KMS	KMS Default Key Usage	N/A	eu-west-3		OK	No KMS keys found
+KMS	KMS Default Key Usage	N/A	eu-north-1		OK	No KMS keys found
+KMS	KMS Default Key Usage	N/A	ap-northeast-1		OK	No KMS keys found
+KMS	KMS Default Key Usage	N/A	ap-northeast-2		OK	No KMS keys found
+KMS	KMS Default Key Usage	N/A	ap-southeast-1		OK	No KMS keys found
+KMS	KMS Default Key Usage	N/A	ap-southeast-2		OK	No KMS keys found
+KMS	KMS Default Key Usage	N/A	ap-south-1		OK	No KMS keys found
+KMS	KMS Default Key Usage	N/A	sa-east-1		OK	No KMS keys found
+KMS	KMS Default Key Usage	N/A	ap-east-1		OK	Region is not enabled
+KMS	KMS Default Key Usage	N/A	me-south-1		OK	Region is not enabled
+RDS	RDS Automated Backups	arn:aws:rds:us-east-1:XXXXXXXXXXXX:db:terraform-20200403183839276800000011	us-east-1		FAIL	Automated backups are not enabled
+RDS	RDS Automated Backups	N/A	us-east-2		OK	No RDS instances found
+RDS	RDS Automated Backups	N/A	us-west-1		OK	No RDS instances found
+RDS	RDS Automated Backups	N/A	us-west-2		OK	No RDS instances found
+RDS	RDS Automated Backups	N/A	ca-central-1		OK	No RDS instances found
+RDS	RDS Automated Backups	N/A	eu-central-1		OK	No RDS instances found
+RDS	RDS Automated Backups	N/A	eu-west-1		OK	No RDS instances found
+RDS	RDS Automated Backups	N/A	eu-west-2		OK	No RDS instances found
+RDS	RDS Automated Backups	N/A	eu-west-3		OK	No RDS instances found
+RDS	RDS Automated Backups	N/A	eu-north-1		OK	No RDS instances found
+RDS	RDS Automated Backups	N/A	ap-northeast-1		OK	No RDS instances found
+RDS	RDS Automated Backups	N/A	ap-northeast-2		OK	No RDS instances found
+RDS	RDS Automated Backups	N/A	ap-southeast-1		OK	No RDS instances found
+RDS	RDS Automated Backups	N/A	ap-southeast-2		OK	No RDS instances found
+RDS	RDS Automated Backups	N/A	ap-south-1		OK	No RDS instances found
+RDS	RDS Automated Backups	N/A	sa-east-1		OK	No RDS instances found
+RDS	RDS Automated Backups	N/A	ap-east-1		OK	Region is not enabled
+RDS	RDS Automated Backups	N/A	me-south-1		OK	Region is not enabled
+RDS	RDS Encryption Enabled	arn:aws:rds:us-east-1:XXXXXXXXXXXX:db:terraform-20200403183839276800000011	us-east-1		FAIL	Encryption at rest is not enabled
+RDS	RDS Encryption Enabled	N/A	us-east-2		OK	No RDS instances found
+RDS	RDS Encryption Enabled	N/A	us-west-1		OK	No RDS instances found
+RDS	RDS Encryption Enabled	N/A	us-west-2		OK	No RDS instances found
+RDS	RDS Encryption Enabled	N/A	ca-central-1		OK	No RDS instances found
+RDS	RDS Encryption Enabled	N/A	eu-central-1		OK	No RDS instances found
+RDS	RDS Encryption Enabled	N/A	eu-west-1		OK	No RDS instances found
+RDS	RDS Encryption Enabled	N/A	eu-west-2		OK	No RDS instances found
+RDS	RDS Encryption Enabled	N/A	eu-west-3		OK	No RDS instances found
+RDS	RDS Encryption Enabled	N/A	eu-north-1		OK	No RDS instances found
+RDS	RDS Encryption Enabled	N/A	ap-northeast-1		OK	No RDS instances found
+RDS	RDS Encryption Enabled	N/A	ap-northeast-2		OK	No RDS instances found
+RDS	RDS Encryption Enabled	N/A	ap-southeast-1		OK	No RDS instances found
+RDS	RDS Encryption Enabled	N/A	ap-southeast-2		OK	No RDS instances found
+RDS	RDS Encryption Enabled	N/A	ap-south-1		OK	No RDS instances found
+RDS	RDS Encryption Enabled	N/A	sa-east-1		OK	No RDS instances found
+RDS	RDS Encryption Enabled	N/A	ap-east-1		OK	Region is not enabled
+RDS	RDS Encryption Enabled	N/A	me-south-1		OK	Region is not enabled
+RDS	RDS Logging Enabled	arn:aws:rds:us-east-1:XXXXXXXXXXXX:db:terraform-20200403183839276800000011	us-east-1		FAIL	Logging is not enabled
+RDS	RDS Logging Enabled	N/A	us-east-2		OK	No RDS instances found
+RDS	RDS Logging Enabled	N/A	us-west-1		OK	No RDS instances found
+RDS	RDS Logging Enabled	N/A	us-west-2		OK	No RDS instances found
+RDS	RDS Logging Enabled	N/A	ca-central-1		OK	No RDS instances found
+RDS	RDS Logging Enabled	N/A	eu-central-1		OK	No RDS instances found
+RDS	RDS Logging Enabled	N/A	eu-west-1		OK	No RDS instances found
+RDS	RDS Logging Enabled	N/A	eu-west-2		OK	No RDS instances found
+RDS	RDS Logging Enabled	N/A	eu-west-3		OK	No RDS instances found
+RDS	RDS Logging Enabled	N/A	eu-north-1		OK	No RDS instances found
+RDS	RDS Logging Enabled	N/A	ap-northeast-1		OK	No RDS instances found
+RDS	RDS Logging Enabled	N/A	ap-northeast-2		OK	No RDS instances found
+RDS	RDS Logging Enabled	N/A	ap-southeast-1		OK	No RDS instances found
+RDS	RDS Logging Enabled	N/A	ap-southeast-2		OK	No RDS instances found
+RDS	RDS Logging Enabled	N/A	ap-south-1		OK	No RDS instances found
+RDS	RDS Logging Enabled	N/A	sa-east-1		OK	No RDS instances found
+RDS	RDS Logging Enabled	N/A	ap-east-1		OK	Region is not enabled
+RDS	RDS Logging Enabled	N/A	me-south-1		OK	Region is not enabled
+RDS	RDS Publicly Accessible	arn:aws:rds:us-east-1:XXXXXXXXXXXX:db:terraform-20200403183839276800000011	us-east-1		FAIL	RDS instance is publicly accessible
+RDS	RDS Publicly Accessible	N/A	us-east-2		OK	No RDS instances found
+RDS	RDS Publicly Accessible	N/A	us-west-1		OK	No RDS instances found
+RDS	RDS Publicly Accessible	N/A	us-west-2		OK	No RDS instances found
+RDS	RDS Publicly Accessible	N/A	ca-central-1		OK	No RDS instances found
+RDS	RDS Publicly Accessible	N/A	eu-central-1		OK	No RDS instances found
+RDS	RDS Publicly Accessible	N/A	eu-west-1		OK	No RDS instances found
+RDS	RDS Publicly Accessible	N/A	eu-west-2		OK	No RDS instances found
+RDS	RDS Publicly Accessible	N/A	eu-west-3		OK	No RDS instances found
+RDS	RDS Publicly Accessible	N/A	eu-north-1		OK	No RDS instances found
+RDS	RDS Publicly Accessible	N/A	ap-northeast-1		OK	No RDS instances found
+RDS	RDS Publicly Accessible	N/A	ap-northeast-2		OK	No RDS instances found
+RDS	RDS Publicly Accessible	N/A	ap-southeast-1		OK	No RDS instances found
+RDS	RDS Publicly Accessible	N/A	ap-southeast-2		OK	No RDS instances found
+RDS	RDS Publicly Accessible	N/A	ap-south-1		OK	No RDS instances found
+RDS	RDS Publicly Accessible	N/A	sa-east-1		OK	No RDS instances found
+RDS	RDS Publicly Accessible	N/A	ap-east-1		OK	Region is not enabled
+RDS	RDS Publicly Accessible	N/A	me-south-1		OK	Region is not enabled
+RDS	RDS Restorable	arn:aws:rds:us-east-1:XXXXXXXXXXXX:db:terraform-20200403183839276800000011	us-east-1		FAIL	RDS instance does not have a restorable time
+RDS	RDS Restorable	N/A	us-east-2		OK	No RDS instances found
+RDS	RDS Restorable	N/A	us-west-1		OK	No RDS instances found
+RDS	RDS Restorable	N/A	us-west-2		OK	No RDS instances found
+RDS	RDS Restorable	N/A	ca-central-1		OK	No RDS instances found
+RDS	RDS Restorable	N/A	eu-central-1		OK	No RDS instances found
+RDS	RDS Restorable	N/A	eu-west-1		OK	No RDS instances found
+RDS	RDS Restorable	N/A	eu-west-2		OK	No RDS instances found
+RDS	RDS Restorable	N/A	eu-west-3		OK	No RDS instances found
+RDS	RDS Restorable	N/A	eu-north-1		OK	No RDS instances found
+RDS	RDS Restorable	N/A	ap-northeast-1		OK	No RDS instances found
+RDS	RDS Restorable	N/A	ap-northeast-2		OK	No RDS instances found
+RDS	RDS Restorable	N/A	ap-southeast-1		OK	No RDS instances found
+RDS	RDS Restorable	N/A	ap-southeast-2		OK	No RDS instances found
+RDS	RDS Restorable	N/A	ap-south-1		OK	No RDS instances found
+RDS	RDS Restorable	N/A	sa-east-1		OK	No RDS instances found
+RDS	RDS Restorable	N/A	ap-east-1		OK	Region is not enabled
+RDS	RDS Restorable	N/A	me-south-1		OK	Region is not enabled
+RDS	RDS Multiple AZ	arn:aws:rds:us-east-1:XXXXXXXXXXXX:db:terraform-20200403183839276800000011	us-east-1		FAIL	RDS instance does not have multi-AZ enabled
+RDS	RDS Multiple AZ	N/A	us-east-2		OK	No RDS instances found
+RDS	RDS Multiple AZ	N/A	us-west-1		OK	No RDS instances found
+RDS	RDS Multiple AZ	N/A	us-west-2		OK	No RDS instances found
+RDS	RDS Multiple AZ	N/A	ca-central-1		OK	No RDS instances found
+RDS	RDS Multiple AZ	N/A	eu-central-1		OK	No RDS instances found
+RDS	RDS Multiple AZ	N/A	eu-west-1		OK	No RDS instances found
+RDS	RDS Multiple AZ	N/A	eu-west-2		OK	No RDS instances found
+RDS	RDS Multiple AZ	N/A	eu-west-3		OK	No RDS instances found
+RDS	RDS Multiple AZ	N/A	eu-north-1		OK	No RDS instances found
+RDS	RDS Multiple AZ	N/A	ap-northeast-1		OK	No RDS instances found
+RDS	RDS Multiple AZ	N/A	ap-northeast-2		OK	No RDS instances found
+RDS	RDS Multiple AZ	N/A	ap-southeast-1		OK	No RDS instances found
+RDS	RDS Multiple AZ	N/A	ap-southeast-2		OK	No RDS instances found
+RDS	RDS Multiple AZ	N/A	ap-south-1		OK	No RDS instances found
+RDS	RDS Multiple AZ	N/A	sa-east-1		OK	No RDS instances found
+RDS	RDS Multiple AZ	N/A	ap-east-1		OK	Region is not enabled
+RDS	RDS Multiple AZ	N/A	me-south-1		OK	Region is not enabled
+RDS	RDS Snapshot Encryption	N/A	us-east-1		OK	No RDS snapshots found
+RDS	RDS Snapshot Encryption	N/A	us-east-2		OK	No RDS snapshots found
+RDS	RDS Snapshot Encryption	N/A	us-west-1		OK	No RDS snapshots found
+RDS	RDS Snapshot Encryption	N/A	us-west-2		OK	No RDS snapshots found
+RDS	RDS Snapshot Encryption	N/A	ca-central-1		OK	No RDS snapshots found
+RDS	RDS Snapshot Encryption	N/A	eu-central-1		OK	No RDS snapshots found
+RDS	RDS Snapshot Encryption	N/A	eu-west-1		OK	No RDS snapshots found
+RDS	RDS Snapshot Encryption	N/A	eu-west-2		OK	No RDS snapshots found
+RDS	RDS Snapshot Encryption	N/A	eu-west-3		OK	No RDS snapshots found
+RDS	RDS Snapshot Encryption	N/A	eu-north-1		OK	No RDS snapshots found
+RDS	RDS Snapshot Encryption	N/A	ap-northeast-1		OK	No RDS snapshots found
+RDS	RDS Snapshot Encryption	N/A	ap-northeast-2		OK	No RDS snapshots found
+RDS	RDS Snapshot Encryption	N/A	ap-southeast-1		OK	No RDS snapshots found
+RDS	RDS Snapshot Encryption	N/A	ap-southeast-2		OK	No RDS snapshots found
+RDS	RDS Snapshot Encryption	N/A	ap-south-1		OK	No RDS snapshots found
+RDS	RDS Snapshot Encryption	N/A	sa-east-1		OK	No RDS snapshots found
+RDS	RDS Snapshot Encryption	N/A	ap-east-1		OK	Region is not enabled
+RDS	RDS Snapshot Encryption	N/A	me-south-1		OK	Region is not enabled
+Route53	Domain Auto Renew	N/A	global		OK	No domains registered through Route53
+Route53	Domain Expiry	N/A	global		OK	No domains registered through Route53
+Route53	Domain Transfer Lock	N/A	global		OK	No domains registered through Route53
+undefined
+{
+  "err": {
+    "message": "The bucket policy does not exist",
+    "code": "NoSuchBucketPolicy",
+    "region": null,
+    "time": "2020-04-03T19:01:43.187Z",
+    "requestId": "4503FCC7C701D7E5",
+    "extendedRequestId": "NbS6kdfQ1QzlYxIhO2IC7HKBv5cBEZb93vJs/IKXcsBnvBeknf1Z9qdl1sRewlg4QofsBe0qy4Q=",
+    "statusCode": 404,
+    "retryable": false,
+    "retryDelay": 5.7000565431607475
+  }
+}
+{
+  "err": {
+    "message": "The bucket policy does not exist",
+    "code": "NoSuchBucketPolicy",
+    "region": null,
+    "time": "2020-04-03T19:01:43.221Z",
+    "requestId": "4D2F2D3F90EBA536",
+    "extendedRequestId": "KIZWrcpjn9YdohUkEQErfIVcExoPWD8M5w+0R6l9XuXpdlA9btolsf/1aRquoQfRROsCjc2BKGo=",
+    "statusCode": 404,
+    "retryable": false,
+    "retryDelay": 91.2393440938361
+  }
+}
+{
+  "data": {
+    "Policy": "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Sid\":\"ForceSSLOnlyAccess\",\"Effect\":\"Deny\",\"Principal\":{\"AWS\":\"*\"},\"Action\":\"s3:*\",\"Resource\":[\"arn:aws:s3:::sadcloud20200403183827129700000009/*\",\"arn:aws:s3:::sadcloud20200403183827129700000009\"],\"Condition\":{\"Bool\":{\"aws:SecureTransport\":\"false\"}}}]}"
+  }
+}
+{
+  "data": {
+    "Policy": "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Sid\":\"\",\"Effect\":\"Allow\",\"Principal\":{\"AWS\":\"*\"},\"Action\":\"s3:GetObject\",\"Resource\":[\"arn:aws:s3:::sadcloudhetonlys320200403183821175400000002/*\",\"arn:aws:s3:::sadcloudhetonlys320200403183821175400000002\"]}]}"
+  }
+}
+{
+  "data": {
+    "Policy": "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Sid\":\"\",\"Effect\":\"Allow\",\"Principal\":{\"AWS\":\"*\"},\"Action\":\"s3:*\",\"Resource\":[\"arn:aws:s3:::sadcloudhetonlys320200403183826406000000008/*\",\"arn:aws:s3:::sadcloudhetonlys320200403183826406000000008\"]}]}"
+  }
+}
+S3	S3 Bucket Encryption In Transit	arn:aws:s3:::sadcloud-s3-stack-s3bucket-1nfphtlgi08lv	global		FAIL	No bucket policy found; encryption in transit not enforced
+S3	S3 Bucket Encryption In Transit	arn:aws:s3:::sadcloud-secret-stack-s3bucket-10vlgydj12tcm	global		FAIL	No bucket policy found; encryption in transit not enforced
+S3	S3 Bucket Encryption In Transit	arn:aws:s3:::sadcloud20200403183827129700000009	global		FAIL	Bucket does not enforce encryption in transit
+S3	S3 Bucket Encryption In Transit	arn:aws:s3:::sadcloudhetonlys320200403183821175400000002	global		FAIL	Bucket does not enforce encryption in transit
+S3	S3 Bucket Encryption In Transit	arn:aws:s3:::sadcloudhetonlys320200403183826406000000008	global		FAIL	Bucket does not enforce encryption in transit
+S3	S3 Bucket Encryption In Transit	arn:aws:s3:::sadelb20200403183823065800000004	global		FAIL	No bucket policy found; encryption in transit not enforced
+S3	S3 Bucket All Users Policy	arn:aws:s3:::sadcloud-s3-stack-s3bucket-1nfphtlgi08lv	global		OK	No additional bucket policy found
+S3	S3 Bucket All Users Policy	arn:aws:s3:::sadcloud-secret-stack-s3bucket-10vlgydj12tcm	global		OK	No additional bucket policy found
+S3	S3 Bucket All Users Policy	arn:aws:s3:::sadcloud20200403183827129700000009	global		OK	Bucket policy does not contain any insecure allow statements
+S3	S3 Bucket All Users Policy	arn:aws:s3:::sadcloudhetonlys320200403183821175400000002	global		FAIL	Principal * allowed to perform: s3:GetObject
+S3	S3 Bucket All Users Policy	arn:aws:s3:::sadcloudhetonlys320200403183826406000000008	global		FAIL	Principal * allowed to perform: s3:*
+S3	S3 Bucket All Users Policy	arn:aws:s3:::sadelb20200403183823065800000004	global		OK	No additional bucket policy found
+S3	S3 Bucket All Users ACL	arn:aws:s3:::sadcloud-s3-stack-s3bucket-1nfphtlgi08lv	global		WARN	ACL Grantee AllUsers allowed permission: READ
+S3	S3 Bucket All Users ACL	arn:aws:s3:::sadcloud-secret-stack-s3bucket-10vlgydj12tcm	global		OK	Bucket ACL does not contain any insecure allow statements
+S3	S3 Bucket All Users ACL	arn:aws:s3:::sadcloud20200403183827129700000009	global		OK	Bucket ACL does not contain any insecure allow statements
+S3	S3 Bucket All Users ACL	arn:aws:s3:::sadcloudhetonlys320200403183821175400000002	global		OK	Bucket ACL does not contain any insecure allow statements
+S3	S3 Bucket All Users ACL	arn:aws:s3:::sadcloudhetonlys320200403183826406000000008	global		OK	Bucket ACL does not contain any insecure allow statements
+S3	S3 Bucket All Users ACL	arn:aws:s3:::sadelb20200403183823065800000004	global		OK	Bucket ACL does not contain any insecure allow statements
+S3	S3 Bucket Versioning	arn:aws:s3:::sadcloud-s3-stack-s3bucket-1nfphtlgi08lv	global		FAIL	Bucket : sadcloud-s3-stack-s3bucket-1nfphtlgi08lv has versioning disabled
+S3	S3 Bucket Versioning	arn:aws:s3:::sadcloud-secret-stack-s3bucket-10vlgydj12tcm	global		FAIL	Bucket : sadcloud-secret-stack-s3bucket-10vlgydj12tcm has versioning disabled
+S3	S3 Bucket Versioning	arn:aws:s3:::sadcloud20200403183827129700000009	global		FAIL	Bucket : sadcloud20200403183827129700000009 has versioning disabled
+S3	S3 Bucket Versioning	arn:aws:s3:::sadcloudhetonlys320200403183821175400000002	global		FAIL	Bucket : sadcloudhetonlys320200403183821175400000002 has versioning disabled
+S3	S3 Bucket Versioning	arn:aws:s3:::sadcloudhetonlys320200403183826406000000008	global		FAIL	Bucket : sadcloudhetonlys320200403183826406000000008 has versioning disabled
+S3	S3 Bucket Versioning	arn:aws:s3:::sadelb20200403183823065800000004	global		FAIL	Bucket : sadelb20200403183823065800000004 has versioning disabled
+S3	S3 Bucket Logging	arn:aws:s3:::sadcloud-s3-stack-s3bucket-1nfphtlgi08lv	global		FAIL	Bucket : sadcloud-s3-stack-s3bucket-1nfphtlgi08lv has logging disabled
+S3	S3 Bucket Logging	arn:aws:s3:::sadcloud-secret-stack-s3bucket-10vlgydj12tcm	global		FAIL	Bucket : sadcloud-secret-stack-s3bucket-10vlgydj12tcm has logging disabled
+S3	S3 Bucket Logging	arn:aws:s3:::sadcloud20200403183827129700000009	global		FAIL	Bucket : sadcloud20200403183827129700000009 has logging disabled
+S3	S3 Bucket Logging	arn:aws:s3:::sadcloudhetonlys320200403183821175400000002	global		FAIL	Bucket : sadcloudhetonlys320200403183821175400000002 has logging disabled
+S3	S3 Bucket Logging	arn:aws:s3:::sadcloudhetonlys320200403183826406000000008	global		FAIL	Bucket : sadcloudhetonlys320200403183826406000000008 has logging disabled
+S3	S3 Bucket Logging	arn:aws:s3:::sadelb20200403183823065800000004	global		FAIL	Bucket : sadelb20200403183823065800000004 has logging disabled
+S3	S3 Bucket Public Access Block	arn:aws:s3:::sadcloud-s3-stack-s3bucket-1nfphtlgi08lv	global		FAIL	Public Access Block not enabled
+S3	S3 Bucket Public Access Block	arn:aws:s3:::sadcloud-secret-stack-s3bucket-10vlgydj12tcm	global		FAIL	Public Access Block not enabled
+S3	S3 Bucket Public Access Block	arn:aws:s3:::sadcloud20200403183827129700000009	global		FAIL	Public Access Block not enabled
+S3	S3 Bucket Public Access Block	arn:aws:s3:::sadcloudhetonlys320200403183821175400000002	global		FAIL	Public Access Block not enabled
+S3	S3 Bucket Public Access Block	arn:aws:s3:::sadcloudhetonlys320200403183826406000000008	global		FAIL	Public Access Block not enabled
+S3	S3 Bucket Public Access Block	arn:aws:s3:::sadelb20200403183823065800000004	global		FAIL	Public Access Block not enabled
+S3	S3 Bucket Encryption	arn:aws:s3:::sadcloud-s3-stack-s3bucket-1nfphtlgi08lv	global		FAIL	Bucket: sadcloud-s3-stack-s3bucket-1nfphtlgi08lv has encryption disabled
+S3	S3 Bucket Encryption	arn:aws:s3:::sadcloud-secret-stack-s3bucket-10vlgydj12tcm	global		FAIL	Bucket: sadcloud-secret-stack-s3bucket-10vlgydj12tcm has encryption disabled
+S3	S3 Bucket Encryption	arn:aws:s3:::sadcloud20200403183827129700000009	global		FAIL	Bucket: sadcloud20200403183827129700000009 has encryption disabled
+S3	S3 Bucket Encryption	arn:aws:s3:::sadcloudhetonlys320200403183821175400000002	global		FAIL	Bucket: sadcloudhetonlys320200403183821175400000002 has encryption disabled
+S3	S3 Bucket Encryption	arn:aws:s3:::sadcloudhetonlys320200403183826406000000008	global		FAIL	Bucket: sadcloudhetonlys320200403183826406000000008 has encryption disabled
+S3	S3 Bucket Encryption	arn:aws:s3:::sadelb20200403183823065800000004	global		FAIL	Bucket: sadelb20200403183823065800000004 has encryption disabled
+S3	S3 Bucket Website Enabled	arn:aws:s3:::sadcloud-s3-stack-s3bucket-1nfphtlgi08lv	global		OK	Bucket : sadcloud-s3-stack-s3bucket-1nfphtlgi08lv does not have static website hosting enabled
+S3	S3 Bucket Website Enabled	arn:aws:s3:::sadcloud-secret-stack-s3bucket-10vlgydj12tcm	global		OK	Bucket : sadcloud-secret-stack-s3bucket-10vlgydj12tcm does not have static website hosting enabled
+S3	S3 Bucket Website Enabled	arn:aws:s3:::sadcloud20200403183827129700000009	global		OK	Bucket : sadcloud20200403183827129700000009 does not have static website hosting enabled
+S3	S3 Bucket Website Enabled	arn:aws:s3:::sadcloudhetonlys320200403183821175400000002	global		OK	Bucket : sadcloudhetonlys320200403183821175400000002 does not have static website hosting enabled
+S3	S3 Bucket Website Enabled	arn:aws:s3:::sadcloudhetonlys320200403183826406000000008	global		OK	Bucket : sadcloudhetonlys320200403183826406000000008 does not have static website hosting enabled
+S3	S3 Bucket Website Enabled	arn:aws:s3:::sadelb20200403183823065800000004	global		OK	Bucket : sadelb20200403183823065800000004 does not have static website hosting enabled
+S3	S3 Bucket Enforce Object Encryption	arn:aws:s3:::sadcloud-s3-stack-s3bucket-1nfphtlgi08lv	global		FAIL	No bucket policy found
+S3	S3 Bucket Enforce Object Encryption	arn:aws:s3:::sadcloud-secret-stack-s3bucket-10vlgydj12tcm	global		FAIL	No bucket policy found
+S3	S3 Bucket Enforce Object Encryption	arn:aws:s3:::sadcloud20200403183827129700000009	global		UNKNOWN	Error querying for bucket policy for bucket: sadcloud20200403183827129700000009: Policy JSON could not be parsed.
+S3	S3 Bucket Enforce Object Encryption	arn:aws:s3:::sadcloudhetonlys320200403183821175400000002	global		UNKNOWN	Error querying for bucket policy for bucket: sadcloudhetonlys320200403183821175400000002: Policy JSON could not be parsed.
+S3	S3 Bucket Enforce Object Encryption	arn:aws:s3:::sadcloudhetonlys320200403183826406000000008	global		UNKNOWN	Error querying for bucket policy for bucket: sadcloudhetonlys320200403183826406000000008: Policy JSON could not be parsed.
+S3	S3 Bucket Enforce Object Encryption	arn:aws:s3:::sadelb20200403183823065800000004	global		FAIL	No bucket policy found
+SageMaker	Notebook Data Encrypted	N/A	us-east-1		OK	No Notebook Instances Found
+SageMaker	Notebook Data Encrypted	N/A	us-east-2		OK	No Notebook Instances Found
+SageMaker	Notebook Data Encrypted	N/A	us-west-2		OK	No Notebook Instances Found
+SageMaker	Notebook Data Encrypted	N/A	ap-northeast-1		OK	No Notebook Instances Found
+SageMaker	Notebook Data Encrypted	N/A	ap-northeast-2		OK	No Notebook Instances Found
+SageMaker	Notebook Data Encrypted	N/A	ap-southeast-2		OK	No Notebook Instances Found
+SageMaker	Notebook Data Encrypted	N/A	eu-central-1		OK	No Notebook Instances Found
+SageMaker	Notebook Data Encrypted	N/A	eu-central-1		OK	No Notebook Instances Found
+SageMaker	Notebook Data Encrypted	N/A	eu-west-1		OK	No Notebook Instances Found
+SageMaker	Notebook Direct Internet Access	N/A	us-east-1		OK	No Notebook Instances found
+SageMaker	Notebook Direct Internet Access	N/A	us-east-2		OK	No Notebook Instances found
+SageMaker	Notebook Direct Internet Access	N/A	us-west-2		OK	No Notebook Instances found
+SageMaker	Notebook Direct Internet Access	N/A	ap-northeast-1		OK	No Notebook Instances found
+SageMaker	Notebook Direct Internet Access	N/A	ap-northeast-2		OK	No Notebook Instances found
+SageMaker	Notebook Direct Internet Access	N/A	ap-southeast-2		OK	No Notebook Instances found
+SageMaker	Notebook Direct Internet Access	N/A	eu-central-1		OK	No Notebook Instances found
+SageMaker	Notebook Direct Internet Access	N/A	eu-central-1		OK	No Notebook Instances found
+SageMaker	Notebook Direct Internet Access	N/A	eu-west-1		OK	No Notebook Instances found
+SES	Email DKIM Enabled	example.com	us-east-1		WARN	DKIM is enabled, but not configured properly
+SES	Email DKIM Enabled	N/A	us-west-2		OK	No SES identities found
+SES	Email DKIM Enabled	N/A	eu-west-1		OK	No SES identities found
+SNS	SNS Topic Policies	arn:aws:sns:us-east-1:XXXXXXXXXXXX:sadcloud	us-east-1		FAIL	The SNS topic policy allows global access to the action(s): SNS:Subscribe,SNS:SetTopicAttributes,SNS:RemovePermission,SNS:Receive,SNS:Publish,SNS:ListSubscriptionsByTopic,SNS:GetTopicAttributes,SNS:DeleteTopic,SNS:AddPermission
+SNS	SNS Topic Policies	N/A	us-east-2		OK	No SNS topics found
+SNS	SNS Topic Policies	N/A	us-west-1		OK	No SNS topics found
+SNS	SNS Topic Policies	N/A	us-west-2		OK	No SNS topics found
+SNS	SNS Topic Policies	N/A	ca-central-1		OK	No SNS topics found
+SNS	SNS Topic Policies	N/A	eu-central-1		OK	No SNS topics found
+SNS	SNS Topic Policies	N/A	eu-west-1		OK	No SNS topics found
+SNS	SNS Topic Policies	N/A	eu-west-2		OK	No SNS topics found
+SNS	SNS Topic Policies	N/A	eu-west-3		OK	No SNS topics found
+SNS	SNS Topic Policies	N/A	eu-north-1		OK	No SNS topics found
+SNS	SNS Topic Policies	N/A	ap-northeast-1		OK	No SNS topics found
+SNS	SNS Topic Policies	N/A	ap-northeast-2		OK	No SNS topics found
+SNS	SNS Topic Policies	N/A	ap-southeast-1		OK	No SNS topics found
+SNS	SNS Topic Policies	N/A	ap-southeast-2		OK	No SNS topics found
+SNS	SNS Topic Policies	N/A	ap-south-1		OK	No SNS topics found
+SNS	SNS Topic Policies	N/A	sa-east-1		OK	No SNS topics found
+SNS	SNS Topic Policies	N/A	ap-east-1		OK	Region is not enabled
+SNS	SNS Topic Policies	N/A	me-south-1		OK	Region is not enabled
+SQS	SQS Cross Account Access	arn:aws:sqs:us-east-1:XXXXXXXXXXXX:sadcloud	us-east-1		FAIL	The SQS queue policy allows global access to the action(s): sqs:*
+SQS	SQS Cross Account Access	N/A	us-east-2		OK	No SQS queues found
+SQS	SQS Cross Account Access	N/A	us-west-1		OK	No SQS queues found
+SQS	SQS Cross Account Access	N/A	us-west-2		OK	No SQS queues found
+SQS	SQS Cross Account Access	N/A	ca-central-1		OK	No SQS queues found
+SQS	SQS Cross Account Access	N/A	eu-central-1		OK	No SQS queues found
+SQS	SQS Cross Account Access	N/A	eu-west-1		OK	No SQS queues found
+SQS	SQS Cross Account Access	N/A	eu-west-2		OK	No SQS queues found
+SQS	SQS Cross Account Access	N/A	eu-west-3		OK	No SQS queues found
+SQS	SQS Cross Account Access	N/A	eu-north-1		OK	No SQS queues found
+SQS	SQS Cross Account Access	N/A	ap-northeast-1		OK	No SQS queues found
+SQS	SQS Cross Account Access	N/A	ap-northeast-2		OK	No SQS queues found
+SQS	SQS Cross Account Access	N/A	ap-southeast-1		OK	No SQS queues found
+SQS	SQS Cross Account Access	N/A	ap-southeast-2		OK	No SQS queues found
+SQS	SQS Cross Account Access	N/A	ap-south-1		OK	No SQS queues found
+SQS	SQS Cross Account Access	N/A	sa-east-1		OK	No SQS queues found
+SQS	SQS Cross Account Access	N/A	ap-east-1		OK	Region is not enabled
+SQS	SQS Cross Account Access	N/A	me-south-1		OK	Region is not enabled
+SQS	SQS Encrypted	arn:aws:sqs:us-east-1:XXXXXXXXXXXX:sadcloud	us-east-1		FAIL	The SQS queue does not use a KMS key for SSE
+SQS	SQS Encrypted	N/A	us-east-2		OK	No SQS queues found
+SQS	SQS Encrypted	N/A	us-west-2		OK	No SQS queues found
+SQS	SQS Encrypted	N/A	us-west-1		OK	No SQS queues found
+SQS	SQS Encrypted	N/A	ca-central-1		OK	No SQS queues found
+SQS	SQS Encrypted	N/A	eu-central-1		OK	No SQS queues found
+SQS	SQS Encrypted	N/A	eu-west-1		OK	No SQS queues found
+SQS	SQS Encrypted	N/A	eu-west-2		OK	No SQS queues found
+SQS	SQS Encrypted	N/A	eu-west-3		OK	No SQS queues found
+SQS	SQS Encrypted	N/A	eu-north-1		OK	No SQS queues found
+SQS	SQS Encrypted	N/A	ap-northeast-1		OK	No SQS queues found
+SQS	SQS Encrypted	N/A	ap-northeast-2		OK	No SQS queues found
+SQS	SQS Encrypted	N/A	ap-southeast-1		OK	No SQS queues found
+SQS	SQS Encrypted	N/A	ap-southeast-2		OK	No SQS queues found
+SQS	SQS Encrypted	N/A	ap-south-1		OK	No SQS queues found
+SQS	SQS Encrypted	N/A	sa-east-1		OK	No SQS queues found
+SSM	SSM Encrypted Parameters	N/A	us-east-1		OK	No Parameters present
+SSM	SSM Encrypted Parameters	N/A	us-east-2		OK	No Parameters present
+SSM	SSM Encrypted Parameters	N/A	us-west-1		OK	No Parameters present
+SSM	SSM Encrypted Parameters	N/A	us-west-2		OK	No Parameters present
+SSM	SSM Encrypted Parameters	N/A	ca-central-1		OK	No Parameters present
+SSM	SSM Encrypted Parameters	N/A	eu-central-1		OK	No Parameters present
+SSM	SSM Encrypted Parameters	N/A	eu-west-1		OK	No Parameters present
+SSM	SSM Encrypted Parameters	N/A	eu-west-2		OK	No Parameters present
+SSM	SSM Encrypted Parameters	N/A	eu-west-3		OK	No Parameters present
+SSM	SSM Encrypted Parameters	N/A	eu-north-1		OK	No Parameters present
+SSM	SSM Encrypted Parameters	N/A	ap-northeast-1		OK	No Parameters present
+SSM	SSM Encrypted Parameters	N/A	ap-northeast-2		OK	No Parameters present
+SSM	SSM Encrypted Parameters	N/A	ap-southeast-1		OK	No Parameters present
+SSM	SSM Encrypted Parameters	N/A	ap-southeast-2		OK	No Parameters present
+SSM	SSM Encrypted Parameters	N/A	ap-south-1		OK	No Parameters present
+SSM	SSM Encrypted Parameters	N/A	sa-east-1		OK	No Parameters present
+SSM	SSM Encrypted Parameters	N/A	ap-east-1		OK	Region is not enabled
+SSM	SSM Encrypted Parameters	N/A	me-south-1		OK	Region is not enabled
+SSM	SSM Agent Active All Instances	N/A	us-east-1		FAIL	No SSM installations found on any of 1 instances
+SSM	SSM Agent Active All Instances	N/A	us-east-2		OK	No EC2 instances found
+SSM	SSM Agent Active All Instances	N/A	us-west-1		OK	No EC2 instances found
+SSM	SSM Agent Active All Instances	N/A	us-west-2		OK	No EC2 instances found
+SSM	SSM Agent Active All Instances	N/A	ca-central-1		OK	No EC2 instances found
+SSM	SSM Agent Active All Instances	N/A	eu-central-1		OK	No EC2 instances found
+SSM	SSM Agent Active All Instances	N/A	eu-west-1		OK	No EC2 instances found
+SSM	SSM Agent Active All Instances	N/A	eu-west-2		OK	No EC2 instances found
+SSM	SSM Agent Active All Instances	N/A	eu-west-3		OK	No EC2 instances found
+SSM	SSM Agent Active All Instances	N/A	eu-north-1		OK	No EC2 instances found
+SSM	SSM Agent Active All Instances	N/A	ap-northeast-1		OK	No EC2 instances found
+SSM	SSM Agent Active All Instances	N/A	ap-northeast-2		OK	No EC2 instances found
+SSM	SSM Agent Active All Instances	N/A	ap-southeast-1		OK	No EC2 instances found
+SSM	SSM Agent Active All Instances	N/A	ap-southeast-2		OK	No EC2 instances found
+SSM	SSM Agent Active All Instances	N/A	ap-south-1		OK	No EC2 instances found
+SSM	SSM Agent Active All Instances	N/A	sa-east-1		OK	No EC2 instances found
+SSM	SSM Agent Active All Instances	N/A	ap-east-1		OK	Region is not enabled
+SSM	SSM Agent Active All Instances	N/A	me-south-1		OK	Region is not enabled
+SSM	SSM Agent Latest Version	N/A	us-east-1		OK	No SSM installations found
+SSM	SSM Agent Latest Version	N/A	us-east-2		OK	No SSM installations found
+SSM	SSM Agent Latest Version	N/A	us-west-1		OK	No SSM installations found
+SSM	SSM Agent Latest Version	N/A	us-west-2		OK	No SSM installations found
+SSM	SSM Agent Latest Version	N/A	ca-central-1		OK	No SSM installations found
+SSM	SSM Agent Latest Version	N/A	eu-central-1		OK	No SSM installations found
+SSM	SSM Agent Latest Version	N/A	eu-west-1		OK	No SSM installations found
+SSM	SSM Agent Latest Version	N/A	eu-west-2		OK	No SSM installations found
+SSM	SSM Agent Latest Version	N/A	eu-west-3		OK	No SSM installations found
+SSM	SSM Agent Latest Version	N/A	eu-north-1		OK	No SSM installations found
+SSM	SSM Agent Latest Version	N/A	ap-northeast-1		OK	No SSM installations found
+SSM	SSM Agent Latest Version	N/A	ap-northeast-2		OK	No SSM installations found
+SSM	SSM Agent Latest Version	N/A	ap-southeast-1		OK	No SSM installations found
+SSM	SSM Agent Latest Version	N/A	ap-southeast-2		OK	No SSM installations found
+SSM	SSM Agent Latest Version	N/A	ap-south-1		OK	No SSM installations found
+SSM	SSM Agent Latest Version	N/A	sa-east-1		OK	No SSM installations found
+SSM	SSM Agent Latest Version	N/A	ap-east-1		OK	Region is not enabled
+SSM	SSM Agent Latest Version	N/A	me-south-1		OK	Region is not enabled
+Lambda	Lambda Old Runtimes	N/A	us-east-1		OK	No Lambda functions found
+Lambda	Lambda Old Runtimes	N/A	us-east-2		OK	No Lambda functions found
+Lambda	Lambda Old Runtimes	N/A	us-west-1		OK	No Lambda functions found
+Lambda	Lambda Old Runtimes	N/A	us-west-2		OK	No Lambda functions found
+Lambda	Lambda Old Runtimes	N/A	ca-central-1		OK	No Lambda functions found
+Lambda	Lambda Old Runtimes	N/A	eu-central-1		OK	No Lambda functions found
+Lambda	Lambda Old Runtimes	N/A	eu-west-1		OK	No Lambda functions found
+Lambda	Lambda Old Runtimes	N/A	eu-west-2		OK	No Lambda functions found
+Lambda	Lambda Old Runtimes	N/A	eu-west-3		OK	No Lambda functions found
+Lambda	Lambda Old Runtimes	N/A	eu-north-1		OK	No Lambda functions found
+Lambda	Lambda Old Runtimes	N/A	ap-northeast-1		OK	No Lambda functions found
+Lambda	Lambda Old Runtimes	N/A	ap-northeast-2		OK	No Lambda functions found
+Lambda	Lambda Old Runtimes	N/A	ap-southeast-1		OK	No Lambda functions found
+Lambda	Lambda Old Runtimes	N/A	ap-southeast-2		OK	No Lambda functions found
+Lambda	Lambda Old Runtimes	N/A	ap-south-1		OK	No Lambda functions found
+Lambda	Lambda Old Runtimes	N/A	sa-east-1		OK	No Lambda functions found
+Lambda	Lambda Old Runtimes	N/A	ap-east-1		OK	Region is not enabled
+Lambda	Lambda Old Runtimes	N/A	me-south-1		OK	Region is not enabled
+Lambda	Lambda VPC Config	N/A	us-east-1		OK	No Lambda functions found
+Lambda	Lambda VPC Config	N/A	us-east-2		OK	No Lambda functions found
+Lambda	Lambda VPC Config	N/A	us-west-1		OK	No Lambda functions found
+Lambda	Lambda VPC Config	N/A	us-west-2		OK	No Lambda functions found
+Lambda	Lambda VPC Config	N/A	ca-central-1		OK	No Lambda functions found
+Lambda	Lambda VPC Config	N/A	eu-central-1		OK	No Lambda functions found
+Lambda	Lambda VPC Config	N/A	eu-west-1		OK	No Lambda functions found
+Lambda	Lambda VPC Config	N/A	eu-west-2		OK	No Lambda functions found
+Lambda	Lambda VPC Config	N/A	eu-west-3		OK	No Lambda functions found
+Lambda	Lambda VPC Config	N/A	eu-north-1		OK	No Lambda functions found
+Lambda	Lambda VPC Config	N/A	ap-northeast-1		OK	No Lambda functions found
+Lambda	Lambda VPC Config	N/A	ap-northeast-2		OK	No Lambda functions found
+Lambda	Lambda VPC Config	N/A	ap-southeast-1		OK	No Lambda functions found
+Lambda	Lambda VPC Config	N/A	ap-southeast-2		OK	No Lambda functions found
+Lambda	Lambda VPC Config	N/A	ap-south-1		OK	No Lambda functions found
+Lambda	Lambda VPC Config	N/A	sa-east-1		OK	No Lambda functions found
+Lambda	Lambda VPC Config	N/A	ap-east-1		OK	Region is not enabled
+Lambda	Lambda VPC Config	N/A	me-south-1		OK	Region is not enabled
+Lambda	Lambda Public Access	N/A	us-east-1		OK	No Lambda functions found
+Lambda	Lambda Public Access	N/A	us-east-2		OK	No Lambda functions found
+Lambda	Lambda Public Access	N/A	us-west-1		OK	No Lambda functions found
+Lambda	Lambda Public Access	N/A	us-west-2		OK	No Lambda functions found
+Lambda	Lambda Public Access	N/A	ca-central-1		OK	No Lambda functions found
+Lambda	Lambda Public Access	N/A	eu-central-1		OK	No Lambda functions found
+Lambda	Lambda Public Access	N/A	eu-west-1		OK	No Lambda functions found
+Lambda	Lambda Public Access	N/A	eu-west-2		OK	No Lambda functions found
+Lambda	Lambda Public Access	N/A	eu-west-3		OK	No Lambda functions found
+Lambda	Lambda Public Access	N/A	eu-north-1		OK	No Lambda functions found
+Lambda	Lambda Public Access	N/A	ap-northeast-1		OK	No Lambda functions found
+Lambda	Lambda Public Access	N/A	ap-northeast-2		OK	No Lambda functions found
+Lambda	Lambda Public Access	N/A	ap-southeast-1		OK	No Lambda functions found
+Lambda	Lambda Public Access	N/A	ap-southeast-2		OK	No Lambda functions found
+Lambda	Lambda Public Access	N/A	ap-south-1		OK	No Lambda functions found
+Lambda	Lambda Public Access	N/A	sa-east-1		OK	No Lambda functions found
+Lambda	Lambda Public Access	N/A	ap-east-1		OK	Region is not enabled
+Lambda	Lambda Public Access	N/A	me-south-1		OK	Region is not enabled
+Redshift	Redshift Encryption Enabled	sadcloud.cse5u4hh9aby.us-east-1.redshift.amazonaws.com	us-east-1		WARN	Redshift cluster is not encrypted
+Redshift	Redshift Encryption Enabled	N/A	us-east-2		OK	No Redshift clusters found
+Redshift	Redshift Encryption Enabled	N/A	us-west-1		OK	No Redshift clusters found
+Redshift	Redshift Encryption Enabled	N/A	us-west-2		OK	No Redshift clusters found
+Redshift	Redshift Encryption Enabled	N/A	ca-central-1		OK	No Redshift clusters found
+Redshift	Redshift Encryption Enabled	N/A	eu-central-1		OK	No Redshift clusters found
+Redshift	Redshift Encryption Enabled	N/A	eu-west-1		OK	No Redshift clusters found
+Redshift	Redshift Encryption Enabled	N/A	eu-west-2		OK	No Redshift clusters found
+Redshift	Redshift Encryption Enabled	N/A	eu-west-3		OK	No Redshift clusters found
+Redshift	Redshift Encryption Enabled	N/A	eu-north-1		OK	No Redshift clusters found
+Redshift	Redshift Encryption Enabled	N/A	ap-northeast-1		OK	No Redshift clusters found
+Redshift	Redshift Encryption Enabled	N/A	ap-northeast-2		OK	No Redshift clusters found
+Redshift	Redshift Encryption Enabled	N/A	ap-southeast-1		OK	No Redshift clusters found
+Redshift	Redshift Encryption Enabled	N/A	ap-southeast-2		OK	No Redshift clusters found
+Redshift	Redshift Encryption Enabled	N/A	ap-south-1		OK	No Redshift clusters found
+Redshift	Redshift Encryption Enabled	N/A	sa-east-1		OK	No Redshift clusters found
+Redshift	Redshift Encryption Enabled	N/A	ap-east-1		OK	Region is not enabled
+Redshift	Redshift Encryption Enabled	N/A	me-south-1		OK	Region is not enabled
+Redshift	Redshift Publicly Accessible	sadcloud.cse5u4hh9aby.us-east-1.redshift.amazonaws.com	us-east-1		WARN	Redshift cluster is publicly accessible
+Redshift	Redshift Publicly Accessible	N/A	us-east-2		OK	No Redshift clusters found
+Redshift	Redshift Publicly Accessible	N/A	us-west-1		OK	No Redshift clusters found
+Redshift	Redshift Publicly Accessible	N/A	us-west-2		OK	No Redshift clusters found
+Redshift	Redshift Publicly Accessible	N/A	ca-central-1		OK	No Redshift clusters found
+Redshift	Redshift Publicly Accessible	N/A	eu-central-1		OK	No Redshift clusters found
+Redshift	Redshift Publicly Accessible	N/A	eu-west-1		OK	No Redshift clusters found
+Redshift	Redshift Publicly Accessible	N/A	eu-west-2		OK	No Redshift clusters found
+Redshift	Redshift Publicly Accessible	N/A	eu-west-3		OK	No Redshift clusters found
+Redshift	Redshift Publicly Accessible	N/A	eu-north-1		OK	No Redshift clusters found
+Redshift	Redshift Publicly Accessible	N/A	ap-northeast-1		OK	No Redshift clusters found
+Redshift	Redshift Publicly Accessible	N/A	ap-northeast-2		OK	No Redshift clusters found
+Redshift	Redshift Publicly Accessible	N/A	ap-southeast-1		OK	No Redshift clusters found
+Redshift	Redshift Publicly Accessible	N/A	ap-southeast-2		OK	No Redshift clusters found
+Redshift	Redshift Publicly Accessible	N/A	ap-south-1		OK	No Redshift clusters found
+Redshift	Redshift Publicly Accessible	N/A	sa-east-1		OK	No Redshift clusters found
+Redshift	Redshift Publicly Accessible	N/A	ap-east-1		OK	Region is not enabled
+Redshift	Redshift Publicly Accessible	N/A	me-south-1		OK	Region is not enabled
+Transfer	Transfer Logging Enabled	N/A	us-east-1		OK	No Transfer servers found
+Transfer	Transfer Logging Enabled	N/A	us-east-2		OK	No Transfer servers found
+Transfer	Transfer Logging Enabled	N/A	us-west-1		OK	No Transfer servers found
+Transfer	Transfer Logging Enabled	N/A	us-west-2		OK	No Transfer servers found
+Transfer	Transfer Logging Enabled	N/A	ap-northeast-2		OK	No Transfer servers found
+Transfer	Transfer Logging Enabled	N/A	ap-southeast-1		OK	No Transfer servers found
+Transfer	Transfer Logging Enabled	N/A	ap-southeast-2		OK	No Transfer servers found
+Transfer	Transfer Logging Enabled	N/A	ap-northeast-1		OK	No Transfer servers found
+Transfer	Transfer Logging Enabled	N/A	ca-central-1		OK	No Transfer servers found
+Transfer	Transfer Logging Enabled	N/A	eu-central-1		OK	No Transfer servers found
+Transfer	Transfer Logging Enabled	N/A	eu-west-1		OK	No Transfer servers found
+Transfer	Transfer Logging Enabled	N/A	eu-west-2		OK	No Transfer servers found
+Transfer	Transfer Logging Enabled	N/A	eu-west-3		OK	No Transfer servers found
+Shield	Shield Advanced Enabled	N/A	global		FAIL	Shield subscription is not enabled
+Shield	Shield Emergency Contacts	N/A	global		FAIL	Shield subscription is not enabled
+Shield	Shield Protections	N/A	global		FAIL	Shield subscription is not enabled
+GuardDuty	GuardDuty is Enabled	N/A	us-east-1		FAIL	GuardDuty not enabled
+GuardDuty	GuardDuty is Enabled	N/A	us-east-2		FAIL	GuardDuty not enabled
+GuardDuty	GuardDuty is Enabled	N/A	us-west-1		FAIL	GuardDuty not enabled
+GuardDuty	GuardDuty is Enabled	N/A	us-west-2		FAIL	GuardDuty not enabled
+GuardDuty	GuardDuty is Enabled	N/A	ca-central-1		FAIL	GuardDuty not enabled
+GuardDuty	GuardDuty is Enabled	N/A	eu-central-1		FAIL	GuardDuty not enabled
+GuardDuty	GuardDuty is Enabled	N/A	eu-west-1		FAIL	GuardDuty not enabled
+GuardDuty	GuardDuty is Enabled	N/A	eu-west-2		FAIL	GuardDuty not enabled
+GuardDuty	GuardDuty is Enabled	N/A	eu-west-3		FAIL	GuardDuty not enabled
+GuardDuty	GuardDuty is Enabled	N/A	eu-north-1		FAIL	GuardDuty not enabled
+GuardDuty	GuardDuty is Enabled	N/A	ap-northeast-1		FAIL	GuardDuty not enabled
+GuardDuty	GuardDuty is Enabled	N/A	ap-northeast-2		FAIL	GuardDuty not enabled
+GuardDuty	GuardDuty is Enabled	N/A	ap-southeast-1		FAIL	GuardDuty not enabled
+GuardDuty	GuardDuty is Enabled	N/A	ap-southeast-2		FAIL	GuardDuty not enabled
+GuardDuty	GuardDuty is Enabled	N/A	ap-south-1		FAIL	GuardDuty not enabled
+GuardDuty	GuardDuty is Enabled	N/A	sa-east-1		FAIL	GuardDuty not enabled
+GuardDuty	GuardDuty is Enabled	N/A	ap-east-1		OK	Region is not enabled
+GuardDuty	GuardDuty is Enabled	N/A	me-south-1		OK	Region is not enabled
+GuardDuty	GuardDuty Master Account	N/A	ap-east-1		OK	Region is not enabled
+GuardDuty	GuardDuty Master Account	N/A	me-south-1		OK	Region is not enabled
+XRay	XRay Encryption Enabled	N/A	us-east-1		FAIL	XRay is configured to use default encryption without CMK
+XRay	XRay Encryption Enabled	N/A	us-east-2		FAIL	XRay is configured to use default encryption without CMK
+XRay	XRay Encryption Enabled	N/A	us-west-2		FAIL	XRay is configured to use default encryption without CMK
+XRay	XRay Encryption Enabled	N/A	us-west-1		FAIL	XRay is configured to use default encryption without CMK
+XRay	XRay Encryption Enabled	N/A	ca-central-1		FAIL	XRay is configured to use default encryption without CMK
+XRay	XRay Encryption Enabled	N/A	eu-central-1		FAIL	XRay is configured to use default encryption without CMK
+XRay	XRay Encryption Enabled	N/A	eu-west-1		FAIL	XRay is configured to use default encryption without CMK
+XRay	XRay Encryption Enabled	N/A	eu-west-2		FAIL	XRay is configured to use default encryption without CMK
+XRay	XRay Encryption Enabled	N/A	eu-west-3		FAIL	XRay is configured to use default encryption without CMK
+XRay	XRay Encryption Enabled	N/A	eu-north-1		FAIL	XRay is configured to use default encryption without CMK
+XRay	XRay Encryption Enabled	N/A	ap-northeast-1		FAIL	XRay is configured to use default encryption without CMK
+XRay	XRay Encryption Enabled	N/A	ap-northeast-2		FAIL	XRay is configured to use default encryption without CMK
+XRay	XRay Encryption Enabled	N/A	ap-southeast-1		FAIL	XRay is configured to use default encryption without CMK
+XRay	XRay Encryption Enabled	N/A	ap-southeast-2		FAIL	XRay is configured to use default encryption without CMK
+XRay	XRay Encryption Enabled	N/A	ap-south-1		FAIL	XRay is configured to use default encryption without CMK
+XRay	XRay Encryption Enabled	N/A	sa-east-1		FAIL	XRay is configured to use default encryption without CMK
+XRay	XRay Encryption Enabled	N/A	ap-east-1		OK	Region is not enabled
+Done
