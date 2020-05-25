@@ -33,3 +33,7 @@ Time to run: .074s
 
 <https://ramimac.github.io/sadcloud-reports/tfsec/tfsec.03_27_2020.txt>  
 <https://ramimac.github.io/sadcloud-reports/tfsec/tfsec.11_27_2019.txt>
+
+### SLScan.io
+
+<https://ramimac.github.io/sadcloud-reports/slscan-reports/slscan_reports_05_25_2020.zip>
